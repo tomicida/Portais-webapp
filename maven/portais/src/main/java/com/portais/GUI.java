@@ -99,7 +99,7 @@ class GUI{
 
     public void openFile(){
         try {
-            JFileChooser fileChooser = new JFileChooser("./data/");
+            JFileChooser fileChooser = new JFileChooser("portais/data/");
 
             int result = fileChooser.showOpenDialog(null);
 

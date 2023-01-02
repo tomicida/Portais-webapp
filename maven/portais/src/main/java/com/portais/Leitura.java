@@ -26,13 +26,13 @@ public class Leitura implements Serializable{
         historico = new ArrayList<ArrayList<Integer>>();
         startTime = LocalDateTime.now();
         filename = startTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).replaceAll("-", "").replaceAll(":", "")+"_"+cliente.nome;
-        observations = "";
+        observations = " ";
     }
 
     public void Save(){
         try{
             finishTime = LocalDateTime.now();
-            File file= new File("./data/"+filename);
+            File file= new File("portais/data/"+filename);
             if(!file.exists())
                 file.createNewFile();
             FileOutputStream fileOut = new FileOutputStream(file);
