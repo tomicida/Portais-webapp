@@ -18,6 +18,7 @@ public class Leitura implements Serializable{
     LocalDateTime startTime;
     LocalDateTime finishTime;
     String filename;
+    String observations;
 
     public Leitura(Cliente cliente){
         this.cliente = cliente;
@@ -25,6 +26,7 @@ public class Leitura implements Serializable{
         historico = new ArrayList<ArrayList<Integer>>();
         startTime = LocalDateTime.now();
         filename = startTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).replaceAll("-", "").replaceAll(":", "")+"_"+cliente.nome;
+        observations = "";
     }
 
     public void Save(){

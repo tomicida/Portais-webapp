@@ -126,6 +126,10 @@ public class GeneratePDF {
 
             doc.add(table);
 
+            table = new PdfPTable(1);
+            table.addCell("Observações");
+            table.addCell(""+leitura.observations);
+
             paragraph = new Paragraph("Relatório:",new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD));
             paragraph.setSpacingAfter(12f);
 
