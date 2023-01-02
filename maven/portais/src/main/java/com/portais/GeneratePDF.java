@@ -26,7 +26,7 @@ public class GeneratePDF {
             String[] tempo = {"meses", "dias", "horas"};
             String timeStrings[]={"dias","semanas","meses"};
             //generate a PDF at the specified location  
-            writer = PdfWriter.getInstance(doc, new FileOutputStream("./reports/"+leitura.filename+".pdf"));
+            writer = PdfWriter.getInstance(doc, new FileOutputStream("portais/reports/"+leitura.filename+".pdf"));
             doc.open();
             
             //doc.setMargins(72, 72, 36, 36);
@@ -124,6 +124,12 @@ public class GeneratePDF {
             
             table.setSpacingAfter(24f);
 
+            doc.add(table);
+
+            table = new PdfPTable(1);
+            table.addCell("Observações");
+            table.addCell(""+leitura.observations);
+            
             doc.add(table);
 
             paragraph = new Paragraph("Relatório:",new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD));

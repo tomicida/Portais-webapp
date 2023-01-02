@@ -99,7 +99,7 @@ class GUI{
 
     public void openFile(){
         try {
-            JFileChooser fileChooser = new JFileChooser("./data/");
+            JFileChooser fileChooser = new JFileChooser("portais/data/");
 
             int result = fileChooser.showOpenDialog(null);
 
@@ -1677,7 +1677,9 @@ class GUI{
     }
 
     public JPanel endPanel(){
+        JPanel biggerPanel = new JPanel(new GridLayout(2,1));
         JPanel panel = new JPanel(new GridLayout(1,2));
+        biggerPanel.add(panel);
         JPanel section = new JPanel(new GridLayout(8,1));
         JPanel tempPanel;
         JLabel tempLabel;
@@ -1814,10 +1816,21 @@ class GUI{
 
         panel.add(section);
 
+        panel = new JPanel();
+        tempPanel = new JPanel(new BorderLayout());
+        tempLabel = new JLabel("Observações:");
+        tempTextField = new JTextField(40);
+        fields.add(tempTextField);
+        tempPanel.add(tempLabel,BorderLayout.NORTH);
+        tempPanel.add(tempTextField,BorderLayout.CENTER);
+        panel.add(tempPanel);
+
+        biggerPanel.add(panel);
+
         JPanel finalPanel = new JPanel(new BorderLayout());
 
 
-        finalPanel.add(panel, BorderLayout.CENTER);
+        finalPanel.add(biggerPanel, BorderLayout.CENTER);
 
         JLabel label = new JLabel("Fim de Sessão - 2ª Leitura", JLabel.CENTER);
         finalPanel.add(label, BorderLayout.NORTH);
@@ -1852,6 +1865,8 @@ class GUI{
                 currentClient.setChakraSolar2(Integer.parseInt(fields.get(12).getText()));
                 currentClient.setChakraUmbilical2(Integer.parseInt(fields.get(13).getText()));
                 currentClient.setChakraRaiz2(Integer.parseInt(fields.get(14).getText()));
+
+                leitura.observations = fields.get(15).getText();
 
                 leitura.Save();
 
