@@ -128,8 +128,8 @@ class GUI{
         ArrayList<JLabel> labels = new ArrayList<JLabel>();
 
         try{
-            BufferedImage savePicture = ImageIO.read(new File("assets/save.png"));
-            BufferedImage editPicture = ImageIO.read(new File("assets/edit.png"));
+            BufferedImage savePicture = ImageIO.read(new File("portais/assets/save.png"));
+            BufferedImage editPicture = ImageIO.read(new File("portais/assets/edit.png"));
 
             small = new JPanel(new GridLayout(1,2));
             smalls.add(small);
@@ -1247,7 +1247,7 @@ class GUI{
         
         subPanel = new JPanel(new GridLayout(rownum,1));
         try{
-        BufferedImage deletPicture = ImageIO.read(new File("assets/delet.png"));
+        BufferedImage deletPicture = ImageIO.read(new File("portais/assets/delet.png"));
         for(int i = rownum*page; i < Math.min(rownum*(page+1), leitura.historico.size()); i++){
             JPanel subSubPanel = new JPanel();
             Portal portal = root.portais.get(leitura.historico.get(i).get(0));
@@ -1886,8 +1886,9 @@ class GUI{
         for (Portal portal : root.portais) {
             try {
                 JPanel jPanel = new JPanel(new BorderLayout());
-        
-                myPicture = ImageIO.read(new File("assets/" + portal.name + ".png"));
+                System.out.println(new File("portais/assets/" + portal.name + ".png").getCanonicalPath());
+                File file = new File("portais/assets/" + portal.name + ".png");
+                myPicture = ImageIO.read(file);
                 JButton picButton = new JButton(new ImageIcon(myPicture));
                 picButton.addActionListener(e -> replacePanel(ferramentasPanel(portal)));
 
@@ -1898,7 +1899,9 @@ class GUI{
 
                 mainPanel.add(jPanel);
             } catch (Exception e) {
+                System.out.println(portal.name);
                 System.out.println(e);
+                e.printStackTrace();
             }
         }
 
@@ -2016,7 +2019,7 @@ class GUI{
             for (int i = 0;i<ferramenta.resultados.size();i++) {
                 JPanel smaller = new JPanel(new BorderLayout());
                 try {
-                    myPicture = ImageIO.read(new File("assets/" + ferramenta.resultados.get(i) + ".png"));
+                    myPicture = ImageIO.read(new File("portais/assets/" + ferramenta.resultados.get(i) + ".png"));
                     JButton button = new JButton(new ImageIcon(myPicture));
                     smaller.add(button,BorderLayout.CENTER);
                     int newi = i;
