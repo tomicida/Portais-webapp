@@ -31,7 +31,8 @@ class GUI{
 
         frame = new JFrame("Portais");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1600,800);
+        frame.setSize(1920,1080);
+        frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
 
         JMenuBar menuBar = menu();
         frame.getContentPane().add(BorderLayout.NORTH, menuBar);
