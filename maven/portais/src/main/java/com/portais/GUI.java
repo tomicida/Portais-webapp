@@ -1300,6 +1300,7 @@ class GUI{
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     leitura.historico.remove(newi);
+                    leitura.Save();
                     page = 0;
                     replacePanel(editResultsPanel());
                 }
