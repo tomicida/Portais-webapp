@@ -2184,16 +2184,15 @@ class GUI{
                     });
             }
             else{
-                button.addActionListener(e -> replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(newi), newIndexArray)));
+                button.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e) { 
+                        page = 0;
+                        replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(newi), newIndexArray));
+                    }
+                });
             }
 
-            // if(!subFerramenta.subFerramentas.isEmpty()){
-            //     if(!subFerramenta.subFerramentas.get(i).inactive)
-            //         button.addActionListener(e -> replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(newi), newIndexArray)));
-            //     else
-            //         button.addActionListener(e -> replacePanel(protocoloPanel(subFerramenta, newIndexArray)));
-            // }else
-            //     button.addActionListener(e -> replacePanel(protocoloPanel(subFerramenta, newIndexArray)));
             resultadosPanel.add(smaller);
         }
 
