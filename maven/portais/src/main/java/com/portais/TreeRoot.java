@@ -1373,6 +1373,7 @@ public class TreeRoot {
 
         temp = new Ferramenta("Cura Egípcia",Portal2,7);
         temp.type = 3;
+        temp.optionPerPage = 40;
 
         temp.resultados.add("OM METISTICA");
         temp.resultados.add("ACARESH");
