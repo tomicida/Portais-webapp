@@ -2266,7 +2266,7 @@ class GUI{
             label = new JLabel("A Soma dos Três Portais: "+temp.get(5)+ " - " + ferramenta.subFerramentas.get(3).resultados.get(temp.get(5)-1));
             smaller.add(label);
 
-            centerJPanel.add(smaller);
+            centerJPanel.add(smaller,BorderLayout.NORTH);
         }
 
         JPanel topPanel;
