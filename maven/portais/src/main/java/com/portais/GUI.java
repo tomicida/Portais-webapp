@@ -257,7 +257,13 @@ class GUI{
 
             bigger.add(panel);
 
-            biggest.add(bigger,BorderLayout.NORTH);
+            JPanel newBigger = new JPanel(new BorderLayout());
+
+            newBigger.add(bigger,BorderLayout.CENTER);
+
+
+
+            biggest.add(newBigger,BorderLayout.NORTH);
             bigger = new JPanel(new GridLayout(1,4));
 
             //Planos 1ª
@@ -1208,6 +1214,39 @@ class GUI{
             panel.add(small);
 
             bigger.add(panel);
+
+            //Observations  (out of order)
+            small = new JPanel(new GridLayout(1,2));
+            smalls.add(small);
+            textLabel = new JLabel("Observações");
+            small.add(textLabel);
+            smaller1 = new JPanel();
+            smallers1.add(smaller1);
+            smaller2 = new JPanel();
+            smallers2.add(smaller2);
+            textLabel = new JLabel("<html><div WIDTH=850>"+leitura.observations+"</div></html>");
+            labels.add(textLabel);
+            smaller1.add(textLabel);
+            textField = new JTextField(leitura.observations, 75);
+            textFields.add(textField);
+            smaller2.add(textField);
+            button = new JButton(new ImageIcon(editPicture));
+            button.addActionListener(e -> switch1to2(smalls.get(34), smallers2.get(34),"Observações"));
+            smaller1.add(button);
+            button = new JButton(new ImageIcon(savePicture));
+            button.addActionListener(new ActionListener(){
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    leitura.observations = textFields.get(34).getText();
+                    labels.get(34).setText("<html><div WIDTH=850>"+leitura.observations+"</div></html>");
+                    switch1to2(smalls.get(34), smallers1.get(34),"Observações");
+                    leitura.Save();
+                }
+            });
+            smaller2.add(button);
+            small.add(smaller1);
+            newBigger.add(small,BorderLayout.SOUTH);
+
             biggest.add(bigger,BorderLayout.CENTER);
 
         }catch (Exception e){
