@@ -1940,7 +1940,6 @@ class GUI{
         for (Portal portal : root.portais) {
             try {
                 JPanel jPanel = new JPanel(new BorderLayout());
-                System.out.println(new File("portais/assets/" + portal.name + ".png").getCanonicalPath());
                 File file = new File("portais/assets/" + portal.name + ".png");
                 myPicture = ImageIO.read(file);
                 JButton picButton = new JButton(new ImageIcon(myPicture));
