@@ -3913,8 +3913,9 @@ public class TreeRoot {
         
         
 
-        subTemp.repeatString = "(nº e designação)  ";
-        subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com as frequências de Cura dos Códigos Arcturianos. Acedendo ao campo cósmico de comunicação estelar e ativando os aparelhos etéreos de aplicação dos códigos. Ativo agora o código (next) na frequência certa e na quantidade exata e ordeno que se fixe no campo morfogenético de (nome do consulente) operando a cura e a transformação interior em todos os corpos e todos os chakras. Encerro agora a comunicação com o campo cósmico de comunicação estelar e todos os aparelhos etéreos de aplicação. Fechando o campo morfogenético e a Merkabah Pessoal de (nome completo do consulente) e ordeno que se fixem todas as frequências de cura, agora.";
+        subTemp.repeatString = "(nº e designação),  ";
+        subTemp.repeatString2 = "(simbolo), ";
+        subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com as frequências de Cura dos Códigos Arcturianos. Acedendo ao campo cósmico de comunicação estelar e ativando os aparelhos etéreos de aplicação dos códigos. Ativo agora o código (next) na frequência certa e na quantidade exata e ordeno que se fixe no campo morfogenético de (nome do consulente) operando a cura e a transformação interior em todos os corpos e todos os chakras. (next2) Encerro agora a comunicação com o campo cósmico de comunicação estelar e todos os aparelhos etéreos de aplicação. Fechando o campo morfogenético e a Merkabah Pessoal de (nome completo do consulente) e ordeno que se fixem todas as frequências de cura, agora.";
         temp.subFerramentas.add(subTemp);
 
         subTemp = new SubFerramenta(temp, "Cartas de Cura");
