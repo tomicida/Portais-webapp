@@ -567,7 +567,7 @@ public class TreeRoot {
 
         subSubTemp = new SubFerramenta(temp, "Casa");
 
-        subSubTemp.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente casa de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        subSubTemp.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         
         subSubTemp.resultados.add("Yin");
         subSubTemp.resultados.add("Yang");
@@ -676,8 +676,7 @@ public class TreeRoot {
         
         subSubTemp = (SubFerramenta) subSubTemp.clone();
         subSubTemp.prevResult = "Empresa";
-        //TODO Fix decreto
-        subSubTemp.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente empresa de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        subSubTemp.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         subTemp.subFerramentas.add(subSubTemp);
 
         temp.subFerramentas.add(subTemp);
