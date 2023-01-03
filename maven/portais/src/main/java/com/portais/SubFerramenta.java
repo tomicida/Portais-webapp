@@ -80,7 +80,6 @@ public class SubFerramenta implements Cloneable{
         if(resultados.size()>index.get(1)){
             decreto = decreto.replace("(index)", "<b style=\"color:blue;\">" + index.get(1)+ "</b>");
             decreto = decreto.replace("(campo, número, ligação)", "<b style=\"color:blue;\">" + mainFerramenta.resultados.get(index.get(0))+"; "+ resultados.get(index.get(1))+"</b>");
-            decreto = decreto.replace("(nº e designação)", "<b style=\"color:blue;\">" + (index.get(1) + offset) + " " + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(nome do floral)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(nome da cepa)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(indicação)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
@@ -92,6 +91,9 @@ public class SubFerramenta implements Cloneable{
             decreto = decreto.replace("(designar qual ou quais por ordem de saída)", "<b style=\"color:blue;\">" + resultados.get(index.get(1))+ "</b>");
             decreto = decreto.replace("(simbolo)", "<b style=\"color:blue;\">" + resultados.get(index.get(1))+ "</b>");
             decreto = decreto.replace("(nome de deus)", "<b style=\"color:blue;\">" + resultados.get(index.get(1))+ "</b>");
+            if(!ações.isEmpty()){
+                decreto = decreto.replace("(nº e designação)", "<b style=\"color:blue;\">" + (index.get(1) + offset) + " " + resultados.get(index.get(1))+" "+  ações.get(index.get(1)) + "</b>");
+            }
         }
         decreto = decreto.replace("(designação)", "<b style=\"color:blue;\">" + mainFerramenta.subFerramentas.get(index.get(0)).resultados.get(index.get(1))+ "</b>");
 
