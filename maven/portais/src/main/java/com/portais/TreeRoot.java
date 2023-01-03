@@ -1730,14 +1730,15 @@ public class TreeRoot {
         subSubTemp.resultados.add("Norepinefrina");
         subSubTemp.resultados.add("Acetilcolina");
         
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
-        subSubTemp.ações.add("");
+        subSubTemp.ações.add("Controlar a estimulação e os níveis do controle motor.");
+        subSubTemp.ações.add("Estimular o humor, memória, aprendizado, alimentação, desejo sexual e sono reparador.");
+        subSubTemp.ações.add("Promover as contrações musculares uterinas; reduzir o sangramento durante o parto, estimular a libertação do leite materno; desenvolver a empatia entre pessoas; e modelar a sensibilidade ao medo.");
+        subSubTemp.ações.add("induzir a excitação física e mental e ao bom humor.");
+        subSubTemp.ações.add("Preparar o organismo para a realização de grandes feitos, derivado da modificação de um aminoácido aromático (tirosina)");
+        subSubTemp.ações.add("Potenciar a ação analgésica e estimular a sensação de bem-estar, conforto, melhor estado de humor e alegria, êxtase e euforia.");
+        subSubTemp.ações.add("Ajudar a aumentar a pressão arterial estreitando os vasos sanguíneos do coração e do coração para o cérebro");
+        //TODO Confirmar ação
+        subSubTemp.ações.add("Redução da 98inorreia98 cardíaca, Diminuição da força de contração cardíaca, Queda da condução nervosa no nodo sinoatrial e nodo atrioventricular. Na mente, a Ach desempenha um importante papel nas funções cognitivas, como, por exemplo, a aprendizagem. No aparelho respiratório, a Ach é responsável por provocar fechamento do esfíncter pós-capilar, resultando no enchimento dos 98inorreia98 venosos e extravasamento de líquidos, aumentando o volume da submucosa e vasodilatação. Também é responsável por ativar as glândulas serosas, levando a exacerbação das secreções e 98inorreia98e 98inorreia.");
         subTemp.subFerramentas.add(subSubTemp);
 
         temp.subFerramentas.add(subTemp);
