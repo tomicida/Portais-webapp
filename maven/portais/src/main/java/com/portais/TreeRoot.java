@@ -1791,7 +1791,6 @@ public class TreeRoot {
 
         temp.subFerramentas.add(subTemp);
 
-        //TODO confirmar ação/designação
         temp.Decreto = "Eu, (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, chakras e corpos sutis que se encontram afetados pela anomalia de (designação), (hormona) para que se harmonizem, equilibrem e criem impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu sou a ativar agora o equilíbrio de (hormona) para (ação) e promovo a harmonização de todos os chakras e todos os corpos sutis. Pulsa, pulsa, pulsa no campo.";
 
         Portal3.AddFerramenta(temp);
