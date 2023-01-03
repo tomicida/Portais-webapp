@@ -3941,10 +3941,6 @@ public class TreeRoot {
         
         temp.resultados.add("Matriz Bioenergética");
         temp.resultados.add("Tabela Funções Shu");
-        // temp.resultados.add("Tonificação das Funções Yin");
-        // temp.resultados.add("Sedação das Funções Yin");
-        // temp.resultados.add("Tonificação das Funções Yang");
-        // temp.resultados.add("Sedação das Funções Yang");
         temp.resultados.add("Tabela Periódica dos Elementos");
 
         subTemp = new SubFerramenta(temp, "Matriz Bioenergética");
