@@ -2320,47 +2320,6 @@ class GUI{
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             }
-        }else if (ferramenta.portal.id == 0){
-            if(ferramenta.id == 9){
-                confirmButton.setEnabled(false);
-                topPanel = new JPanel();
-
-                JPanel labPanel = new JPanel(new GridLayout(2,1));
-                JLabel instructLabel = new JLabel("Tipo de Ambiente");
-                labPanel.add(instructLabel);
-                JLabel effectLabel = new JLabel("Efeito");
-                labPanel.add(effectLabel);
-                topPanel.add(labPanel,BorderLayout.NORTH);
-
-                JPanel capsule = new JPanel(new GridLayout(2,1));
-                String tipoAmbiente[]={"casa","empresa"};
-                JComboBox<String> unitBox = new JComboBox<String>(tipoAmbiente);
-                capsule.add(unitBox);
-
-                JTextField effectField = new JTextField(20);
-                capsule.add(effectField);
-                topPanel.add(capsule, BorderLayout.CENTER);
-
-                JButton topButton = new JButton("Ajustar decreto");
-                topButton.addActionListener(new ActionListener(){
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        temp.add(unitBox.getSelectedIndex());
-                        currentClient.efeito = effectField.getText();
-                        String newD;
-                        if(unitBox.getSelectedIndex()==0){
-                            newD = "<b style=\"color:blue;\">"+ currentClient.morada +" </b>";
-                        }else{
-                            newD = "<b style=\"color:blue;\">"+ currentClient.nomeEspaço +" </b>";
-                        }
-                        labelDecreto.setText("<html><div WIDTH=1000>" + ferramenta.Decreto(multiResultsArray, currentClient).replace("<b style=\"color:red;\"> (tipo de ambiente) </b>", newD) + "</div></html>");
-                        confirmButton.setEnabled(true);
-                    }
-                });
-                topPanel.add(topButton,BorderLayout.SOUTH);
-
-                centerJPanel.add(topPanel,BorderLayout.NORTH);
-            }
         }else if (ferramenta.portal.id == 3){
             if (ferramenta.id==0){
                 confirmButton.setEnabled(false);

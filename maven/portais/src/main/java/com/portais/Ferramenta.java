@@ -47,7 +47,6 @@ public class Ferramenta {
         //Blue
         decreto = Decreto.replace("(nome do consulente)", "<b style=\"color:blue;\">" +cliente.nome+ "</b>");
         decreto = decreto.replace("(nome completo do consulente)", "<b style=\"color:blue;\">" +cliente.nome+ "</b>");
-        decreto = decreto.replace("(efeito)","<b style=\"color:blue;\">" +cliente.efeito+ "</b>");
         decreto = decreto.replace("(nome completo do terapeuta)","<b style=\"color:blue;\">" +cliente.nomeTerapeuta+ "</b>");
         decreto = decreto.replace("(nome do terapeuta)","<b style=\"color:blue;\">" +cliente.nomeTerapeuta+ "</b>");
         
@@ -64,6 +63,7 @@ public class Ferramenta {
         decreto = decreto.replace("(x)", "<b style=\"color:red;\">(x) </b>");
         decreto = decreto.replace("(y)", "<b style=\"color:red;\">(y) </b>");
         decreto = decreto.replace("(z)", "<b style=\"color:red;\">(z) </b>");
+        decreto = decreto.replace("(efeito)","<b style=\"color:red;\">(efeito) </b>");
         decreto = decreto.replace("(tipo de ambiente)","<b style=\"color:red;\"> (tipo de ambiente) </b>");
         decreto = decreto.replace("(medir no relógio de mensuração)", "<b style=\"color:red;\">(medir no relógio de mensuração) </b>");
         decreto = decreto.replace("(x vezes ao dia)", "<b style=\"color:red;\">(x vezes ao dia) </b>");
