@@ -2281,7 +2281,7 @@ class GUI{
                 JPanel capsule = new JPanel(new GridLayout(2,1));
                 JTextField numberField = new JTextField();
                 capsule.add(numberField);
-                String timeStrings[]={"meses","dias","horas"};
+                String timeStrings[]={"meses","semanas","dias","horas"};
                 JComboBox<String> unitBox = new JComboBox<String>(timeStrings);
                 unitBox.addActionListener(e -> temp.set(4,unitBox.getSelectedIndex()));
                 capsule.add(unitBox);

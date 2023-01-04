@@ -23,7 +23,7 @@ public class GeneratePDF {
             Font fontb = new Font(Font.FontFamily.HELVETICA, 13, Font.BOLD);
             Font fontn = new Font(Font.FontFamily.HELVETICA, 11, Font.NORMAL);
             Font fontul = new Font(Font.FontFamily.HELVETICA, 12, Font.UNDERLINE);
-            String[] tempo = {"meses", "dias", "horas"};
+            String[] tempo = {"meses", "semanas" ,"dias", "horas"};
             String timeStrings[]={"dias","semanas","meses"};
             writer = PdfWriter.getInstance(doc, new FileOutputStream("portais/reports/"+leitura.filename+".pdf"));
             doc.open();
