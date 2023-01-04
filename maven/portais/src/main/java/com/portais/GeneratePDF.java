@@ -25,11 +25,8 @@ public class GeneratePDF {
             Font fontul = new Font(Font.FontFamily.HELVETICA, 12, Font.UNDERLINE);
             String[] tempo = {"meses", "dias", "horas"};
             String timeStrings[]={"dias","semanas","meses"};
-            //generate a PDF at the specified location  
             writer = PdfWriter.getInstance(doc, new FileOutputStream("portais/reports/"+leitura.filename+".pdf"));
             doc.open();
-            
-            //doc.setMargins(72, 72, 36, 36);
 
             paragraph = new Paragraph("Relatório de Mesa Radiónica Cura Quântica Multidimensional",new Font(Font.FontFamily.HELVETICA, 16, Font.BOLD));
             paragraph.setAlignment(Element.ALIGN_CENTER);
@@ -193,8 +190,6 @@ public class GeneratePDF {
                             tempParagraph.add(new Chunk(": "+ferramenta.ações.get(lista.get(2)),fontn));
                     }
 
-                    //Debug
-                    //tempParagraph.add(new Chunk(lista.subList(2,lista.size()).toString(),fontn));
                 }else if (ferramenta.type ==4){
                     //TODO [adicionar] resultados e [Confirmar] dados necessários.
                     tempParagraph.add(new Chunk(lista.get(2)+"."+lista.get(3)+"."+lista.get(4)+" => "+lista.get(5),fontn));
