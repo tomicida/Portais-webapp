@@ -2426,7 +2426,7 @@ class GUI{
         int resultIndex = temp.size()-1;
 
         if(subFerramenta.multi)
-            decreto = subFerramenta.Decreto(indexArray,currentClient,multiResultsArray,resultIndex);//ferramenta.Decreto(multiResultsArray, currentClient);
+            decreto = subFerramenta.Decreto(indexArray,currentClient,multiResultsArray,resultIndex);
         else
             decreto = subFerramenta.Decreto(indexArray, currentClient);
 
@@ -2467,6 +2467,30 @@ class GUI{
                     label = new JLabel(subFerramenta.funções.get(multiResultsArray.get(result)));
                     topPanel.add(label);
                 }
+                centerJPanel.add(topPanel,BorderLayout.NORTH);
+            } else if (subFerramenta.mainFerramenta.id == 7){
+                confirmButton.setEnabled(false);
+                temp.add(0);
+
+                topPanel = new JPanel();
+                JLabel instructLabel = new JLabel("Medir no Biometro");
+                topPanel.add(instructLabel,BorderLayout.NORTH);
+
+                JTextField numberField = new JTextField(6);
+                topPanel.add(numberField, BorderLayout.CENTER);
+
+                JButton topButton = new JButton("Confirmar Medições");
+                topButton.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        temp.set(temp.size()-1, Integer.parseInt(numberField.getText()));
+                        String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" </b>";
+                        labelDecreto.setText("<html><div WIDTH=1000>" + subFerramenta.Decreto(indexArray, currentClient).replace("<b style=\"color:red;\">(medir no biometro) </b>", newD) + "</div></html>");
+                        confirmButton.setEnabled(true);
+                    }
+                });
+                topPanel.add(topButton,BorderLayout.SOUTH);
+
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             }
         }

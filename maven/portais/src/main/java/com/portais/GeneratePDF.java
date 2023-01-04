@@ -175,7 +175,7 @@ public class GeneratePDF {
                         tempParagraph.add(new Chunk(ferramenta.resultados.get(lista.get(2)),fontn));
                         if (lista.size() >=4 ){
                             tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).resultados.get(lista.get(3)),fontn));
-                            if (lista.size() >= 5 && !(lista.get(0)==3&&lista.get(1)==2&&lista.get(2)==1)){
+                            if (lista.size() >= 5 && !(lista.get(0)==2 && lista.get(1)==7)){
                                 tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados.get(lista.get(4)),fontn));
                                 if(lista.size() >= 6){
                                     tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).resultados.get(lista.get(5)),fontn));
