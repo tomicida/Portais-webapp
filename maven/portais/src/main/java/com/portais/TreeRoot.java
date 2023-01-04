@@ -3444,7 +3444,7 @@ public class TreeRoot {
 
         //TODO Fix decree
         subTemp.repeatString = "(nome do cristal), ";
-        subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência da cura pelos cristais pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético através da programação de cristal (next). Programo a frequência do cristal (next) com a finalidade de (definir atuação do cristal) com o quantum energético de (medir no biometro) Angstrom para que pulse no campo (x vezes, medir no biometro) por dia, durante (dias, semanas, meses, medir no biometro) para que atuem direta e indiretamente no seu propósito e tomada de decisão. Ativo agora a sua frequência de cura para que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com a frequência dos cristais. Lanço na rede a frequência do cristal (next) para que atuem direta e indiretamente no seu propósito e tomada de decisão. Ativo agora a sua frequência de cura para que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
         temp.subFerramentas.add(subTemp);
 

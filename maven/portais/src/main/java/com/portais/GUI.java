@@ -2447,72 +2447,7 @@ class GUI{
         JPanel centerJPanel = new JPanel(new BorderLayout());
 
         JPanel topPanel;
-        if(subFerramenta.mainFerramenta.portal.id == 3){
-            if(subFerramenta.mainFerramenta.id == 2 ){
-                if(subFerramenta.prevResult == "Cristais"){
-                    confirmButton.setEnabled(false);
-                    temp.add(0);
-                    temp.add(0);
-                    temp.add(0);
-                    temp.add(0);
-                    topPanel = new JPanel();
-
-                    JPanel labPanel = new JPanel(new GridLayout(5,1));
-                    JLabel instructLabel1 = new JLabel("Atuação do cristal");
-                    labPanel.add(instructLabel1);
-                    JLabel instructLabel2 = new JLabel("Quantum energético");
-                    labPanel.add(instructLabel2);
-                    JLabel instructLabel3 = new JLabel("Frequência diária");
-                    labPanel.add(instructLabel3);
-                    JLabel instructLabel4 = new JLabel("Duração");
-                    labPanel.add(instructLabel4);
-                    JLabel instructLabel5 = new JLabel("Unidade de Duração");
-                    labPanel.add(instructLabel5);
-                    topPanel.add(labPanel,BorderLayout.WEST);
-
-                    JPanel capsule = new JPanel(new GridLayout(5,1));
-                    JTextField effectField = new JTextField(20);
-                    capsule.add(effectField);
-                    JTextField quantumField = new JTextField(20);
-                    capsule.add(quantumField);
-                    JTextField freqField = new JTextField(20);
-                    capsule.add(freqField);
-                    JTextField durationField = new JTextField(20);
-                    capsule.add(durationField);
-                    String timeStrings[]={"dias","semanas","meses"};
-                    JComboBox<String> unitBox = new JComboBox<String>(timeStrings);
-                    unitBox.addActionListener(e -> temp.set(7,unitBox.getSelectedIndex()));
-                    capsule.add(unitBox);
-                    topPanel.add(capsule, BorderLayout.CENTER);
-
-                    JButton topButton = new JButton("Confirmar Medições");
-                    topButton.addActionListener(new ActionListener(){
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            String newD;
-                            temp.set(4, Integer.parseInt(quantumField.getText()));
-                            temp.set(5, Integer.parseInt(freqField.getText()));
-                            temp.set(6, Integer.parseInt(durationField.getText()));
-                            temp.set(7, unitBox.getSelectedIndex());
-                            currentClient.efeito2 = effectField.getText();
-                            String s1 = "<b style=\"color:blue;\">"+ effectField.getText() +" </b>";
-                            newD = subFerramenta.Decreto(indexArray,currentClient,multiResultsArray,resultIndex).replace("<b style=\"color:red;\">(definir atuação do cristal) </b>", s1);
-                            s1 = "<b style=\"color:blue;\">"+ quantumField.getText() +" </b>";
-                            newD = newD.replace("<b style=\"color:red;\">(medir no biometro) </b>", s1);
-                            s1 = "<b style=\"color:blue;\">"+ freqField.getText() +" vezes </b>";
-                            newD = newD.replace("<b style=\"color:red;\">(x vezes, medir no biometro) </b>", s1);
-                            s1 = "<b style=\"color:blue;\">"+ durationField.getText() + " " + unitBox.getSelectedItem() +" </b>";
-                            newD = newD.replace("<b style=\"color:red;\">(dias, semanas, meses, medir no biometro) </b>", s1);
-                            labelDecreto.setText("<html><div WIDTH=1000>" + newD + "</div></html>");
-                            confirmButton.setEnabled(true);
-                        }
-                    });
-                    topPanel.add(topButton,BorderLayout.EAST);
-
-                    centerJPanel.add(topPanel,BorderLayout.NORTH);
-                }
-            }
-        }else if (subFerramenta.mainFerramenta.portal.id == 2){
+        if (subFerramenta.mainFerramenta.portal.id == 2){
             if(subFerramenta.mainFerramenta.id == 4 && subFerramenta.prevResult=="Arcanos Maiores"){
                 topPanel = new JPanel(new GridLayout(multiResultsArray.size()+1,5));
                 topPanel.add(new JLabel());
