@@ -2468,6 +2468,17 @@ class GUI{
                     topPanel.add(label);
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
+            } else if(subFerramenta.mainFerramenta.id == 0 && subFerramenta.prevResult=="Tabela de Vitaminas e Minerais"){
+                topPanel = new JPanel(new GridLayout(multiResultsArray.size()+1,2));
+                topPanel.add(new JLabel("Designação"));
+                topPanel.add(new JLabel("Função"));
+                for(int result = 0;result<multiResultsArray.size() ;result++){
+                    JLabel label = new JLabel(subFerramenta.resultados.get(multiResultsArray.get(result)));
+                    topPanel.add(label);
+                    label = new JLabel("<html><div WIDTH=500>"+subFerramenta.ações.get(multiResultsArray.get(result))+"</div></html>");
+                    topPanel.add(label);
+                }
+                centerJPanel.add(topPanel,BorderLayout.NORTH);
             } else if (subFerramenta.mainFerramenta.id == 7){
                 confirmButton.setEnabled(false);
                 temp.add(0);
