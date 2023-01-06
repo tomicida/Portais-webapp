@@ -7,8 +7,8 @@ public class Cliente implements Serializable{
     public String nome;
     public String nomeEspaço;
     public String morada;
-    public String efeito;
-    public String efeito2;
+
+
     public Leitura leitura;
     public int planoFisico1, planoMental1, planoEmocional1, planoEspiritual1, planoProfissional1, planoFinanceiro1, influenNegExt1, influenNegInt1;
     public int chakraCoronário1, chakraFrontal1, chakraLaríngeo1, chakraCardíaco1, chakraSolar1, chakraUmbilical1, chakraRaiz1;
@@ -141,10 +141,6 @@ public class Cliente implements Serializable{
 
     public void setMorada(String morada) {
         this.morada = morada;
-    }
-
-    public void setEfeito(String efeito) {
-        this.efeito = efeito;
     }
 
     public void setNome(String nome) {
