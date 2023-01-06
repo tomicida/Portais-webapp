@@ -176,21 +176,24 @@ public class GeneratePDF {
                         if (lista.size() >=4 ){
                             tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).resultados.get(lista.get(3)),fontn));
                             if (lista.size() >= 5 && !(lista.get(0)==2 && lista.get(1)==7)){
-                                tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados.get(lista.get(4)),fontn));
+                                if(ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).type != 1)
+                                    tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados.get(lista.get(4)),fontn));
                                 if(lista.size() >= 6){
                                     tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).resultados.get(lista.get(5)),fontn));
                                     if(!ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).ações.isEmpty())
                                         tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).ações.get(lista.get(5)),fontn));
                                 }
                                 if(!ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).ações.isEmpty())
-                                    tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).ações.get(lista.get(4)),fontn));
+                                    tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).ações.get(lista.get(4)),fontn));   
+                                if(ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).type == 1)
+                                    tempParagraph.add(new Chunk("; " + leitura.strings.get(lista.get(4)),fontn));
                             }
                             if(!ferramenta.subFerramentas.get(lista.get(2)).ações.isEmpty())
                                 tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).ações.get(lista.get(3)),fontn));
                         }
                         if(!ferramenta.ações.isEmpty())
                             tempParagraph.add(new Chunk(": "+ferramenta.ações.get(lista.get(2)),fontn));
-                    }
+                    } 
 
                 }else if (ferramenta.type ==4){
                     //TODO [adicionar] resultados e [Confirmar] dados necessários.

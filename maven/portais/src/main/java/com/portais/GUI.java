@@ -2197,6 +2197,29 @@ class GUI{
             resultadosPanel.add(smaller);
         }
 
+        if(subFerramenta.type == 1){
+            JTextField textField = new JTextField(32);
+            resultadosPanel.add(textField);
+            confirmButton.addActionListener(new ActionListener(){
+                @Override
+                public void actionPerformed(ActionEvent e){
+                    if(textField.getText().isEmpty())
+                        System.out.println("empty");
+                    else{
+                        indexArray.add(leitura.strings.size());
+                        System.out.println(indexArray);
+                        leitura.strings.add(textField.getText());
+                        System.out.println(leitura.strings);
+                        currentResult.addAll(indexArray);
+                        leitura.historico.add(currentResult);
+                        leitura.Save();
+                        replacePanel(resultadosPanel(subFerramenta.mainFerramenta));
+                    }
+                }
+            });
+            resultadosPanel.add(confirmButton);
+        }
+
         if(subFerramenta.multi){
             if(multiResultsArray.isEmpty())
                 confirmButton.setEnabled(false);

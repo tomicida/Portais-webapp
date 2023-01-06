@@ -15,6 +15,7 @@ import java.time.format.DateTimeFormatter;
 public class Leitura implements Serializable{
     Cliente cliente;
     ArrayList<ArrayList<Integer>> historico;
+    ArrayList<String> strings;
     LocalDateTime startTime;
     LocalDateTime finishTime;
     String filename;
@@ -24,6 +25,7 @@ public class Leitura implements Serializable{
         this.cliente = cliente;
         cliente.leitura = this;
         historico = new ArrayList<ArrayList<Integer>>();
+        strings = new ArrayList<String>();
         startTime = LocalDateTime.now();
         filename = startTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).replaceAll("-", "").replaceAll(":", "")+"_"+cliente.nome;
         observations = " ";
