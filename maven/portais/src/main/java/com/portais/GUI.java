@@ -1363,7 +1363,7 @@ class GUI{
 
         System.out.println(rownum);
 
-        File folder = new File("./data/");
+        File folder = new File("portais/data/");
         File[] listOfFiles = folder.listFiles();
         System.out.println(listOfFiles);
 
