@@ -2262,6 +2262,10 @@ class GUI{
             while(tempIndex>9)
                 tempIndex=tempIndex%10+tempIndex/10;
 
+            temp.add(i);
+            temp.add(j);
+            temp.add(k);
+
             decreto = decreto.replace("(todas as coordenadas que saírem, não mais de três)", "<b style=\"color:blue;\">" +temp.get(2)+"."+temp.get(3)+"."+temp.get(4)+ "</b>");
         }
         
@@ -2287,7 +2291,7 @@ class GUI{
             label = new JLabel("Coordenadas Portal Eu Interior: "+(k)+ " - " + ferramenta.subFerramentas.get(2).resultados.get(k-1));
             smaller.add(label);
 
-            label = new JLabel("A Soma dos Três Portais: "+temp.get(5)+ " - " + ferramenta.subFerramentas.get(3).resultados.get(temp.get(5)-1));
+            label = new JLabel("A Soma dos Três Portais: "+(temp.get(8))+ " - " + ferramenta.subFerramentas.get(3).resultados.get(temp.get(8)-1));
             smaller.add(label);
 
             centerJPanel.add(smaller,BorderLayout.NORTH);

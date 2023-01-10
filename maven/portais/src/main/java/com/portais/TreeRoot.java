@@ -3282,6 +3282,7 @@ public class TreeRoot {
 
         temp = new Ferramenta("Matriz Morfogenética",Portal4,1);
         temp.type = 4;
+        temp.offset = 0;
         
         subTemp = new SubFerramenta(temp, "Coordenadas Portal Ambientes");
         subTemp.resultados.add("O início, a liderança, proatividade e autonomia");

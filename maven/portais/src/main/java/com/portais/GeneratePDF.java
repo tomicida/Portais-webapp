@@ -199,7 +199,12 @@ public class GeneratePDF {
 
                 }else if (ferramenta.type ==4){
                     //TODO [adicionar] resultados e [Confirmar] dados necessários.
-                    tempParagraph.add(new Chunk(lista.get(2)+"."+lista.get(3)+"."+lista.get(4)+" => "+lista.get(5),fontn));
+                    tempParagraph.add(new Chunk(lista.get(2)+"."+lista.get(3)+"."+lista.get(4)+": ",fontn));
+                    tempParagraph.add(new Chunk(lista.get(5)+" - "+ferramenta.subFerramentas.get(0).resultados.get(lista.get(5)-1)+"; ",fontn));
+                    tempParagraph.add(new Chunk(lista.get(6)+" - "+ferramenta.subFerramentas.get(1).resultados.get(lista.get(6)-1)+"; ",fontn));
+                    tempParagraph.add(new Chunk(lista.get(7)+" - "+ferramenta.subFerramentas.get(2).resultados.get(lista.get(7)-1),fontn));
+                    tempParagraph.add(new Chunk(" => "+lista.get(8)+" - "+ferramenta.subFerramentas.get(3).resultados.get(lista.get(8)-1),fontn));
+                    
                 }
 
                 if(portal.id == 1){
