@@ -10,6 +10,7 @@ import javax.swing.*;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 class GUI{
     public TreeRoot root;
@@ -1292,7 +1293,7 @@ class GUI{
             JPanel subSubPanel = new JPanel();
             Portal portal = root.portais.get(leitura.historico.get(i).get(0));
             Ferramenta ferramenta = portal.ferramentas.get(leitura.historico.get(i).get(1));
-            JLabel resultadoLabel = new JLabel(portal.name + " "+ferramenta.name+" "+leitura.historico.get(i).subList(2, leitura.historico.get(i).size()));
+            JLabel resultadoLabel = new JLabel(portal.name + " "+ferramenta.name+" "+leitura.historico.get(i).subList(2, leitura.historico.get(i).size()).stream().map(number -> number + ferramenta.offset).collect(Collectors.toList()));
             subSubPanel.add(resultadoLabel);
             JButton deletButton = new JButton(new ImageIcon(deletPicture));
             int newi = i;
