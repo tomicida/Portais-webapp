@@ -116,12 +116,10 @@ public class TreeRoot {
         subTemp.resultados.add("Geopatia Sutil");
         subTemp.resultados.add("Geopatia Anatómica");
 
-        //TODO Linha Hartmann
         subSubTemp=new SubFerramenta(temp, "Linhas Hartmann");
         subSubTemp.type = 1;
         subTemp.subFerramentas.add(subSubTemp);
 
-        //TODO Linha Curry
         subSubTemp=new SubFerramenta(temp, "Linha Curry");
         subSubTemp.type = 1;
         subTemp.subFerramentas.add(subSubTemp);
@@ -2560,8 +2558,6 @@ public class TreeRoot {
 
         temp = new Ferramenta("Naturopatia",Portal3,7);
         temp.type = 2;
-        
-        //TODO adjust GUI
 
         temp.resultados.add("Florais");
         temp.resultados.add("Cepas Homeopáticas");
@@ -3443,7 +3439,6 @@ public class TreeRoot {
         subTemp.resultados.add("Malaquita");
         subTemp.resultados.add("Hematita");
 
-        //TODO Fix decree
         subTemp.repeatString = "(nome do cristal), ";
         subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com a frequência dos cristais. Lanço na rede a frequência do cristal (next) para que atuem direta e indiretamente no seu propósito e tomada de decisão. Ativo agora a sua frequência de cura para que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
