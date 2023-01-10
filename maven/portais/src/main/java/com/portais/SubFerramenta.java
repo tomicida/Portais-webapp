@@ -24,7 +24,7 @@ public class SubFerramenta implements Cloneable{
         repeatString2= "";
         type = 0;
         offset = 1;
-        optionPerPage = 10;
+        optionPerPage = 15;
         inactive = false;
         multi = false;
         
