@@ -105,11 +105,11 @@ class GUI{
 
             int result = fileChooser.showOpenDialog(null);
 
-            if (result == JFileChooser.APPROVE_OPTION)
+            if (result == JFileChooser.APPROVE_OPTION){
                 leitura = Leitura.fromFile(fileChooser.getSelectedFile().getPath().toString());
-
-            replacePanel(editPanel());
-
+                replacePanel(editPanel());
+            } 
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
