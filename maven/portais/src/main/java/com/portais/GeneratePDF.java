@@ -24,7 +24,6 @@ public class GeneratePDF {
             Font fontn = new Font(Font.FontFamily.HELVETICA, 11, Font.NORMAL);
             Font fontul = new Font(Font.FontFamily.HELVETICA, 12, Font.UNDERLINE);
             String[] tempo = {"meses", "semanas" ,"dias", "horas"};
-            String timeStrings[]={"dias","semanas","meses"};
             writer = PdfWriter.getInstance(doc, new FileOutputStream("portais/reports/"+leitura.filename+".pdf"));
             doc.open();
 
@@ -211,7 +210,7 @@ public class GeneratePDF {
                     }
                 }else if (portal.id == 3){
                     if(ferramenta.id == 0){
-                        tempParagraph.add(new Chunk(", " + lista.get(3)+" vezes ao dia por "+lista.get(4)+ " " +timeStrings[lista.get(5)],fontn));
+                        tempParagraph.add(new Chunk(", " + lista.get(3)+" vezes ao dia por "+lista.get(4)+ " dias, "+lista.get(5)+ " semanas, "+lista.get(6)+ " meses",fontn));
                     }
                 }
 

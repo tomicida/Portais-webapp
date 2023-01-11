@@ -2354,18 +2354,19 @@ class GUI{
                 temp.add(0);
                 temp.add(0);
                 temp.add(0);
+                temp.add(0);
                 topPanel = new JPanel();
                 JLabel instructLabel = new JLabel("Medir no Biometro");
                 topPanel.add(instructLabel,BorderLayout.NORTH);
-                JPanel capsule = new JPanel(new GridLayout(3,1));
-                JTextField numberField = new JTextField();
+                JPanel capsule = new JPanel(new GridLayout(4,1));
+                JTextField numberField = new JTextField(4);
                 capsule.add(numberField);
-                JTextField numberField2 = new JTextField();
+                JTextField numberField2 = new JTextField(4);
                 capsule.add(numberField2);
-                String timeStrings[]={"dias","semanas","meses"};
-                JComboBox<String> unitBox = new JComboBox<String>(timeStrings);
-                unitBox.addActionListener(e -> temp.set(5,unitBox.getSelectedIndex()));
-                capsule.add(unitBox);
+                JTextField numberField3 = new JTextField(4);
+                capsule.add(numberField3);
+                JTextField numberField4 = new JTextField(4);
+                capsule.add(numberField4);
                 topPanel.add(capsule, BorderLayout.CENTER);
                 JButton topButton = new JButton("Confirmar Medições");
                 topButton.addActionListener(new ActionListener(){
@@ -2373,8 +2374,9 @@ class GUI{
                     public void actionPerformed(ActionEvent e) {
                         temp.set(3, Integer.parseInt(numberField.getText()));
                         temp.set(4, Integer.parseInt(numberField2.getText()));
-                        temp.set(5, unitBox.getSelectedIndex());
-                        String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" vezes ao dia, durante o periodo de "+numberField2.getText()+" "+unitBox.getSelectedItem()+" </b>";
+                        temp.set(5, Integer.parseInt(numberField3.getText()));
+                        temp.set(6, Integer.parseInt(numberField4.getText()));
+                        String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" vezes ao dia, durante o periodo de "+numberField2.getText()+" dias, "+numberField3.getText()+" semanas, "+numberField4.getText()+" meses </b>";
                         labelDecreto.setText("<html><div WIDTH=1000>" + ferramenta.Decreto(index, currentClient).replace("<b style=\"color:red;\">(x vezes ao dia) </b> durante o periodo de <b style=\"color:red;\">(dias, semanas, meses) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }
