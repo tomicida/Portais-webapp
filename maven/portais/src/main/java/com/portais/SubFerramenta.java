@@ -63,7 +63,7 @@ public class SubFerramenta implements Cloneable{
             decreto = decreto.replace("(localização)", "<b style=\"color:blue;\">" + prevResult + "</b>");
             decreto = decreto.replace("(nome do elemento)", "<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
             decreto = decreto.replace("(simbolo reiki)", "<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
-            decreto = decreto.replace("(index reiki)", "<b style=\"color:blue;\">" + index.get(2) + "</b>");
+            decreto = decreto.replace("(index reiki)", "<b style=\"color:blue;\">" + (index.get(2)+offset) + "</b>");
             decreto = decreto.replace("(geopatia)","<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
             decreto = decreto.replace("(tipo geo)","<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
             decreto = decreto.replace("(desig)", "<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
@@ -79,8 +79,8 @@ public class SubFerramenta implements Cloneable{
         }
 
         if(resultados.size()>index.get(1)){
-            decreto = decreto.replace("(index)", "<b style=\"color:blue;\">" + index.get(1)+ "</b>");
-            decreto = decreto.replace("(campo, número, ligação)", "<b style=\"color:blue;\">" + mainFerramenta.resultados.get(index.get(0))+"; "+ resultados.get(index.get(1))+"</b>");
+            decreto = decreto.replace("(index)", "<b style=\"color:blue;\">" + (index.get(1)+offset)+ "</b>");
+            decreto = decreto.replace("(campo, número, ligação)", "<b style=\"color:blue;\">" + mainFerramenta.resultados.get(index.get(0))+"; "+(index.get(1)+offset)+" "+ resultados.get(index.get(1))+"</b>");
             decreto = decreto.replace("(nome do floral)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(nome da cepa)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(indicação)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");

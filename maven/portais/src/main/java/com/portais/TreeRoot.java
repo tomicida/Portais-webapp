@@ -35,14 +35,14 @@ public class TreeRoot {
         temp.resultados.add("Amarelo");
         temp.resultados.add("Indigo");
 
-        temp.ações.add("Potenciamento de todas as cores e a elevação de frequência ao máximo do campo mórfico.");
-        temp.ações.add("A energia da natureza, na força equilibrada dos sentidos no ambiente. Baixo no ambiente a frequência da esperança, da satisfação e da saúde.");
-        temp.ações.add("A purificação, transformando e transmutando todas as energias negativas em positivas no campo mórfico.");
-        temp.ações.add("O auxílio da mente a assimilar novas ideias, estimular os sentidos, a criatividade e a comunicação no campo mórfico.");
-        temp.ações.add("Activação e estimulação das relações interpessoais, com energia sexual de ação e a criatividade e estimulando o apetite e a fala direta.");
-        temp.ações.add("Transmissão de calma e serenidade e acionando o seu poder asséptico. Ativando tranquilidade aos ambientes.");
-        temp.ações.add("A ativação da mente, os pensamentos, o ânimo, inspiração e estimulação do raciocínio no auto-controle.");
-        temp.ações.add("Auxílio em todos os casos em que as tensões e restrições do meio produzem estado de má saúde física, emocional ou mental.");
+        temp.ações.add("Potenciamento de todas as cores e a elevação de frequência ao máximo do campo mórfico");
+        temp.ações.add("A energia da natureza, na força equilibrada dos sentidos no ambiente. Baixo no ambiente a frequência da esperança, da satisfação e da saúde");
+        temp.ações.add("A purificação, transformando e transmutando todas as energias negativas em positivas no campo mórfico");
+        temp.ações.add("O auxílio da mente a assimilar novas ideias, estimular os sentidos, a criatividade e a comunicação no campo mórfico");
+        temp.ações.add("Activação e estimulação das relações interpessoais, com energia sexual de ação e a criatividade e estimulando o apetite e a fala direta");
+        temp.ações.add("Transmissão de calma e serenidade e acionando o seu poder asséptico. Ativando tranquilidade aos ambientes");
+        temp.ações.add("A ativação da mente, os pensamentos, o ânimo, inspiração e estimulação do raciocínio no auto-controle");
+        temp.ações.add("Auxílio em todos os casos em que as tensões e restrições do meio produzem estado de má saúde física, emocional ou mental");
         
         temp.repeatString = "(nome da cor), promovendo (nome da ação), ";
         temp.Decreto = "Eu ativo a Matriz de Cromoterapia para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Baixo a intensidade contrária à anomalia para que se restabeleça o equilíbrio, representada pela frequência da cor (next) na quantidade certa e na medida exata, reconstruindo e fortalecendo, reconstruindo e fortalecendo, reconstruindo e fortalecendo o campo anómalo, assim como a consciência de mudança de (nome completo do consulente).";
@@ -90,15 +90,15 @@ public class TreeRoot {
         temp.resultados.add("852 Hz");
         temp.resultados.add("963 Hz");
 
-        temp.ações.add("Remover das memórias abstratas a energia cármica, promover a sensação de segurança, motivando a fazer o seu melhor.");
-        temp.ações.add("Retornar as células à sua forma original e influenciar os campos de mórficos para reestruturar a anomalia.");
-        temp.ações.add("Permitir a realização de metas da maneira mais direta. Enraizar, despertar e retornar à realidade.");
-        temp.ações.add("Conectar com processos de ressonância ou processos de amplificação. Permitir o retorno ao “caminho certo”. Limpar experiências traumáticas e influências destrutivas de eventos passados. Limpar impressão de limitação, que desabilita a pessoa para atingir seus objetivos de vida. Energizar as células do corpo e ajudar a usar os potenciais criativos.");
-        temp.ações.add("Retornar o DNA humano ao seu estado original e perfeito, aumento da quantidade de energia da vida, clareza da mente, consciência, criatividade, estados de êxtase como profunda paz interior no ambiente.");
-        temp.ações.add("Criar de uma comunidade harmoniosa e relações interpessoais harmoniosas. Clareza para lidar com problemas de relacionamentos. Incentivar a célula a se comunicar com seu ambiente. Melhorar a comunicação, compreensão, tolerância e amor.");
-        temp.ações.add("Limpar a célula das toxinas. Promover uma vida mais saudável, mais simples, limpar a célula de diferentes tipos de radiações eletromagnéticas.");
-        temp.ações.add("Despertar a força interna e auto-realização. Dissolver a energia mental estagnada de over-thinking. (Atividade mental) Esclarecer os bloqueios de energia que impedem a comunicação clara e forte.");
-        temp.ações.add("Permitir a experiência direta, o retorno à Unidade. Reconectar o ambiente com o propósito dos intervenientes.");
+        temp.ações.add("Remover das memórias abstratas a energia cármica, promover a sensação de segurança, motivando a fazer o seu melhor");
+        temp.ações.add("Retornar as células à sua forma original e influenciar os campos de mórficos para reestruturar a anomalia");
+        temp.ações.add("Permitir a realização de metas da maneira mais direta. Enraizar, despertar e retornar à realidade");
+        temp.ações.add("Conectar com processos de ressonância ou processos de amplificação. Permitir o retorno ao “caminho certo”. Limpar experiências traumáticas e influências destrutivas de eventos passados. Limpar impressão de limitação, que desabilita a pessoa para atingir seus objetivos de vida. Energizar as células do corpo e ajudar a usar os potenciais criativos");
+        temp.ações.add("Retornar o DNA humano ao seu estado original e perfeito, aumento da quantidade de energia da vida, clareza da mente, consciência, criatividade, estados de êxtase como profunda paz interior no ambiente");
+        temp.ações.add("Criar de uma comunidade harmoniosa e relações interpessoais harmoniosas. Clareza para lidar com problemas de relacionamentos. Incentivar a célula a se comunicar com seu ambiente. Melhorar a comunicação, compreensão, tolerância e amor");
+        temp.ações.add("Limpar a célula das toxinas. Promover uma vida mais saudável, mais simples, limpar a célula de diferentes tipos de radiações eletromagnéticas");
+        temp.ações.add("Despertar a força interna e auto-realização. Dissolver a energia mental estagnada de over-thinking. (Atividade mental) Esclarecer os bloqueios de energia que impedem a comunicação clara e forte");
+        temp.ações.add("Permitir a experiência direta, o retorno à Unidade. Reconectar o ambiente com o propósito dos intervenientes");
 
         temp.Decreto = "Eu ativo a Matriz das Frequências de Cura para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Baixo a intensidade contrária à anomalia para que se restabeleça o equilíbrio, representada pela frequência (nome da frequência), para (nome da ação), na quantidade certa e na medida exata, limpando e fortalecendo, fortalecendo e reconstruindo, reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         Portal1.AddFerramenta(temp);
@@ -3927,6 +3927,16 @@ public class TreeRoot {
         subTemp.resultados.add("Hólon");
         subTemp.resultados.add("Mente Arco-Íris");
         subTemp.resultados.add("Radiossónica");
+
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
+        subTemp.ações.add("");
         subTemp.repeatString = "(nº e designação), ";
         subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com as frequências de Cura dos Códigos Arcturianos. Acedendo ao campo cósmico de comunicação estelar e ativando os aparelhos etéreos de aplicação dos códigos. Ativo agora a(s) Carta(s) de Cura (next) na frequência certa e na quantidade exata e ordeno que se fixe no campo morfogenético de (nome do consulente) operando a cura e a transformação na transição planetária. Encerrandoi agora a comunicação com o campo cósmico de comunicação estelar e todos os aparelhos etéreos de aplicação. Fechando o campo morfogenético e a Merkabah Pessoal de (nome completo do consulente) e ordeno que se fixem todas as frequências de cura, agora.";
         temp.subFerramentas.add(subTemp);
@@ -3969,20 +3979,20 @@ public class TreeRoot {
 
         subTemp = new SubFerramenta(temp,"Tabela Funções Shu");
         subTemp.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz dos Meridianos Energéticos com a função de equilibrar as funções Shu, pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos, chakras e corpos sutis. Ativo agora a frequência do ponto (ponto) na localização (canal). Que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo";
-        subTemp.resultados.add("P");
-        subTemp.resultados.add("MC");
-        subTemp.resultados.add("C");
-        subTemp.resultados.add("ID");
-        subTemp.resultados.add("TA");
-        subTemp.resultados.add("IG");
-        subTemp.resultados.add("B");
-        subTemp.resultados.add("VB");
-        subTemp.resultados.add("E");
-        subTemp.resultados.add("R");
-        subTemp.resultados.add("BP");
-        subTemp.resultados.add("F");
+        subTemp.resultados.add("Pulmão");
+        subTemp.resultados.add("Mestre do Coração");
+        subTemp.resultados.add("Coração");
+        subTemp.resultados.add("Intestino Delgado");
+        subTemp.resultados.add("Triplo Aquecedor");
+        subTemp.resultados.add("Intestino Grosso");
+        subTemp.resultados.add("Bexiga");
+        subTemp.resultados.add("Vesícula Biliar");
+        subTemp.resultados.add("Estômago");
+        subTemp.resultados.add("Rim");
+        subTemp.resultados.add("Baço-Pâncreas");
+        subTemp.resultados.add("Fígado");
 
-        subSubTemp = new SubFerramenta(temp, "P");
+        subSubTemp = new SubFerramenta(temp, "Pulmão");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -3996,7 +4006,7 @@ public class TreeRoot {
         subSubTemp.ações.add("5");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "MC");
+        subSubTemp = new SubFerramenta(temp, "Mestre do Coração");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4009,7 +4019,7 @@ public class TreeRoot {
         subSubTemp.ações.add("3");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "C");
+        subSubTemp = new SubFerramenta(temp, "Coração");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4022,7 +4032,7 @@ public class TreeRoot {
         subSubTemp.ações.add("3");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "ID");
+        subSubTemp = new SubFerramenta(temp, "Intestino Delgado");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4035,7 +4045,7 @@ public class TreeRoot {
         subSubTemp.ações.add("8");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "TA");
+        subSubTemp = new SubFerramenta(temp, "Triplo Aquecedor");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4048,7 +4058,7 @@ public class TreeRoot {
         subSubTemp.ações.add("10");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "IG");
+        subSubTemp = new SubFerramenta(temp, "Intestino Grosso");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4061,7 +4071,7 @@ public class TreeRoot {
         subSubTemp.ações.add("11");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "B");
+        subSubTemp = new SubFerramenta(temp, "Bexiga");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4074,7 +4084,7 @@ public class TreeRoot {
         subSubTemp.ações.add("40");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "VB");
+        subSubTemp = new SubFerramenta(temp, "Vesícula Biliar");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4087,7 +4097,7 @@ public class TreeRoot {
         subSubTemp.ações.add("34");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "E");
+        subSubTemp = new SubFerramenta(temp, "Estômago");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4100,7 +4110,7 @@ public class TreeRoot {
         subSubTemp.ações.add("36");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "R");
+        subSubTemp = new SubFerramenta(temp, "Rim");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4113,7 +4123,7 @@ public class TreeRoot {
         subSubTemp.ações.add("10");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "BP");
+        subSubTemp = new SubFerramenta(temp, "Baço-Pâncreas");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
@@ -4126,7 +4136,7 @@ public class TreeRoot {
         subSubTemp.ações.add("9");
         subSubTemp.ownDecreto = subTemp.ownDecreto;
         subTemp.subFerramentas.add(subSubTemp);
-        subSubTemp = new SubFerramenta(temp, "F");
+        subSubTemp = new SubFerramenta(temp, "Fígado");
         subSubTemp.resultados.add("Ting");
         subSubTemp.resultados.add("Iong");
         subSubTemp.resultados.add("Iu");
