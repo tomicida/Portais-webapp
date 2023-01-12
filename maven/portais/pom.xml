@@ -165,6 +165,14 @@
         </executions>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>.</directory>
+        <includes>
+          <include>assets/**/*.*</include>
+        </includes>
+      </resource>
+    </resources>
   </build>
   <reporting>
     <plugins>
