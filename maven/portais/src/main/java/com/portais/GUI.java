@@ -9,7 +9,11 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 class GUI{
@@ -27,7 +31,11 @@ class GUI{
     int maxPage = 0;
     int offset = 0;
 
-    public GUI(){
+    String configNomeTerapeuta;
+
+    public GUI() throws FileNotFoundException{
+        readConfig();
+
         root = new TreeRoot();
 
         frame = new JFrame("Portais");
@@ -39,6 +47,7 @@ class GUI{
         frame.getContentPane().add(BorderLayout.NORTH, menuBar);
         
         currentClient = new Cliente();
+        currentClient.nomeTerapeuta = configNomeTerapeuta;
 
         centerPanel = new JPanel();
         frame.getContentPane().add(BorderLayout.CENTER, centerPanel);
@@ -53,6 +62,20 @@ class GUI{
         bottomPanel = bottomPanel();
         frame.getContentPane().add(BorderLayout.SOUTH, bottomPanel);
         
+    }
+
+    public void readConfig() throws FileNotFoundException{
+        File configFile = new File("portais/config.txt");
+        Scanner sc = new Scanner(configFile, "UTF-8");
+        while(sc.hasNextLine()){
+            String tempLine = sc.nextLine();
+            Matcher matcher = Pattern.compile("'(.*)'").matcher(tempLine);
+            if(tempLine.contains("nomeTerapeuta")){
+                if(matcher.find()){
+                    configNomeTerapeuta = matcher.group().replace("'", "");
+                }
+            }
+        }
     }
 
     public void Show(){
@@ -1408,6 +1431,7 @@ class GUI{
         JTextField tempTextField ;
         ArrayList <JTextField> fields= new ArrayList<JTextField>();
         currentClient = new Cliente();
+        currentClient.nomeTerapeuta = configNomeTerapeuta;
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Nome do Cliente:");
@@ -1919,6 +1943,7 @@ class GUI{
 
                 leitura = null;
                 currentClient = new Cliente();
+                currentClient.nomeTerapeuta = configNomeTerapeuta;
 
                 }catch(Exception ex){
                     ex.printStackTrace();

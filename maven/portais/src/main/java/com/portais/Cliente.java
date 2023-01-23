@@ -152,6 +152,5 @@ public class Cliente implements Serializable{
     }
 
     public Cliente(){
-        nomeTerapeuta= "Nome do Terapeuta";
     }
 }
