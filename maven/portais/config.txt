@@ -1,1 +1,2 @@
 nomeTerapeuta: 'Nome do Terapeuta'
+fonteTamanho: '20'

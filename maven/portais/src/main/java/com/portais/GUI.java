@@ -1,5 +1,6 @@
 package com.portais;
 import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -32,6 +33,8 @@ class GUI{
     int offset = 0;
 
     String configNomeTerapeuta;
+    int configFonteTamanho = 12;
+    Font configFonte;
 
     public GUI() throws FileNotFoundException{
         readConfig();
@@ -75,7 +78,15 @@ class GUI{
                     configNomeTerapeuta = matcher.group().replace("'", "");
                 }
             }
+            if(tempLine.contains("fonteTamanho")){
+                if(matcher.find()){
+                    configFonteTamanho = Integer.parseInt(matcher.group().replace("'", ""));
+                }
+            }
         }
+
+        configFonte = new Font("Roboto", Font.PLAIN, configFonteTamanho);
+        sc.close();
     }
 
     public void Show(){
@@ -2264,6 +2275,7 @@ class GUI{
         String decreto = ferramenta.Decreto(tempIndex,currentClient);
         int i=0, j=0 ,k=0;
         JLabel labelDecreto = new JLabel();
+        labelDecreto.setFont(configFonte);
         JButton confirmButton = new JButton("Confirmar");
 
         if(ferramenta.type==4){
@@ -2466,6 +2478,7 @@ class GUI{
 
     public JPanel protocoloPanel(SubFerramenta subFerramenta, ArrayList<Integer> indexArray){
         JLabel labelDecreto = new JLabel();
+        labelDecreto.setFont(configFonte);
         String decreto;
         JButton confirmButton = new JButton("Confirmar");
         ArrayList<Integer> temp = ( ArrayList<Integer>) currentResult.clone();
