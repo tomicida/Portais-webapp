@@ -128,7 +128,35 @@ class GUI{
         m1.add(m14);
         m1.add(m15);
         m1.add(m16);
-        
+
+        JMenu m2 = new JMenu("Decretos");
+        JMenuItem m21 = new JMenuItem("Ativação da Mesa Radionica CQM");
+        m21.addActionListener(e ->decretoWindowAtivação());
+        JMenuItem m22 = new JMenuItem("Decreto de Abertura");
+        m22.addActionListener(e -> decretoWindowAbertura());
+        JMenuItem m23 = new JMenuItem("Decreto de Encerramento");
+        m23.addActionListener(e -> decretoWindowEncerramento());
+        JMenuItem m24 = new JMenuItem("Decreto de Programação de Ferramentas");
+        m24.addActionListener(e -> decretoWindowProgramaçãoFerramentas());
+        JMenuItem m25 = new JMenuItem("Decreto de Programação de Portais");
+        m25.addActionListener(e -> decretoWindowProgramaçãoPortais());
+        JMenuItem m26 = new JMenuItem("Decreto de Programação da Mesa");
+        m26.addActionListener(e -> decretoWindowProgramaçãoMesa());
+        JMenuItem m27 = new JMenuItem("Decreto de Lançamento da Mesa no Campo");
+        m27.addActionListener(e -> decretoWindowLançamentoMesa());
+        JMenuItem m28 = new JMenuItem("Decreto de Ancoragem de Ferramentas");
+        m28.addActionListener(e -> decretoWindowAncoragemFerramentas());
+
+        mb.add(m2);
+        m2.add(m21);
+        m2.add(m22);
+        m2.add(m23);
+        m2.addSeparator();
+        m2.add(m24);
+        m2.add(m25);
+        m2.add(m26);
+        m2.add(m27);
+        m2.add(m28);
 
         return mb;
     }
@@ -1426,6 +1454,196 @@ class GUI{
         return panel;
     }
 
+    public void decretoWindow(String title, String decreto){
+        JFrame decretoWindow = new JFrame(title);
+
+        decretoWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        JLabel decretoLabel = new JLabel("<html><div WIDTH=1000>"+decreto+"</div></html>");
+        decretoLabel.setFont(configFonte);
+        decretoWindow.getContentPane().add(BorderLayout.CENTER,decretoLabel);
+        
+        decretoWindow.pack();
+        decretoWindow.setLocationRelativeTo(null);
+        decretoWindow.setVisible(true);
+    }
+
+    public void decretoWindowAtivação(){
+        String title = "Ativação da Mesa Radionica CQM";
+        String decreto = "EU SOU (nome do terapeuta), a Supraconsciência EU SOU em toda a minha divindade\r\n" + //
+                "revelada na da conexão com a Mesa Radiônica de Cura Quântica Multidimensional e suas\r\n" + //
+                "energias. Desse momento em diante a minha consciência escolhe se conectar com a minha\r\n" + //
+                "consciência Divina, para que a sabedoria e o conhecimento fluam naturalmente, e, dessa\r\n" + //
+                "forma, eu possa cumprir a minha missão! Eu Sou ativar a conexão com a Divina presença\r\n" + //
+                "de (nome do terapeuta) e apelo à egrégora do Arcanjo Miguel, para que sele e proteja\r\n" + //
+                "completamente o trabalho no propósito de cura. Agora apelo ao Círculo de Segurança das\r\n" + //
+                "dimensões mais elevadas para que selem, protejam e aumentem completamente o escudo\r\n" + //
+                "de Miguel, assim como para que removam qualquer coisa que não seja de natureza divina\r\n" + //
+                "e que exista atualmente dentro deste campo. Apelo aos Mestres Ascensionados e a nossos\r\n" + //
+                "assistentes Crísticos e Extraplanetários, para que removam e dissolvam completamente,\r\n" + //
+                "todos e cada um dos implantes e suas energias semeadas, parasitas, armas espirituais e\r\n" + //
+                "dispositivos de limitação auto-impostos, tanto conhecidos como desconhecidos para que\r\n" + //
+                "com a minha cura eu possa facilitar a cura do Outro. Aciono a Matriz Morfogenética para\r\n" + //
+                "que daqui em diante, com toda a clareza do raio amarelo, possa desempenhar e intuir a\r\n" + //
+                "melhor resposta para o meu consulente e o raio verde, com o Mestre Hilarion e a presença\r\n" + //
+                "do Arcanjo Rafael, para ativar e amplificar no meu campo as frequências de Cura e\r\n" + //
+                "Regeneração de Harmonia e Equilíbrio. Uma vez completado isso, apelo pela completa\r\n" + //
+                "restauração e reparação do campo de energia original, infundido com a energia dourada\r\n" + //
+                "de da Luz Crística de sexta Dimensão. Me declaro, aqui e agora, pronto e a serviço da\r\n" + //
+                "Egrégora da Cura Quântica Multidimensional.";
+
+        decreto = decreto.replace("(nome do terapeuta)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowAbertura(){
+        String title = "Decreto de Abertura";
+        String decreto = "Na divina presença do Eu Sou de (nome do terapeuta), evoco a frequência da Egrégora da\r\n" + //
+                "Cura Quântica Multidimensional para que me assista, proteja e intua na tomada de decisão\r\n" + //
+                "em relação ao trabalho aqui iniciado. Com a proteção do Arcanjo Miguel, a sabedoria do\r\n" + //
+                "Arcanjo Jofiel e a cura do Arcanjo Rafael, ativo todos os portais e todas as ferramentas da\r\n" + //
+                "Mesa Radionica de Cura Quantica Multidimensional para que pulsem com a Flor da Vida\r\n" + //
+                "na sintonização do campo morfogenético do consulente que aqui se apresenta. Declaro\r\n" + //
+                "assim aberta a sessão.";
+
+        decreto = decreto.replace("(nome do terapeuta)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowEncerramento(){
+        String title = "Decreto de Encerramento";
+        String decreto = "Na divina presença do Eu Sou de (nome do terapeuta), evoco a excelsa frequência de\r\n" + //
+                "Metatrão para que entregue todas as frequências de cura aqui acionadas através das\r\n" + //
+                "ferramentas e portais da Mesa Radionica de Cura Quântica Multidimensional no Grande\r\n" + //
+                "Campo Mórfico. Que pulsem na medida certa e na quantidade exata para o bem maior de\r\n" + //
+                "todos os intervenientes em todos os planos e todas as dimensões. Selo e entrego o trabalho\r\n" + //
+                "de (nome do consulente), harmonizado e equilibrado para que encontre o seu propósito e\r\n" + //
+                "declaro encerrada a sessão.";
+
+        decreto = decreto.replace("(nome do terapeuta)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+        decreto = decreto.replace("(nome do consulente)", "<b style=\"color:blue;\">"+currentClient.nome+"</b>");
+
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowProgramaçãoFerramentas(){
+        String title = "Decreto de Programação de Ferramentas";
+        String decreto = "Ativando a divina presença do EU SOU de (nome do programador), acedo ao campo\r\n" + //
+                "quântico programando a ferramenta (nome da ferramenta) e todas as suas tabelas de ação\r\n" + //
+                "para que ao ser acionada possa enviar o sinal de frequência de cura, dentro do que é divino\r\n" + //
+                "e atuando diretamente no que eu agora decreto como testemunho, onde manifestarei a\r\n" + //
+                "frequência pessoal do beneficiário através do seu nome completo, data de nascimento e\r\n" + //
+                "local de residência, assim como o tema a equilibrar e todos os subtemas em benefício do\r\n" + //
+                "mesmo. Ancoro na frequência da programação quântica que lhe é provida, esta ferramenta\r\n" + //
+                "ao Portal (nome do portal). Pulso em sintonia com a harmonia dos 1000Hz, expandindo a\r\n" + //
+                "ferramenta (nome da ferramenta) no Portal (nome do portal) por todos os campos\r\n" + //
+                "morfogenéticos que se lhe ligarem e em expansão, todos os campos mórficos até à 12ª\r\n" + //
+                "Dimensão, deste ou de outros Universos. Pulso, pulso, pulso, ancoro, ancoro, ancoro,\r\n" + //
+                "expando, expando, expando. Na divina presença do EU SOU de (nome do programador),\r\n" + //
+                "declaro ancorada a ferramenta (nome da ferramenta) no Portal (nome do portal).";
+
+        decreto = decreto.replace("(nome do programador)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+        decreto = decreto.replace("(nome da ferramenta)", "<b style=\"color:red;\">(nome da ferramenta)</b>");
+        decreto = decreto.replace("(nome do portal)", "<b style=\"color:red;\">(nome do portal)</b>");
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowProgramaçãoPortais(){
+        String title = "Decreto de Programação de Portais";
+        String decreto = "Ativando a divina presença do EU SOU de (nome do programador), acedo ao campo\r\n" + //
+                "quântico programando Portal (nome do portal) e todas as suas ferramentas de ação para\r\n" + //
+                "que ao ser acionado possa enviar o sinal de frequência de cura, dentro do que é divino e\r\n" + //
+                "atuando diretamente no que eu agora decreto como testemunho, onde manifestarei a\r\n" + //
+                "frequência pessoal do beneficiário através do seu nome completo, data de nascimento e\r\n" + //
+                "local de residência, assim como o tema a equilibrar e todos os subtemas em benefício do\r\n" + //
+                "mesmo. Ancoro na frequência da programação quântica que lhe é provida, este Portal\r\n" + //
+                "(nome do portal). Pulso em sintonia com a harmonia dos 1000Hz, expandindo o Portal\r\n" + //
+                "(nome do portal) e todas as ferramentas que lhe estão conectadas, por todos os campos\r\n" + //
+                "morfogenéticos que se lhe ligarem e em expansão, todos os campos mórficos até à 12ª\r\n" + //
+                "Dimensão, deste ou de outros Universos. Pulso, pulso, pulso, ancoro, ancoro, ancoro,\r\n" + //
+                "expando, expando, expando. Na divina presença do EU SOU de (nome do programador),\r\n" + //
+                "declaro ancorado o Portal (nome do portal) na Mesa Radionica (nome da mesa).";
+
+        decreto = decreto.replace("(nome do programador)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+        decreto = decreto.replace("(nome do portal)", "<b style=\"color:red;\">(nome do portal)</b>");
+                decreto = decreto.replace("(nome da mesa)", "<b style=\"color:red;\">(nome da mesa)</b>");
+
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowProgramaçãoMesa(){
+        String title = "Decreto de Programação da Mesa";
+        String decreto = "Ativando a divina presença do EU SOU de (nome do programador), acedo ao campo\r\n" + //
+                "quântico programando a Mesa Radionica (nome da mesa), todos os seus portais e todas\r\n" + //
+                "as suas ferramentas de ação para que ao ser acionada possa enviar o sinal de frequência\r\n" + //
+                "de cura, dentro do que é divino e atuando diretamente no que eu agora decreto como\r\n" + //
+                "testemunho, onde manifestarei a frequência pessoal do beneficiário através do seu nome\r\n" + //
+                "completo, data de nascimento e local de residência, assim como o tema a equilibrar e todos\r\n" + //
+                "os subtemas em benefício do mesmo. Ancoro na frequência da programação quântica que\r\n" + //
+                "lhe é provida, esta Mesa Radionica (nome da mesa). Pulso em sintonia com a harmonia\r\n" + //
+                "dos 1000Hz, expandindo a Mesa Radionica (nome da mesa), todos os portais e todas as\r\n" + //
+                "ferramentas que lhe estão conectadas, por todos os campos morfogenéticos que se lhe\r\n" + //
+                "ligarem e em expansão, todos os campos mórficos até à 12ª Dimensão, deste ou de outros\r\n" + //
+                "Universos. Pulso, pulso, pulso, ancoro, ancoro, ancoro, expando, expando, expando. Na\r\n" + //
+                "divina presença do EU SOU de (nome do programador), declaro ancorada a Mesa\r\n" + //
+                "Radionica (nome da mesa) na facilitação da cura de todas as anomalias do que designo\r\n" + //
+                "como testemunho.";
+
+        decreto = decreto.replace("(nome do programador)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+        decreto = decreto.replace("(nome da mesa)", "<b style=\"color:red;\">(nome da mesa)</b>");
+
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowLançamentoMesa(){
+        String title = "Decreto de Lançamento da Mesa no Campo";
+        String decreto = "Ativando a divina presença do EU SOU de (nome do programador), acedo ao campo\r\n" + //
+                "quântico programando a Mesa Radionica (nome da mesa), todos os seus portais e todas\r\n" + //
+                "as suas ferramentas de ação para que ao ser acionada possa enviar o sinal de frequência\r\n" + //
+                "de cura, dentro do que é divino e atuando diretamente no que eu agora decreto como\r\n" + //
+                "testemunho, onde manifestarei a frequência pessoal do beneficiário através do seu nomecompleto, data de nascimento e local de residência, assim como o tema a equilibrar e todos\r\n" + //
+                "os subtemas em benefício do mesmo. Ancoro na frequência da programação quântica que\r\n" + //
+                "lhe é provida, esta Mesa Radionica (nome da mesa). Pulso em sintonia com a harmonia\r\n" + //
+                "dos 1000Hz, expandindo a Mesa Radionica (nome da mesa), todos os portais e todas as\r\n" + //
+                "ferramentas que lhe estão conectadas, por todos os campos morfogenéticos que se lhe\r\n" + //
+                "ligarem e em expansão, todos os campos mórficos até à 12ª Dimensão, deste ou de outros\r\n" + //
+                "Universos. Pulso, pulso, pulso, ancoro, ancoro, ancoro, expando, expando, expando. Na\r\n" + //
+                "divina presença do EU SOU de (nome do programador), declaro ancorada a Mesa\r\n" + //
+                "Radionica (nome da mesa) na egrégora do nosso planeta Terra, no nosso Sistema Solar,\r\n" + //
+                "na nossa galáxia, sob a influência do Grande Sol Central de Alcione, da primeira à décima\r\n" + //
+                "segunda dimensão e em expansão a todos os Universos onde se cruze a influência do\r\n" + //
+                "Grande Campo Mórfico, de todas as Harmonias e todas as Sincronicidades.";
+
+        decreto = decreto.replace("(nome do programador)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+        decreto = decreto.replace("(nome da mesa)", "<b style=\"color:red;\">(nome da mesa)</b>");
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowAncoragemFerramentas(){
+        String title = "Decreto de Ancoragem de Ferramentas";
+        String decreto = "Na Divina Presença do Eu Sou de (nome do terapeuta) eu ancoro na Mesa Radiônica\r\n" + //
+                "Quântica Multidimensional a ferramenta (identificação da ferramenta) com o número\r\n" + //
+                "(número na tabela de identificação) para que sirva de extensão ao propósito da facilitação\r\n" + //
+                "da Cura no Portal (Tipo de Portal). Fixo e ancoro, pulsando a frequência de onda violeta e\r\n" + //
+                "branca, fixando os 700Hz e expandindo para os 1000Hz. Declaro ancorada a (identificação da ferramenta)\r\n" + //
+                " na Mesa Radiônica Quântica Multidimensional, assim como todas as\r\n" + //
+                "egrégoras que lhe estão anexas.";
+
+        decreto = decreto.replace("(nome do terapeuta)", "<b style=\"color:blue;\">"+configNomeTerapeuta+"</b>");
+        decreto = decreto.replace("(identificação da ferramenta)", "<b style=\"color:red;\">(identificação da ferramenta)</b>");
+        decreto = decreto.replace("(Tipo de Portal)", "<b style=\"color:red;\">(Tipo de Portal)</b>");
+        decreto = decreto.replace("(número na tabela de identificação)", "<b style=\"color:red;\">(número na tabela de identificação)</b>");
+
+
+        decretoWindow(title, decreto);
+    }
+
     public void switch1to2(JPanel container,JPanel newPanel, String string){
         container.removeAll();
         container.add(new JLabel(string));
@@ -1739,7 +1957,7 @@ class GUI{
 
         return bP;
     }
-
+ 
     public void sidePanel(){
         JPanel panel = new JPanel(new GridLayout(25,1));
 
