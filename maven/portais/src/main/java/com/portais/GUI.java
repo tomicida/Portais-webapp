@@ -136,6 +136,7 @@ class GUI{
         m22.addActionListener(e -> decretoWindowAbertura());
         JMenuItem m23 = new JMenuItem("Decreto de Encerramento");
         m23.addActionListener(e -> decretoWindowEncerramento());
+
         JMenuItem m24 = new JMenuItem("Decreto de Programação de Ferramentas");
         m24.addActionListener(e -> decretoWindowProgramaçãoFerramentas());
         JMenuItem m25 = new JMenuItem("Decreto de Programação de Portais");
@@ -147,6 +148,12 @@ class GUI{
         JMenuItem m28 = new JMenuItem("Decreto de Ancoragem de Ferramentas");
         m28.addActionListener(e -> decretoWindowAncoragemFerramentas());
 
+        JMenuItem m29 = new JMenuItem("Decreto de Conexão à Mesa Radionica CQM");
+        m29.addActionListener(e -> decretoWindowConexãoMesa());
+        JMenuItem m210 = new JMenuItem("Decreto de Conexão do Consulente à Mesa Radionica CQM");
+        m210.addActionListener(e -> decretoWindowConexãoMesaConsulente());
+        
+
         mb.add(m2);
         m2.add(m21);
         m2.add(m22);
@@ -157,6 +164,9 @@ class GUI{
         m2.add(m26);
         m2.add(m27);
         m2.add(m28);
+        m2.addSeparator();
+        m2.add(m29);
+        m2.add(m210);
 
         return mb;
     }
@@ -169,6 +179,7 @@ class GUI{
 
             if (result == JFileChooser.APPROVE_OPTION){
                 leitura = Leitura.fromFile(fileChooser.getSelectedFile().getPath().toString());
+                currentClient = leitura.cliente;
                 replacePanel(editPanel());
             } 
             
@@ -1640,6 +1651,30 @@ class GUI{
         decreto = decreto.replace("(Tipo de Portal)", "<b style=\"color:red;\">(Tipo de Portal)</b>");
         decreto = decreto.replace("(número na tabela de identificação)", "<b style=\"color:red;\">(número na tabela de identificação)</b>");
 
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowConexãoMesa(){
+        String title = "Decreto de Conexão à Mesa Radionica CQM";
+        String decreto = "Por Decreto da MINHA Presença Divina, do Equilíbrio, da Vibração, do Entrelaçamento\r\n" + //
+                "Quântico, da Coerência e Hamonia e da Sincronicidade, ordeno e invoco a criação ativa\r\n" + //
+                "programando Agora a minha conexão à Mesa Radionica CQM, para um alcance pleno a\r\n" + //
+                "todos os corpos sutis, em todos os níveis multidimensionais, em todo o tempo e todo o\r\n" + //
+                "espaço. Conectando, conectanto, conectando.";
+
+        decretoWindow(title, decreto);
+    }
+
+    public void decretoWindowConexãoMesaConsulente(){
+        String title = "Decreto de Conexão do Consulente à Mesa Radionica CQM";
+        String decreto = "Por Decreto da MINHA Presença Divina, do Equilíbrio, da Vibração, do Entrelaçamento\r\n" + //
+                "Quântico, da Coerência e Hamonia e da Sincronicidade, ordeno e invoco a conexão de\r\n" + //
+                "(nome do consulente) programando Agora a conexão à Mesa Radionica CQM, para um\r\n" + //
+                "alcance pleno a todos os corpos sutis, em todos os níveis multidimensionais, em todo o\r\n" + //
+                "tempo e todo o espaço. Conectando, conectanto, conectando.";
+
+        decreto = decreto.replace("(nome do consulente)", "<b style=\"color:blue;\">"+currentClient.nome+"</b>");
 
         decretoWindow(title, decreto);
     }
