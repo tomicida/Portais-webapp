@@ -11,6 +11,8 @@ import javax.swing.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -32,12 +34,13 @@ class GUI{
     int maxPage = 0;
     int offset = 0;
 
-    String configNomeTerapeuta;
+    String configNomeTerapeuta = "NomeDoTerapeuta";
     int configFonteTamanho = 12;
     Font configFonte;
 
     public GUI() throws FileNotFoundException{
         readConfig();
+        writeConfig();
 
         root = new TreeRoot();
 
@@ -67,26 +70,48 @@ class GUI{
         
     }
 
-    public void readConfig() throws FileNotFoundException{
-        File configFile = new File("portais/config.txt");
-        Scanner sc = new Scanner(configFile, "UTF-8");
-        while(sc.hasNextLine()){
-            String tempLine = sc.nextLine();
-            Matcher matcher = Pattern.compile("'(.*)'").matcher(tempLine);
-            if(tempLine.contains("nomeTerapeuta")){
-                if(matcher.find()){
-                    configNomeTerapeuta = matcher.group().replace("'", "");
+    public void readConfig(){
+        try{
+            File configFile = new File("portais/config.txt");
+            Scanner sc = new Scanner(configFile, "UTF-8");
+            while(sc.hasNextLine()){
+                String tempLine = sc.nextLine();
+                Matcher matcher = Pattern.compile("'(.*)'").matcher(tempLine);
+                if(tempLine.contains("nomeTerapeuta")){
+                    if(matcher.find()){
+                        configNomeTerapeuta = matcher.group().replace("'", "");
+                    }
+                }
+                if(tempLine.contains("fonteTamanho")){
+                    if(matcher.find()){
+                        configFonteTamanho = Integer.parseInt(matcher.group().replace("'", ""));
+                    }
                 }
             }
-            if(tempLine.contains("fonteTamanho")){
-                if(matcher.find()){
-                    configFonteTamanho = Integer.parseInt(matcher.group().replace("'", ""));
-                }
-            }
+
+            configFonte = new Font("Roboto", Font.PLAIN, configFonteTamanho);
+            sc.close();
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void writeConfig(){
+        
+        try{
+            File configFile = new File("portais/config.txt");
+            configFile.createNewFile();
+
+            FileWriter fileWriter = new FileWriter("portais/config.txt");
+            fileWriter.write("nomeTerapeuta: '"+configNomeTerapeuta+"'\n");
+            fileWriter.write("fonteTamanho: '"+configFonteTamanho+"'");
+            fileWriter.close();
+        }
+        catch(IOException e){
+            e.printStackTrace();
         }
 
-        configFonte = new Font("Roboto", Font.PLAIN, configFonteTamanho);
-        sc.close();
     }
 
     public void Show(){
