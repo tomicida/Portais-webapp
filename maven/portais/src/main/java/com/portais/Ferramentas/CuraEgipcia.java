@@ -60,7 +60,7 @@ public class CuraEgipcia extends Ferramenta{
         this.ações.add("Ativando YAVITH para limpar, harmonizar e proteger o campo mórfico da relação.");
         this.ações.add("Ativando YANKIN para realizar a análise do DNA dos corpos sutis dos intervenientes e procurando ressonâncias em discordância e promover o evento necessário para a saúde de todos.");
         this.ações.add("Ativando YAM YOM e inserindo no campo morfogenético dos intervenientes formas pensamento que promovam uma relação saudável;");
-        this.ações.add("Ativando YALOT para promover todas as anomalias estruturais em todos os planos da relação.");
+        this.ações.add("Ativando YALOT para remover todas as anomalias estruturais em todos os planos da relação.");
         this.ações.add("Ativando UTAI FUMIRE para que o campo vibracional de um evento significativo próximo seja de prosperidade e acima de 540Hz.");
         this.ações.add("Ativando SKEE para beneficiar a materialização do propósito da relação");
         this.ações.add("Ativando SWEET para ancorar a energia feminina na relação na medida certa e quantidade exata. Alinhando o chakra cardíaco doa intervenientes no propósito.");
