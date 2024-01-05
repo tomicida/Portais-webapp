@@ -3,6 +3,7 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.awt.event.ActionEvent;
 
@@ -73,28 +74,32 @@ class GUI{
     public void readConfig(){
         try{
             File configFile = new File("portais/config.txt");
-            Scanner sc = new Scanner(configFile, "UTF-8");
+            Scanner sc = new Scanner(configFile, "ISO-8859-1");
             while(sc.hasNextLine()){
                 String tempLine = sc.nextLine();
                 Matcher matcher = Pattern.compile("'(.*)'").matcher(tempLine);
                 if(tempLine.contains("nomeTerapeuta")){
                     if(matcher.find()){
-                        configNomeTerapeuta = matcher.group().replace("'", "");
+                        setConfigNomeTerapeuta(matcher.group().replace("'", ""));
                     }
                 }
                 if(tempLine.contains("fonteTamanho")){
                     if(matcher.find()){
-                        configFonteTamanho = Integer.parseInt(matcher.group().replace("'", ""));
+                        setConfigFontSize(matcher.group().replace("'", ""));
                     }
                 }
             }
 
-            configFonte = new Font("Roboto", Font.PLAIN, configFonteTamanho);
+            updateFont();
             sc.close();
         }
         catch (FileNotFoundException e){
             e.printStackTrace();
         }
+    }
+
+    public void updateFont(){
+        configFonte = new Font("Roboto", Font.PLAIN, configFonteTamanho);
     }
 
     public void writeConfig(){
@@ -144,8 +149,10 @@ class GUI{
         m14.addActionListener(e -> new GeneratePDF(leitura, root));
         JMenuItem m15 = new JMenuItem("Histórico");
         m15.addActionListener(e -> replacePanel(historyPanel()));
-        JMenuItem m16 = new JMenuItem("Sair");
-        m16.addActionListener(e -> Close());
+        JMenuItem m16 = new JMenuItem("Configurações");
+        m16.addActionListener(e -> configEditWindow());
+        JMenuItem m17 = new JMenuItem("Sair");
+        m17.addActionListener(e -> Close());
         mb.add(m1);
         m1.add(m11);
         m1.add(m12);
@@ -153,6 +160,7 @@ class GUI{
         m1.add(m14);
         m1.add(m15);
         m1.add(m16);
+        m1.add(m17);
 
         JMenu m2 = new JMenu("Decretos");
         JMenuItem m21 = new JMenuItem("Ativação da Mesa Radionica CQM");
@@ -195,6 +203,75 @@ class GUI{
 
         return mb;
     }
+
+    private void configEditWindow() {
+        JFrame configWindow = new JFrame("Configurações");
+        configWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        JPanel biggestPanel = new JPanel(new BorderLayout());
+        JPanel choicesPanel = new JPanel(new GridLayout(2,1));
+        JPanel buttonsPanel = new JPanel(new GridLayout(1,2));
+
+        JPanel terapeutaNomePanel = new JPanel(new GridLayout(1,2));
+        JLabel terapeutaNomeLabel = new JLabel("Nome do Terapeuta");
+        JTextField terapeutaNomeField = new JTextField(configNomeTerapeuta);
+        terapeutaNomePanel.add(terapeutaNomeLabel);
+        terapeutaNomePanel.add(terapeutaNomeField);
+
+        JPanel fontSizePanel = new JPanel(new GridLayout(1,2));
+        JLabel fontSizeLabel = new JLabel("Tamanho do Texto");
+        JTextField fontSizeField = new JTextField("" +configFonteTamanho);
+        fontSizePanel.add(fontSizeLabel);
+        fontSizePanel.add(fontSizeField);
+
+        choicesPanel.add(terapeutaNomePanel);
+        choicesPanel.add(fontSizePanel);
+
+        JButton cancelarButton = new JButton("Cancelar");
+        cancelarButton.addActionListener(e -> configWindow.dispatchEvent(new WindowEvent(configWindow,  WindowEvent.WINDOW_CLOSING)));
+        JButton gravarButton = new JButton("Gravar");
+        gravarButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setConfigNomeTerapeuta(terapeutaNomeField.getText());
+                setConfigFontSize(fontSizeField.getText());
+                writeConfig();
+                configWindow.dispatchEvent(new WindowEvent(configWindow,  WindowEvent.WINDOW_CLOSING));
+            }
+        });
+
+        buttonsPanel.add(cancelarButton);
+        buttonsPanel.add(gravarButton);
+
+        biggestPanel.add(choicesPanel,BorderLayout.CENTER);
+        biggestPanel.add(buttonsPanel,BorderLayout.SOUTH);
+
+        configWindow.add(biggestPanel);
+
+        configWindow.pack();
+        configWindow.setLocationRelativeTo(null);
+        configWindow.setVisible(true);
+    }
+
+    private void setConfigNomeTerapeuta(String text) {
+        System.out.println("set configNomeTerapeuta: "+text);
+        if(text != null && text.length()>0)
+            configNomeTerapeuta = text;
+    }
+
+    private void setConfigFontSize(String text) {
+        System.out.println("set configFontSize: "+text);
+
+        int newSize = (int) Integer.parseInt(text);
+
+        System.out.println(""+newSize);
+
+        configFonteTamanho = newSize;
+        updateFont();
+    }
+
+    
 
     public void openFile(){
         try {
