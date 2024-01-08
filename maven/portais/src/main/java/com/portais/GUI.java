@@ -671,10 +671,10 @@ class GUI{
             smallers1.add(smaller1);
             smaller2 = new JPanel();
             smallers2.add(smaller2);
-            textLabel = new JLabel(""+leitura.cliente.influenNegExt1);
+            textLabel = new JLabel(""+leitura.cliente.influenNegInt1);
             labels.add(textLabel);
             smaller1.add(textLabel);
-            textField = new JTextField(""+leitura.cliente.influenNegExt1, 4);
+            textField = new JTextField(""+leitura.cliente.influenNegInt1, 4);
             textFields.add(textField);
             smaller2.add(textField);
             button = new JButton(new ImageIcon(editPicture));
@@ -684,8 +684,8 @@ class GUI{
             button.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    leitura.cliente.influenNegExt1 = Integer.parseInt(textFields.get(11).getText());
-                    labels.get(11).setText(""+leitura.cliente.influenNegExt1);
+                    leitura.cliente.influenNegInt1 = Integer.parseInt(textFields.get(11).getText());
+                    labels.get(11).setText(""+leitura.cliente.influenNegInt1);
                     switch1to2(smalls.get(11), smallers1.get(11),"Influências Neg. Int./1ª");
                     leitura.Save();
                 }
@@ -924,10 +924,10 @@ class GUI{
             smallers1.add(smaller1);
             smaller2 = new JPanel();
             smallers2.add(smaller2);
-            textLabel = new JLabel(""+leitura.cliente.influenNegExt2);
+            textLabel = new JLabel(""+leitura.cliente.influenNegInt2);
             labels.add(textLabel);
             smaller1.add(textLabel);
-            textField = new JTextField(""+leitura.cliente.influenNegExt2, 4);
+            textField = new JTextField(""+leitura.cliente.influenNegInt2, 4);
             textFields.add(textField);
             smaller2.add(textField);
             button = new JButton(new ImageIcon(editPicture));
@@ -937,8 +937,8 @@ class GUI{
             button.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    leitura.cliente.influenNegExt2 = Integer.parseInt(textFields.get(19).getText());
-                    labels.get(19).setText(""+leitura.cliente.influenNegExt2);
+                    leitura.cliente.influenNegInt2 = Integer.parseInt(textFields.get(19).getText());
+                    labels.get(19).setText(""+leitura.cliente.influenNegInt2);
                     switch1to2(smalls.get(19), smallers1.get(19),"Influências Neg. Int./2ª");
                     leitura.Save();
                 }
@@ -1274,10 +1274,10 @@ class GUI{
             smallers1.add(smaller1);
             smaller2 = new JPanel();
             smallers2.add(smaller2);
-            textLabel = new JLabel(""+leitura.cliente.chakraCardíaco1);
+            textLabel = new JLabel(""+leitura.cliente.chakraCardíaco2);
             labels.add(textLabel);
             smaller1.add(textLabel);
-            textField = new JTextField(""+leitura.cliente.chakraCardíaco1, 4);
+            textField = new JTextField(""+leitura.cliente.chakraCardíaco2, 4);
             textFields.add(textField);
             smaller2.add(textField);
             button = new JButton(new ImageIcon(editPicture));
@@ -2124,7 +2124,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Plano Físico:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.planoFisico2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2132,7 +2132,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Plano Mental:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.planoMental2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2140,7 +2140,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Plano Emocional:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.planoEmocional2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2148,7 +2148,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Plano Espiritual:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.planoEspiritual2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2156,7 +2156,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Plano Profissional:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.planoProfissional2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2164,7 +2164,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Plano Financeiro:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.planoFinanceiro2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2172,7 +2172,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Influências Neg. Ext:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.influenNegExt2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2180,7 +2180,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Influências Neg. Int.:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.influenNegInt2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2192,7 +2192,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Coronário:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraCoronário2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2200,7 +2200,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Frontal:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraFrontal2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2208,7 +2208,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Laríngeo:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraLaríngeo2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2216,7 +2216,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Cardíaco:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraCardíaco2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2224,7 +2224,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Solar:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraSolar2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2232,7 +2232,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Umbilical:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraUmbilical2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2240,7 +2240,7 @@ class GUI{
 
         tempPanel = new JPanel(new GridLayout(2,1));
         tempLabel = new JLabel("Chakra Raiz:");
-        tempTextField = new JTextField(20);
+        tempTextField = new JTextField(""+currentClient.chakraRaiz2);
         fields.add(tempTextField);
         tempPanel.add(tempLabel);
         tempPanel.add(tempTextField);
@@ -2251,7 +2251,7 @@ class GUI{
         panel = new JPanel();
         tempPanel = new JPanel(new BorderLayout());
         tempLabel = new JLabel("Observações:");
-        tempTextField = new JTextField(40);
+        tempTextField = new JTextField(""+leitura.observations,40);
         fields.add(tempTextField);
         tempPanel.add(tempLabel,BorderLayout.NORTH);
         tempPanel.add(tempTextField,BorderLayout.CENTER);
