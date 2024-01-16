@@ -227,7 +227,7 @@ public class NomesDeDeus72 extends SubFerramenta{
         this.ações.add("Ative a Capacidade da Negociação. Purifique seu espírito e ambientes limpando resíduos energéticos");
 
 
-        this.ownDecreto = "Eu, (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, chakras e corpos sutis que se encontram afetados pela anomalia de (anomalia deus) para que se harmonizaem, equilibrem e criem impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu ativo agora (nome de deus) para que (ação), promovendo a harmonização de todos os chakras e todos os campos sutis. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.ownDecreto = "Eu, (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, chakras e corpos sutis que se encontram afetados pela anomalia de (anomalia deus) para que se harmonizaem, equilibrem e criem impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu ativo agora (nome de deus) para que (ação), promovendo a harmonização de todos os chakras e todos os corpos sutis. Pulsa no campo, pulsa no campo, pulsa no campo.";
         
     }
 }
