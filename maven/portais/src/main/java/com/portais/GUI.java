@@ -2675,15 +2675,19 @@ class GUI{
             JPanel smaller= new JPanel(new GridLayout(4,1));
 
             JLabel label = new JLabel("Coordenadas Portal Ambientes: "+(i)+ " - " + ferramenta.subFerramentas.get(0).resultados.get(i-1));
+            label.setFont(configFonte);
             smaller.add(label);
 
             label = new JLabel("Coordenadas Portal Relacionamentos: "+(j)+ " - " + ferramenta.subFerramentas.get(1).resultados.get(j-1));
+            label.setFont(configFonte);
             smaller.add(label);
 
             label = new JLabel("Coordenadas Portal Eu Interior: "+(k)+ " - " + ferramenta.subFerramentas.get(2).resultados.get(k-1));
+            label.setFont(configFonte);
             smaller.add(label);
 
             label = new JLabel("A Soma dos Três Portais: "+(temp.get(8))+ " - " + ferramenta.subFerramentas.get(3).resultados.get(temp.get(8)-1));
+            label.setFont(configFonte);
             smaller.add(label);
 
             centerJPanel.add(smaller,BorderLayout.NORTH);
@@ -2713,30 +2717,40 @@ class GUI{
                         temp.set(3, Integer.parseInt(numberField.getText()));
                         temp.set(4,unitBox.getSelectedIndex());
                         String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" "+unitBox.getSelectedItem()+" </b>";
-                        labelDecreto.setText("<html><div WIDTH=1000>" + ferramenta.Decreto(index, currentClient).replace("<b style=\"color:red;\">(medir no relógio de mensuração) </b>", newD) + "</div></html>");
+                        labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(index, currentClient).replace("<b style=\"color:red;\">(medir no relógio de mensuração) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }
                 });
                 topPanel.add(topButton,BorderLayout.SOUTH);
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             }else if(ferramenta.id == 4){
-                topPanel = new JPanel(new GridLayout(multiResultsArray.size()+1,5));
-                topPanel.add(new JLabel());
-                topPanel.add(new JLabel("Significado"));
-                topPanel.add(new JLabel("Significado Reverso"));
-                topPanel.add(new JLabel("Ativação na mesa"));
-                topPanel.add(new JLabel("Chakras Associados"));
+                topPanel = new JPanel();
+                topPanel.setLayout(new BoxLayout(topPanel,BoxLayout.Y_AXIS));
+                JPanel setPanel = new JPanel(new GridLayout(1,5));
+                setPanel.add(new JLabel());
+                setPanel.add(new JLabel("Significado"));
+                setPanel.add(new JLabel("Significado Reverso"));
+                setPanel.add(new JLabel("Ativação na mesa"));
+                setPanel.add(new JLabel("Chakras Associados"));
+                topPanel.add(setPanel);
                 for(int result = 0;result<multiResultsArray.size() ;result++){
+                    setPanel = new JPanel(new GridLayout(1,5));
                     JLabel label = new JLabel(ferramenta.resultados.get(multiResultsArray.get(result)));
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel("<html><div WIDTH=200>"+ferramenta.resultados2.get(multiResultsArray.get(result))+"</div></html>");
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel("<html><div WIDTH=200>"+ferramenta.resultados2.get(multiResultsArray.get(result)+ferramenta.resultados.size())+"</div></html>");
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel(ferramenta.ações.get(multiResultsArray.get(result)));
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel(ferramenta.funções.get(multiResultsArray.get(result)));
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
+                    topPanel.add(setPanel);
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             }
@@ -2769,7 +2783,7 @@ class GUI{
                         temp.set(5, Integer.parseInt(numberField3.getText()));
                         temp.set(6, Integer.parseInt(numberField4.getText()));
                         String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" vezes ao dia, durante o periodo de "+numberField2.getText()+" dias, "+numberField3.getText()+" semanas, "+numberField4.getText()+" meses </b>";
-                        labelDecreto.setText("<html><div WIDTH=1000>" + ferramenta.Decreto(index, currentClient).replace("<b style=\"color:red;\">(x vezes ao dia) </b> durante o periodo de <b style=\"color:red;\">(dias, semanas, meses) </b>", newD) + "</div></html>");
+                        labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(index, currentClient).replace("<b style=\"color:red;\">(x vezes ao dia) </b> durante o periodo de <b style=\"color:red;\">(dias, semanas, meses) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }
                 });
@@ -2782,7 +2796,7 @@ class GUI{
             decreto = ferramenta.Decreto(multiResultsArray, currentClient);
 
         labelDecreto.setSize(1000, 700);
-        labelDecreto.setText("<html><div WIDTH=1000>"+decreto+"</div></html>");
+        labelDecreto.setText("<html><div WIDTH=1600>"+decreto+"</div></html>");
         centerJPanel.add(labelDecreto,BorderLayout.CENTER);
 
         panel.add(centerJPanel,BorderLayout.CENTER);
@@ -2872,23 +2886,33 @@ class GUI{
         JPanel topPanel;
         if (subFerramenta.mainFerramenta.portal.id == 2){
             if(subFerramenta.mainFerramenta.id == 4 && subFerramenta.prevResult=="Arcanos Maiores"){
-                topPanel = new JPanel(new GridLayout(multiResultsArray.size()+1,5));
-                topPanel.add(new JLabel());
-                topPanel.add(new JLabel("Significado"));
-                topPanel.add(new JLabel("Significado Reverso"));
-                topPanel.add(new JLabel("Ativação na mesa"));
-                topPanel.add(new JLabel("Chakras Associados"));
+                topPanel = new JPanel();
+                topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
+                JPanel setPanel = new JPanel(new GridLayout(1,5));
+                setPanel.add(new JLabel());
+                setPanel.add(new JLabel("Significado"));
+                setPanel.add(new JLabel("Significado Reverso"));
+                setPanel.add(new JLabel("Ativação na mesa"));
+                setPanel.add(new JLabel("Chakras Associados"));
+                topPanel.add(setPanel);
                 for(int result = 0;result<multiResultsArray.size() ;result++){
+                    setPanel = new JPanel(new GridLayout(1,5));
                     JLabel label = new JLabel(subFerramenta.resultados.get(multiResultsArray.get(result)));
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel("<html><div WIDTH=200>"+subFerramenta.resultados2.get(multiResultsArray.get(result))+"</div></html>");
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel("<html><div WIDTH=200>"+subFerramenta.resultados2.get(multiResultsArray.get(result)+subFerramenta.resultados.size())+"</div></html>");
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel(subFerramenta.ações.get(multiResultsArray.get(result)));
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
                     label = new JLabel(subFerramenta.funções.get(multiResultsArray.get(result)));
-                    topPanel.add(label);
+                    label.setFont(configFonte);
+                    setPanel.add(label);
+                    topPanel.add(setPanel);
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             } else if(subFerramenta.mainFerramenta.id == 0 && subFerramenta.prevResult=="Tabela de Vitaminas e Minerais"){
@@ -2897,8 +2921,10 @@ class GUI{
                 topPanel.add(new JLabel("Função"));
                 for(int result = 0;result<multiResultsArray.size() ;result++){
                     JLabel label = new JLabel(subFerramenta.resultados.get(multiResultsArray.get(result)));
+                    label.setFont(configFonte);
                     topPanel.add(label);
                     label = new JLabel("<html><div WIDTH=500>"+subFerramenta.ações.get(multiResultsArray.get(result))+"</div></html>");
+                    label.setFont(configFonte);
                     topPanel.add(label);
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
@@ -2919,7 +2945,7 @@ class GUI{
                     public void actionPerformed(ActionEvent e) {
                         temp.set(temp.size()-1, Integer.parseInt(numberField.getText()));
                         String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" </b>";
-                        labelDecreto.setText("<html><div WIDTH=1000>" + subFerramenta.Decreto(indexArray, currentClient).replace("<b style=\"color:red;\">(medir no biometro) </b>", newD) + "</div></html>");
+                        labelDecreto.setText("<html><div WIDTH=1600>" + subFerramenta.Decreto(indexArray, currentClient).replace("<b style=\"color:red;\">(medir no biometro) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }
                 });
@@ -2932,7 +2958,7 @@ class GUI{
         System.out.println(indexArray);
 
         labelDecreto.setSize(1000, 700);
-        labelDecreto.setText("<html><div WIDTH=1000>"+decreto+"</div></html>");
+        labelDecreto.setText("<html><div WIDTH=1600>"+decreto+"</div></html>");
         centerJPanel.add(labelDecreto,BorderLayout.CENTER);
         panel.add(centerJPanel);
 
