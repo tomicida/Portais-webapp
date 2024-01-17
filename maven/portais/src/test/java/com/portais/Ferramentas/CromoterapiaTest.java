@@ -124,4 +124,31 @@ public class CromoterapiaTest {
 
     }
 
+    @Test
+    void BrancoAndVerdeSelected() {
+        //when
+        input = new ArrayList<>();
+        input.add(0);
+        input.add(1);
+        String decree = ferramenta.Decreto(input, cliente);
+
+        //then
+        assertEquals("Eu ativo a Matriz de Cromoterapia para que limpe a informação anomala no ambiente de <b style=\"color:blue;\">Test Nome</b> e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Baixo a intensidade contrária à anomalia para que se restabeleça o equilíbrio, representada pela frequência da cor <b style=\"color:blue;\">Branco</b>, promovendo <b style=\"color:blue;\">Potenciamento de todas as cores e a elevação de frequência ao máximo do campo mórfico</b>, <b style=\"color:blue;\">Verde</b>, promovendo <b style=\"color:blue;\">A energia da natureza, na força equilibrada dos sentidos no ambiente. Baixo no ambiente a frequência da esperança, da satisfação e da saúde</b>,  na quantidade certa e na medida exata, reconstruindo e fortalecendo, reconstruindo e fortalecendo, reconstruindo e fortalecendo o campo anómalo, assim como a consciência de mudança de <b style=\"color:blue;\">Test Nome</b>.", decree);
+
+    }
+
+    @Test
+    void BrancoBrancoAndVerdeSelected() {
+        //when
+        input = new ArrayList<>();
+        input.add(0);
+        input.add(0);
+        input.add(1);
+        String decree = ferramenta.Decreto(input, cliente);
+
+        //then
+        assertEquals("Eu ativo a Matriz de Cromoterapia para que limpe a informação anomala no ambiente de <b style=\"color:blue;\">Test Nome</b> e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Baixo a intensidade contrária à anomalia para que se restabeleça o equilíbrio, representada pela frequência da cor <b style=\"color:blue;\">Branco</b>, promovendo <b style=\"color:blue;\">Potenciamento de todas as cores e a elevação de frequência ao máximo do campo mórfico</b>, <b style=\"color:blue;\">Branco</b>, promovendo <b style=\"color:blue;\">Potenciamento de todas as cores e a elevação de frequência ao máximo do campo mórfico</b>, <b style=\"color:blue;\">Verde</b>, promovendo <b style=\"color:blue;\">A energia da natureza, na força equilibrada dos sentidos no ambiente. Baixo no ambiente a frequência da esperança, da satisfação e da saúde</b>,  na quantidade certa e na medida exata, reconstruindo e fortalecendo, reconstruindo e fortalecendo, reconstruindo e fortalecendo o campo anómalo, assim como a consciência de mudança de <b style=\"color:blue;\">Test Nome</b>.", decree);
+
+    }
+
 }
