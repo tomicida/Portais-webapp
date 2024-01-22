@@ -2917,16 +2917,21 @@ class GUI{
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             } else if(subFerramenta.mainFerramenta.id == 0 && subFerramenta.prevResult=="Tabela de Vitaminas e Minerais"){
-                topPanel = new JPanel(new GridLayout(multiResultsArray.size()+1,2));
-                topPanel.add(new JLabel("Designação"));
-                topPanel.add(new JLabel("Função"));
+                topPanel = new JPanel();
+                topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
+                JPanel setPanel = new JPanel(new GridLayout(1,2));
+                setPanel.add(new JLabel("Designação"));
+                setPanel.add(new JLabel("Função"));
+                topPanel.add(setPanel);
                 for(int result = 0;result<multiResultsArray.size() ;result++){
+                    setPanel = new JPanel(new GridLayout(1,2));
                     JLabel label = new JLabel(subFerramenta.resultados.get(multiResultsArray.get(result)));
                     label.setFont(configFonte);
-                    topPanel.add(label);
+                    setPanel.add(label);
                     label = new JLabel("<html><div WIDTH=500>"+subFerramenta.ações.get(multiResultsArray.get(result))+"</div></html>");
                     label.setFont(configFonte);
-                    topPanel.add(label);
+                    setPanel.add(label);
+                    topPanel.add(setPanel);
                 }
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             } else if (subFerramenta.mainFerramenta.id == 7){
