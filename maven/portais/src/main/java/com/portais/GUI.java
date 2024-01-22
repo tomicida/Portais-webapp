@@ -271,8 +271,6 @@ class GUI{
         updateFont();
     }
 
-    
-
     public void openFile(){
         try {
             JFileChooser fileChooser = new JFileChooser("portais/data/");
@@ -2693,6 +2691,9 @@ class GUI{
             centerJPanel.add(smaller,BorderLayout.NORTH);
         }
 
+        if(ferramenta.multi)
+            decreto = ferramenta.Decreto(multiResultsArray, currentClient);
+
         JPanel topPanel;
         if(ferramenta.portal.id == 1){
             if(ferramenta.id == 0 || ferramenta.id == 1){
@@ -2783,7 +2784,8 @@ class GUI{
                         temp.set(5, Integer.parseInt(numberField3.getText()));
                         temp.set(6, Integer.parseInt(numberField4.getText()));
                         String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" vezes ao dia, durante o periodo de "+numberField2.getText()+" dias, "+numberField3.getText()+" semanas, "+numberField4.getText()+" meses </b>";
-                        labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(index, currentClient).replace("<b style=\"color:red;\">(x vezes ao dia) </b> durante o periodo de <b style=\"color:red;\">(dias, semanas, meses) </b>", newD) + "</div></html>");
+                        System.out.println(newD);
+                        labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(multiResultsArray, currentClient).replace("<b style=\"color:red;\">(x vezes ao dia) </b> durante o periodo de <b style=\"color:red;\">(dias, semanas, meses) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }
                 });
@@ -2792,8 +2794,7 @@ class GUI{
             }
         }
         
-        if(ferramenta.multi)
-            decreto = ferramenta.Decreto(multiResultsArray, currentClient);
+        
 
         labelDecreto.setSize(1000, 700);
         labelDecreto.setText("<html><div WIDTH=1600>"+decreto+"</div></html>");
