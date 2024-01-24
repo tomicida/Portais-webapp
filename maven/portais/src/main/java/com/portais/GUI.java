@@ -255,18 +255,12 @@ class GUI{
     }
 
     private void setConfigNomeTerapeuta(String text) {
-        System.out.println("set configNomeTerapeuta: "+text);
         if(text != null && text.length()>0)
             configNomeTerapeuta = text;
     }
 
     private void setConfigFontSize(String text) {
-        System.out.println("set configFontSize: "+text);
-
         int newSize = (int) Integer.parseInt(text);
-
-        System.out.println(""+newSize);
-
         configFonteTamanho = newSize;
         updateFont();
     }
@@ -1534,18 +1528,14 @@ class GUI{
         JPanel panel= new JPanel(new BorderLayout());
         int rownum = 20;
 
-        System.out.println(rownum);
-
         File folder = new File("portais/data/");
         File[] listOfFiles = folder.listFiles();
-        System.out.println(listOfFiles);
 
         JPanel listPanel = new JPanel(new GridLayout(rownum,1));
         
         for (int i = listOfFiles.length - 1; i >= Math.max(listOfFiles.length-rownum,0);i--) {
             File file = listOfFiles[i];
             JButton listElement = new JButton(file.getName());
-            System.out.println(listElement.getText());
             listElement.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -1559,7 +1549,6 @@ class GUI{
         panel.add(listPanel,BorderLayout.CENTER);
 
         JLabel titleLabel = new JLabel("Histórico", JLabel.CENTER);
-        System.out.println(titleLabel.getText());
         panel.add(titleLabel,BorderLayout.NORTH);
 
         return panel;
@@ -2450,7 +2439,6 @@ class GUI{
                 ArrayList<Integer> newIndexArray = new ArrayList<>();
                 int newix = i;
                 newIndexArray.add(i);
-                System.out.println(newIndexArray.toString());
 
                 if(!ferramenta.subFerramentas.get(i).inactive)
                     button.addActionListener(e -> subFerramentaChosen(ferramenta, newIndexArray));
@@ -2471,7 +2459,6 @@ class GUI{
                     button.addActionListener(e -> replacePanel(protocoloPanel(ferramenta, newi)));
                 } catch (Exception e) {
                     e.printStackTrace();
-                    System.out.println("error");
                 }
 
                 JLabel label = new JLabel(i+ferramenta.offset+" - "+ferramenta.resultados.get(i), JLabel.CENTER);
@@ -2558,7 +2545,6 @@ class GUI{
             smaller.add(button);
             ArrayList<Integer> newIndexArray = (ArrayList<Integer>) indexArray.clone();
             newIndexArray.add(i);
-            System.out.println(newIndexArray);
             int newi = i;
 
             if(subFerramenta.subFerramentas.isEmpty() || subFerramenta.subFerramentas.get(i).inactive){
@@ -2593,13 +2579,9 @@ class GUI{
             confirmButton.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
-                    if(textField.getText().isEmpty())
-                        System.out.println("empty");
-                    else{
+                    if(!textField.getText().isEmpty()){
                         indexArray.add(leitura.strings.size());
-                        System.out.println(indexArray);
                         leitura.strings.add(textField.getText());
-                        System.out.println(leitura.strings);
                         currentResult.addAll(indexArray);
                         leitura.historico.add(currentResult);
                         leitura.Save();
@@ -2625,7 +2607,7 @@ class GUI{
     public JPanel protocoloPanel(Ferramenta ferramenta, int index){
         ArrayList<Integer> temp = ( ArrayList<Integer>) currentResult.clone();
         int tempIndex = index;
-        String decreto = ferramenta.Decreto(tempIndex,currentClient);
+        String decreto = ferramenta.Decreto(index,currentClient);
         int i=0, j=0 ,k=0;
         JLabel labelDecreto = new JLabel();
         labelDecreto.setFont(configFonte);
@@ -2784,7 +2766,6 @@ class GUI{
                         temp.set(5, Integer.parseInt(numberField3.getText()));
                         temp.set(6, Integer.parseInt(numberField4.getText()));
                         String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" vezes ao dia, durante o periodo de "+numberField2.getText()+" dias, "+numberField3.getText()+" semanas, "+numberField4.getText()+" meses </b>";
-                        System.out.println(newD);
                         labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(multiResultsArray, currentClient).replace("<b style=\"color:red;\">(x vezes ao dia) </b> durante o periodo de <b style=\"color:red;\">(dias, semanas, meses) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }
@@ -2960,8 +2941,6 @@ class GUI{
                 centerJPanel.add(topPanel,BorderLayout.NORTH);
             }
         }
-
-        System.out.println(indexArray);
 
         labelDecreto.setSize(1000, 700);
         labelDecreto.setText("<html><div WIDTH=1600>"+decreto+"</div></html>");
