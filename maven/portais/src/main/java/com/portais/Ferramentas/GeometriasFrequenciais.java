@@ -133,7 +133,7 @@ public class GeometriasFrequenciais extends Ferramenta{
         this.resultados.add("Transmutador");
         this.resultados.add("Diafragma");
         
-        this.repeatString = "(tipo), ";
+        this.repeatString = "(resultado), ";
         this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Ressonância Harmonica das Geometrias Sagradas pedindo ao Eu Superior de (nome do consulente) permissão para atuar e imprimir a frequência de cura no seu campo morfogenético impactando todos os chakras e todos os corpos sutis. Ativo agora a frequência de/do/da (next) para que pulse(m) na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
         

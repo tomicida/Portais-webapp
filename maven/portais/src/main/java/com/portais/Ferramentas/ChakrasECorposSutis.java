@@ -194,7 +194,7 @@ public class ChakrasECorposSutis extends Ferramenta{
 
         this.subFerramentas.add(intermedFerramenta);
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, abrindo o (tipo) (designação) para (ação) e crie impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu sou a ativar agora o equilíbrio de (tipo) (designação) e promovo o alinhamento de todos os chakras e todos os corpos sutis. Pulsa, pulsa, pulsa no campo.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, abrindo o (resultado) (designação) para (ação) e crie impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu sou a ativar agora o equilíbrio de (resultado) (designação) e promovo o alinhamento de todos os chakras e todos os corpos sutis. Pulsa, pulsa, pulsa no campo.";
 
     }
 }

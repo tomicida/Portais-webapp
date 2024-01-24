@@ -29,7 +29,7 @@ public class HooponoponoELeisHuna extends Ferramenta{
         this.ações.add("Empodero os intervenientes para que manifestem os sentimentos");
         this.ações.add("Programo a eficácia na resolução de conflitos relacionais");
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome completo do terapeuta), ativo o (tipo) no plano relacional aqui relatado por (nome do consulente) e programo a clareza, a harmonia e o equilíbrio dentro do que é divino. (ação), para que pulse no campo na medida certa e na quantidade exata durante um período de (medir no relógio de mensuração). Pulsa no campo e clarifica, pulsa no campo e harmoniza, pulsa no campo e equilibra, AGORA.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome completo do terapeuta), ativo o (resultado) no plano relacional aqui relatado por (nome do consulente) e programo a clareza, a harmonia e o equilíbrio dentro do que é divino. (ação), para que pulse no campo na medida certa e na quantidade exata durante um período de (medir no relógio de mensuração). Pulsa no campo e clarifica, pulsa no campo e harmoniza, pulsa no campo e equilibra, AGORA.";
 
         
     }

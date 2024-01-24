@@ -28,7 +28,7 @@ public class MatrizDimensional extends Ferramenta{
         this.ações.add("Ordem Cósmica");
         this.ações.add("modulação da individualidade hiperconsciente");
 
-        this.repeatString = "Lanço na rede a frequência de (designação) para a/o (ação). ";
+        this.repeatString = "Lanço na rede a frequência de (resultado) para a/o (ação). ";
         this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de CQM pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com a aplicação da frequência da Matriz Dimensional para que se altere a sua perspectiva de realidade e se adeque à vibração do planeta Terra. (next) Ativo agora a sua frequência de cura para que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }

@@ -19,7 +19,7 @@ public class MatrizCQM extends Ferramenta{
         this.ações.add("Desprogramar e todos os estados de latência, desordem e caos e evocar a Harmonia em todos os planos de vida");
         this.ações.add("Sintonizar todos os eventos síncrones registrados no campo morfogenético e manifestar o alinhamento de consciência no Propósito de Vida");
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz CQM, evocando todas as egrégorasegrégora e pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos, chakras e corpos sutis dentro do que é divino ao seu propósito de vida. Ativo agora a frequência do Princípio (princípio) para que (nome do consulente) possa (ação). Que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na condução da melhor tomada de decisão para que manifeste toda a sua divindade no propósito de vida, na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz CQM, evocando todas as egrégorasegrégora e pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos, chakras e corpos sutis dentro do que é divino ao seu propósito de vida. Ativo agora a frequência do Princípio (resultado) para que (nome do consulente) possa (ação). Que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na condução da melhor tomada de decisão para que manifeste toda a sua divindade no propósito de vida, na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }
 }

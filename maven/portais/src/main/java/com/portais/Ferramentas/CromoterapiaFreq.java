@@ -31,7 +31,7 @@ public class CromoterapiaFreq extends Ferramenta{
         this.ações.add("Ativar o empoderamento pessoal e a proteção energética");
         this.ações.add("Desenvolver a criatividade na intuição e a autoconfiança");
 
-        this.repeatString = "a (frequência) de (cor) para (ação) ";
+        this.repeatString = "a (frequência) de (resultado) para (ação) ";
         this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta), peço permissão ao Eu Superior de (nome do consulente) para imprimir em todos os seus corpos e todos os chakras (next) para que beneficiem a tomada de decisão. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }

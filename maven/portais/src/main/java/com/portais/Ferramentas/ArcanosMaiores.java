@@ -128,7 +128,7 @@ public class ArcanosMaiores extends Ferramenta{
         this.funções.add("Coronário");
         this.funções.add("Raiz");
 
-        this.repeatString = "(designar qual ou quais por ordem de saída), ";
+        this.repeatString = "(resultado), ";
         this.repeatString2 = "(todas as ativações que saírem por ordem), ";
         this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para limpar a informação anómala nos seus campos frequenciais e imprimir a(s) frequência(s) de cura do(s) Arcano(s) Maior(es) (next) com a potência das energias que lhe(s) está (estão) associadas. Ativo agora as potências de (next2) e processo o seu campo de cura para que desbloqueie o sinal anómalo e promova a força de ação dentro do seu propósito.";
         

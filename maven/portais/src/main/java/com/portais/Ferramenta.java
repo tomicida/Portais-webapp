@@ -1,7 +1,6 @@
 package com.portais;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Ferramenta {
     public String name;
@@ -50,7 +49,7 @@ public class Ferramenta {
         decreto = decreto.replace("(nome completo do terapeuta)","<b style=\"color:blue;\">" +cliente.nomeTerapeuta+ "</b>");
         decreto = decreto.replace("(nome do terapeuta)","<b style=\"color:blue;\">" +cliente.nomeTerapeuta+ "</b>");
         
-        if (!resultados.isEmpty()) decreto = decreto.replace(Replacer(name),"<b style=\"color:blue;\">" +resultados.get(index)+ "</b>");
+        if (!resultados.isEmpty()) decreto = decreto.replace("(resultado)","<b style=\"color:blue;\">" +resultados.get(index)+ "</b>");
         if (!resultados.isEmpty()) decreto = decreto.replace("(nº e designação)", "<b style=\"color:blue;\">"+(index+1) +" "+resultados.get(index)+ "</b>");
         if (!resultados.isEmpty()) decreto = decreto.replace("(cor)", "<b style=\"color:blue;\">" +resultados.get(index)+ "</b>");
         if (!ações.isEmpty()) decreto = decreto.replace("(todas as ativações que saírem por ordem)", "<b style=\"color:blue;\">" +ações.get(index)+ "</b>");
@@ -98,41 +97,6 @@ public class Ferramenta {
         return decreto;
     }
 
-    public String Replacer(String key){
-        HashMap<String,String> replacer = new HashMap<String,String>();
-        replacer.put("Cromoterapia", "(nome da cor)");
-        replacer.put("Escala de Solfeggio","(nome da nota)");
-        replacer.put("Frequências de Cura","(nome da frequência)");
-        replacer.put("Cristaloterapia","(cristal)");
-        replacer.put("Aromaterapia","(nome)");
-        replacer.put("Ho’oponopono e Leis Huna", "(tipo)");
-        replacer.put("Yin Yang","(tipo)");
-        replacer.put("Gráficos Radiestesicos","(nomear todos os que estão na mesa ou fazer um decreto por cartão)");
-        replacer.put("Matriz Dimensional","(designação)");
-        replacer.put("Remoção de Chips e Implantes","(tipo)");
-        replacer.put("Geometrias Frequenciais","(tipo)");
-        replacer.put("Matriz CQM","(princípio)");
-        replacer.put("Campo Morfogenético","(campo)");
-        replacer.put("Vidas Passadas","(tipo)");
-        replacer.put("Constelação Familiar","(membro)");
-        replacer.put("Regeneração de DNA","(PLACEHOLDER)");
-        replacer.put("Chakras e Corpos Sutis","(tipo)");
-        replacer.put("Portais Dimensionais","(tipo)");
-        replacer.put("Reiki","(tipo)");
-        replacer.put("Cartão Quântico MD®","(designação do cartão)");
-        replacer.put("Quartzos Quânticos e Cristais","(PLACEHOLDER)");
-        replacer.put("Matriz Bioenergética e Meridional","(PLACEHOLDER)");
-        replacer.put("Ferramenta em Branco (Ambientes)","(PLACEHOLDER)");
-        replacer.put("Feng Shui","(PLACEHOLDER)");
-        replacer.put("Ferramenta em Branco (Relacionamentos)","(designar qual ou quais por ordem de saída)");
-        replacer.put("Ferramenta em Branco (Eu Interior)","(PLACEHOLDER)");
-        replacer.put("Conexão Arcturiana","(PLACEHOLDER)");
-        replacer.put("Naturopatia","(PLACEHOLDER)");
-        replacer.put("Cura Egípcia","(PLACEHOLDER)");
-        replacer.put("Matriz Morfogenética","(PLACEHOLDER)");
-        
-        return replacer.get(key);
-    }
 
     public String subDecreto(String decreto, int index, Cliente cliente){
         String tempMain = Decreto;

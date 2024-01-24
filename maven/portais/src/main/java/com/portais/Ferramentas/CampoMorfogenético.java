@@ -139,7 +139,7 @@ public class CampoMorfogenético extends Ferramenta{
 
         this.subFerramentas.add(intermedFerramenta);
 
-        this.Decreto="Eu ativo a Matriz do Campo Mórfico/Morfogenético para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Removendo, destruindo e transmutando todas as frequências de má informação da anomalia do (campo, número, ligação) e promovendo (ação) . Fixo agora no (campo) a ação de (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.Decreto="Eu ativo a Matriz do Campo Mórfico/Morfogenético para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Removendo, destruindo e transmutando todas as frequências de má informação da anomalia do (campo, número, ligação) e promovendo (ação) . Fixo agora no (resultado) a ação de (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }
 }

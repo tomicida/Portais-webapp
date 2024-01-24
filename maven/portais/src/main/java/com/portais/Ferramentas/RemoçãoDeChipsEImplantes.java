@@ -29,7 +29,7 @@ public class RemoçãoDeChipsEImplantes extends Ferramenta{
         this.ações.add("Desativando, removendo o agente inibidor de propósito. Ativar o progresso, a emancipação e a expansão de consciência.");
         this.ações.add("Removendo o chip de extração de informação e todas as ramificações a nível dos sistemas de organização do corpo. Cicatrizando agora todas as mazelas expostas na extração e promovendo o equilíbrio em todos os corpos sutis.");
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de CQM e a Matriz das Grandes Esferas da Medicina Quântica pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus chakras e corpos sutis. Anulo a frequência de (tipo) e ativo a Matriz das Grandes Esferas da Medicina Quântica para (ação). Ativo agora a sua frequência de cura para que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de CQM e a Matriz das Grandes Esferas da Medicina Quântica pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus chakras e corpos sutis. Anulo a frequência de (resultado) e ativo a Matriz das Grandes Esferas da Medicina Quântica para (ação). Ativo agora a sua frequência de cura para que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }
 }

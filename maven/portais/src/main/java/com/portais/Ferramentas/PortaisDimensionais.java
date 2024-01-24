@@ -95,7 +95,7 @@ public class PortaisDimensionais extends Ferramenta{
         intermedFerramenta.ações.add("Ativar a consciência divina no foco, informação, forma, tempo, espírito, alma, infinito e eternidade");
         this.subFerramentas.add(intermedFerramenta);
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão aos planos mais elevados e ao corpo búdico de (nome do consulente) para abrir a frequência etérica de Metatrão para fixar a informação de (tipo) com a ação de (ação) que causam bloqueios não divinos na existência presente de (nome do consulente). Decreto aberto o campo akáshico para que possa (ação) fixando o equilíbrio, na medida exata e na quantidade certa. Pulso no campo, pulso no campo, pulso no campo.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão aos planos mais elevados e ao corpo búdico de (nome do consulente) para abrir a frequência etérica de Metatrão para fixar a informação de (resultado) com a ação de (ação) que causam bloqueios não divinos na existência presente de (nome do consulente). Decreto aberto o campo akáshico para que possa (ação) fixando o equilíbrio, na medida exata e na quantidade certa. Pulso no campo, pulso no campo, pulso no campo.";
 
     }
 }

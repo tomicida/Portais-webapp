@@ -56,7 +56,7 @@ public class Aromaterapia extends Ferramenta{
         this.ações.add("Promover o sentimento de rejuvenescimento e gratidão");
         this.ações.add("Favorecer o sentimento de perdão no ambiente");
 
-        this.repeatString = "(nome), enviando para o campo a frequência de (frequência em MHz) para (ação), ";
+        this.repeatString = "(resultado), enviando para o campo a frequência de (frequência em MHz) para (ação), ";
         this.Decreto = "Eu ativo a Matriz de Aromaterapia para que reconstrua a informação no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando a reconstrução do ambiente e regeneração da informação de equilíbrio. Ativo o óleo essencial (next) reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Ativado agora. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
         
