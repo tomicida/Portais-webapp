@@ -73,7 +73,7 @@ public class Ferramenta {
         decreto = decreto.replace("(medir no biómetro)", "<b style=\"color:red;\">(medir no biometro) </b>");
         decreto = decreto.replace("(x vezes, medir no biometro)", "<b style=\"color:red;\">(x vezes, medir no biometro) </b>");
         decreto = decreto.replace("(dias, semanas, meses, medir no biometro)", "<b style=\"color:red;\">(dias, semanas, meses, medir no biometro) </b>");
-        System.out.println(decreto);
+
         return decreto;
     }
 
