@@ -108,7 +108,7 @@ public class GráficosRadiestesicos extends Ferramenta{
         this.funções.add("Utilizado pelo método CQM® para representar os campos morfogenéticos e as infinitas possibilidades de futuro, posiciona, através de coordenadas dadas pelo biometro a melhor tomada de decisão perante um evento significativo da vida do sujeito");
         this.funções.add("Utilizado pelo método CQM® para acionar um vórtice imediato para acionar o propósito no campo do sujeito com as frequências triplices: amor, empoderamento e sabedoria. Atua no campo colocado em antena pelo tempo indicado pelo biometro.");
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome completo do terapeuta), ativo os gráficos radiônicos (resultado) no plano relacional aqui relatado por (nome do consulente) e programo a clareza, a harmonia e o equilíbrio dentro do que é divino. Que os gráficos pulsem no campo na medida certa e na quantidade exata durante um período de (medir no relógio de mensuração). A começar neste momentum. Pulsa no campo e clarifica, pulsa no campo e harmoniza, pulsa no campo e equilibra, AGORA.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta), ativo os gráficos radiônicos (resultado) no plano relacional aqui relatado por (nome do consulente) e programo a clareza, a harmonia e o equilíbrio dentro do que é divino. Que os gráficos pulsem no campo na medida certa e na quantidade exata durante um período de (medir no relógio de mensuração). A começar neste momentum. Pulsa no campo e clarifica, pulsa no campo e harmoniza, pulsa no campo e equilibra, AGORA.";
 
     }
 }

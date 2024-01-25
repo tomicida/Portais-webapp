@@ -52,7 +52,7 @@ public class Cristaloterapia extends Ferramenta {
         this.ações.add("Abrir as consciências para a solução de confrontos pessoais");
 
         this.repeatString = "(resultado) para (ação), ";
-        this.Decreto = "Eu ativo a Matriz de Cristaloterapia para que reconstrua a informação no ambiente (tipo de ambiente) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando a reconstrução do ambiente e regeneração da informação de equilíbrio. Ativo a frequência de (next) reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente) para o efeito de (efeito). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.Decreto = "Eu ativo a Matriz de Cristaloterapia para que reconstrua a informação no ambiente (tipo de ambiente) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando a reconstrução do ambiente e regeneração da informação de equilíbrio. Ativo a frequência de (next) reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente) para o efeito de (efeito). Pulsa no campo, pulsa no campo, pulsa no campo.";
 
         
     }

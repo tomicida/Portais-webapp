@@ -134,7 +134,7 @@ public class FengShui extends Ferramenta{
         
         intermedSubFerramenta = (SubFerramenta) intermedSubFerramenta.clone();
         intermedSubFerramenta.prevResult = "Empresa";
-        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         this.subFerramentas.add(intermedFerramenta);
@@ -196,7 +196,7 @@ public class FengShui extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         this.subFerramentas.add(intermedFerramenta);
-        this.Decreto = "Eu ativo a Matriz do Feng Shui para que imprima no ambiente (casa ou empresa) de (nome do consulente) e em todos os seus registros no campo morfogenético e mórfico a frequência do elemento (nome do ou dos elementos) em/na/no (cómodo). Ativando, imprimindo e ampliando, ampliando e fortalecendo, fortalecendo e fixando, harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.Decreto = "Eu ativo a Matriz do Feng Shui para que imprima no ambiente (casa ou empresa) de (nome do consulente) e em todos os seus registros no campo morfogenético e mórfico a frequência do elemento (nome do ou dos elementos) em/na/no (cómodo). Ativando, imprimindo e ampliando, ampliando e fortalecendo, fortalecendo e fixando, harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }
 }

@@ -6,7 +6,6 @@ import com.portais.Portal;
 public class CartãoQuanticoMD extends Ferramenta{
     public CartãoQuanticoMD (Portal portal, int id){
         super("Cartão Quântico MD®", portal, id);
-        //TODO change to multi?
         this.multi=true;
 
         this.resultados.add("Prosperidade Financeira");

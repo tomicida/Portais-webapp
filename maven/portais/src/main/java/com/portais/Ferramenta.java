@@ -45,8 +45,6 @@ public class Ferramenta {
 
         //Blue
         decreto = Decreto.replace("(nome do consulente)", "<b style=\"color:blue;\">" +cliente.nome+ "</b>");
-        decreto = decreto.replace("(nome completo do consulente)", "<b style=\"color:blue;\">" +cliente.nome+ "</b>");
-        decreto = decreto.replace("(nome completo do terapeuta)","<b style=\"color:blue;\">" +cliente.nomeTerapeuta+ "</b>");
         decreto = decreto.replace("(nome do terapeuta)","<b style=\"color:blue;\">" +cliente.nomeTerapeuta+ "</b>");
         
         if (!resultados.isEmpty()) decreto = decreto.replace("(resultado)","<b style=\"color:blue;\">" +resultados.get(index)+ "</b>");

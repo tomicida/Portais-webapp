@@ -28,7 +28,7 @@ public class EscalaDeSolfeggio extends Ferramenta{
 
         this.repeatString="(resultado), para (nome da ação), ";
         
-        this.Decreto = "Eu ativo a Matriz da Escala de Solfeggio para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Baixo a intensidade contrária à anomalia para que se restabeleça o equilíbrio, representada pela nota/frequência (next) na quantidade certa e na medida exata, limpando e fortalecendo, fortalecendo e reconstruindo, reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente).";
+        this.Decreto = "Eu ativo a Matriz da Escala de Solfeggio para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Baixo a intensidade contrária à anomalia para que se restabeleça o equilíbrio, representada pela nota/frequência (next) na quantidade certa e na medida exata, limpando e fortalecendo, fortalecendo e reconstruindo, reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente).";
 
     }
     
