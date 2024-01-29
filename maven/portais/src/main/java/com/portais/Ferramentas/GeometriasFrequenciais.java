@@ -79,7 +79,7 @@ public class GeometriasFrequenciais extends Ferramenta{
         this.resultados.add("Santa Ametista");
         this.resultados.add("Santa Esmeralda");
         this.resultados.add("Shamlin");
-        this.resultados.add("Comando thisoral");
+        this.resultados.add("Comando Temporal");
         this.resultados.add("Om Plash");
         this.resultados.add("Yesh");
         this.resultados.add("Om Miguel");
