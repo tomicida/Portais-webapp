@@ -25,7 +25,7 @@ public class FengShui extends Ferramenta{
 
         intermedSubFerramenta = new SubFerramenta(this, "Casa");
 
-        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome completo do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         
         intermedSubFerramenta.resultados.add("Yin");
         intermedSubFerramenta.resultados.add("Yang");
