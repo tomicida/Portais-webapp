@@ -189,6 +189,9 @@ public class GeneratePDF {
                                 if(ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).type == 1)
                                     tempParagraph.add(new Chunk("; " + leitura.strings.get(lista.get(4)),fontn));
                             }
+
+                            if(lista.get(0)==2 && lista.get(1)==4 && lista.get(2)==1)
+                            tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).resultados2.get(lista.get(3)),fontn));
                             if(!ferramenta.subFerramentas.get(lista.get(2)).ações.isEmpty())
                                 tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).ações.get(lista.get(3)),fontn));
                         }
