@@ -12,6 +12,10 @@ public class ConstelaçãoFamiliar extends Ferramenta{
 
         this.type = 2;
 
+        this.repeatString = "Ativo o elemento (resultado) identificado como causando (causa) no plano das relações de (nome do consulente). ";
+        this.repeatString2 = "(Ação), ";
+        this.Decreto = "Abro no portal dos relacionamentos a frequência de cura da Constelação Familiar para que os bloqueios de relação de (nome do consulente) possam ser desativados, limpos e harmonizados. (next) (next2) pulsando no campo a limpeza e harmonização para que se fixe na medida certa e na quantidade exata, dentro do que é divino. Pulsa no campo, pulsa no campo, pulsa no campo.";
+
         this.resultados.add("Mãe");
         this.resultados.add("Pai");
         this.resultados.add("Irmão");
@@ -26,6 +30,11 @@ public class ConstelaçãoFamiliar extends Ferramenta{
         this.resultados.add("Criança Interior");
 
         interrmedFerramenta = new SubFerramenta(this, "Mãe");
+        interrmedFerramenta.multi = true;
+        interrmedFerramenta.ownDecreto = this.Decreto;
+        interrmedFerramenta.repeatString = this.repeatString;
+        interrmedFerramenta.repeatString2 = this.repeatString2;
+
         interrmedFerramenta.resultados.add("Exclusão");
         interrmedFerramenta.resultados.add("Fora do Próprio Lugar");
         interrmedFerramenta.resultados.add("Bloqueio");
@@ -47,6 +56,7 @@ public class ConstelaçãoFamiliar extends Ferramenta{
         interrmedFerramenta.ações.add("Promover a comunicação limpa e clara, quebrando padrões ancestrais e assumindo a sua individualidade.");
         interrmedFerramenta.ações.add("Reconhecer o seu merecimento na prosperidade em todos os planos da vida");
         interrmedFerramenta.ações.add("Reconciliar-se com todos os abusos a si e seus ancestrais e limpar essa informação do seu campo morfogenético");
+
         this.subFerramentas.add(interrmedFerramenta);
 
         interrmedFerramenta = (SubFerramenta) interrmedFerramenta.clone();
@@ -93,7 +103,6 @@ public class ConstelaçãoFamiliar extends Ferramenta{
         interrmedFerramenta.prevResult = "Criança Interior";
         this.subFerramentas.add(interrmedFerramenta);
 
-        this.Decreto = "Abro no portal dos relacionamentos a frequência de cura da Constelação Familiar para que os bloqueios de relação de (nome do consulente) possam ser desativados, limpos e harmonizados. Ativo o elemento (resultado) identificado como causando (causa) no plano das relações de (nome do consulente). (Ação), pulsando no campo a limpeza e harmonização para que se fixe na medida certa e na quantidade exata, dentro do que é divino. Pulsa no campo, pulsa no campo, pulsa no campo.";
-
+        
     }
 }
