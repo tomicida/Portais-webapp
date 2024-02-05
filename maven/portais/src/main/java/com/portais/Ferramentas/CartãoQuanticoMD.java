@@ -6,7 +6,6 @@ import com.portais.Portal;
 public class CartãoQuanticoMD extends Ferramenta{
     public CartãoQuanticoMD (Portal portal, int id){
         super("Cartão Quântico MD®", portal, id);
-        this.multi=true;
 
         this.resultados.add("Prosperidade Financeira");
         this.resultados.add("Prosperidade Familiar");
@@ -34,8 +33,7 @@ public class CartãoQuanticoMD extends Ferramenta{
         this.ações.add("facilitar a tomada de decisão e ampliar as possibilidades de propósito junto de anomalias somatizadoras no SC. Identificar a anomalia e ativar eventos de “limpeza” dos sinais de doença");
         this.ações.add("facilitar a tomada de decisão e ampliar as possibilidades de propósito junto de anomalias somatizadoras no SEn. Identificar a anomalia e ativar eventos de “limpeza” dos sinais de doença");
 
-        this.repeatString="(resultado) para (ação), ";
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com o Cartão de Quântico Multidimensional (next). Lanço na rede todos os seus componentes para que atuem direta e indiretamente no seu propósito e tomada de decisão. Ativo agora as suas frequências de cura para que pulsem (x vezes dia) durante o periodo de (dias,semanas,meses) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional pedindo ao Eu Superior de (nome do consulente) permissão para atuar no seu campo morfogenético com o Cartão de Quântico Multidimensional (resultado) para (ação). Lanço na rede todos os seus componentes para que atuem direta e indiretamente no seu propósito e tomada de decisão. Ativo agora as suas frequências de cura para que pulsem (x vezes dia) durante o periodo de (dias,semanas,meses) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
     }
 }

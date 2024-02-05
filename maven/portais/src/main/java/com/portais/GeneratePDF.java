@@ -208,12 +208,12 @@ public class GeneratePDF {
                     if(ferramenta.id == 0 || ferramenta.id == 1){
                         tempParagraph.add(new Chunk(", " + lista.get(3)+" "+tempo[lista.get(4)],fontn));
                     }
-                }/* //MaybeRemove
+                }
                 else if (portal.id == 3){
                     if(ferramenta.id == 0){
                         tempParagraph.add(new Chunk(", " + lista.get(3)+" vezes ao dia por "+lista.get(4)+ " dias, "+lista.get(5)+ " semanas, "+lista.get(6)+ " meses",fontn));
                     }
-                }*/
+                }
 
                 paragraph= tempParagraph;
 
