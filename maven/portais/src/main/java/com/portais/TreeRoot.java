@@ -188,15 +188,13 @@ public class TreeRoot {
 
         temp = new Ferramenta("Conexão Arcturiana",Portal4,6);
         temp.type = 2;
-
-        //TODO change codigos arcturianos -> activar conexao arcturiana ?
         temp.resultados.add("Códigos Arcturianos");
-        temp.resultados.add("Cartas de Cura");
+        temp.resultados.add("Mesa Arcturiana");
 
         subTemp = new CódigosArcturianos(temp);
         temp.subFerramentas.add(subTemp);
 
-        subTemp = new CartasDeCura(temp);
+        subTemp = new MesaArcturiana(temp);
         temp.subFerramentas.add(subTemp);
 
         Portal4.AddFerramenta(temp);
