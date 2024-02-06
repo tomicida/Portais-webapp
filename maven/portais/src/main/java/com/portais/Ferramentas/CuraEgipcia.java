@@ -82,7 +82,7 @@ public class CuraEgipcia extends Ferramenta{
         this.ações.add("Ativando RAMA para imprimir no campo a frequência da alegria (540Hz) e intuir o enraizamento perante as ideias abstratas e criativas");
         this.ações.add("Ativando RANYAM para desbloquear os chakras através da limpeza de frequências baixas atuantes. Nutrir e amparar");
         this.ações.add("Ativando OM TRASH MASH CAM LOO para aliviar toda a sensação de dor emocional no momento");
-        this.ações.add("Ativando RAKU SUPERLUMINAL para");
+        this.ações.add("Ativando RAKU SUPERLUMINAL para definir situações mal-resolvidas, trazer Justiça e promover a sua Limpeza. Despertando os corpos sutis para contato com realidades paralelas. Ativar os Trabalhos cirúrgicos e de limpeza maior em todos os corpos e todos os chakras.");
         this.ações.add("Ativando OM VRIL para imprimir frequência do Prana no campo e oxigenar todas as funções hormonais associadas ao sentimento de perda.");
         this.ações.add("Ativando OM RADHIX para potenciar a tradução frequencial dos intestinos,melhorando o desempenho das sinapses na atuação de expulsão de energias não benéficas do organismo.");
         this.ações.add("Ativando OM NUT para limpar o sistema reprodutor e potenciar a fertilidade física, mental e emocional");
