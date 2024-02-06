@@ -117,6 +117,10 @@ public class GeneratePDF {
             table.addCell("Influências Neg. Int.");
             table.addCell(""+leitura.cliente.influenNegInt1);
             table.addCell(""+leitura.cliente.influenNegInt2);
+
+            table.addCell("");
+            table.addCell("");
+            table.addCell("");
             
             table.setSpacingAfter(24f);
 
