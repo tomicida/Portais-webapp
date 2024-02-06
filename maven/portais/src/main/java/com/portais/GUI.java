@@ -10,11 +10,14 @@ import java.awt.event.ActionEvent;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -2418,7 +2421,7 @@ class GUI{
                 int newi = i;
 
                 if(!ferramenta.multi)
-                    button.addActionListener(e -> replacePanel(protocoloPanel(ferramenta, newi)));
+                    button.addActionListener(e -> replacePanel(decretoPanel(ferramenta, newi)));
                 else
                     button.addActionListener(new ActionListener(){
                         @Override
@@ -2443,7 +2446,7 @@ class GUI{
                 if(!ferramenta.subFerramentas.get(i).inactive)
                     button.addActionListener(e -> subFerramentaChosen(ferramenta, newIndexArray));
                 else
-                    button.addActionListener(e -> replacePanel(protocoloPanel(ferramenta, newix)));
+                    button.addActionListener(e -> replacePanel(decretoPanel(ferramenta, newix)));
 
                 resultadosPanel.add(smaller);
             }
@@ -2456,7 +2459,7 @@ class GUI{
                     JButton button = new JButton(new ImageIcon(myPicture));
                     smaller.add(button,BorderLayout.CENTER);
                     int newi = i;
-                    button.addActionListener(e -> replacePanel(protocoloPanel(ferramenta, newi)));
+                    button.addActionListener(e -> replacePanel(decretoPanel(ferramenta, newi)));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -2484,7 +2487,7 @@ class GUI{
                     currentResult.add(Integer.parseInt(textField2.getText()));
                     currentResult.add(Integer.parseInt(textField3.getText()));
                     
-                    replacePanel(protocoloPanel(ferramenta, 0));
+                    replacePanel(decretoPanel(ferramenta, 0));
                 }
             });
             resultadosPanel.add(button);
@@ -2494,7 +2497,7 @@ class GUI{
         if(ferramenta.multi){
             if(multiResultsArray.isEmpty())
                 confirmButton.setEnabled(false);
-            confirmButton.addActionListener(e -> replacePanel(protocoloPanel(ferramenta, multiResultsArray.get(0))));
+            confirmButton.addActionListener(e -> replacePanel(decretoPanel(ferramenta, multiResultsArray.get(0))));
             resultadosPanel.add(confirmButton);
         }
         
@@ -2533,7 +2536,7 @@ class GUI{
         bottomPanel.add(bottomPanel());
         sidePanel();
 
-        JLabel labelTitle = new JLabel(subFerramenta.mainFerramenta.name, JLabel.CENTER);
+        JLabel labelTitle = new JLabel(getCurrentToolPathName(subFerramenta.mainFerramenta,indexArray), JLabel.CENTER);
         containerJPanel.add(labelTitle,BorderLayout.PAGE_START);
 
         JPanel resultadosPanel = new JPanel(new GridLayout(pagesize,1));
@@ -2549,7 +2552,7 @@ class GUI{
 
             if(subFerramenta.subFerramentas.isEmpty() || subFerramenta.subFerramentas.get(i).inactive){
                 if(!subFerramenta.multi)
-                    button.addActionListener(e -> replacePanel(protocoloPanel(subFerramenta, newIndexArray)));
+                    button.addActionListener(e -> replacePanel(decretoPanel(subFerramenta, newIndexArray)));
                 else
                     button.addActionListener(new ActionListener(){
                         @Override
@@ -2595,7 +2598,7 @@ class GUI{
         if(subFerramenta.multi){
             if(multiResultsArray.isEmpty())
                 confirmButton.setEnabled(false);
-            confirmButton.addActionListener(e -> replacePanel(protocoloPanel(subFerramenta, indexArray)));
+            confirmButton.addActionListener(e -> replacePanel(decretoPanel(subFerramenta, indexArray)));
             resultadosPanel.add(confirmButton);
         }
 
@@ -2604,7 +2607,20 @@ class GUI{
         return containerJPanel;
     }
 
-    public JPanel protocoloPanel(Ferramenta ferramenta, int index){
+    public String getCurrentToolPathName(Ferramenta ferramenta, List<Integer> indexArray){
+        String pathString= ferramenta.name;
+        SubFerramenta tempSubFerramenta = ferramenta.subFerramentas.get(indexArray.get(0));
+        pathString += " > " + tempSubFerramenta.prevResult;
+
+        for(int i = 1;i<indexArray.size();i++){
+            tempSubFerramenta = tempSubFerramenta.subFerramentas.get(indexArray.get(i));
+            pathString += " > " + tempSubFerramenta.prevResult;
+        }
+
+        return pathString;
+    }
+
+    public JPanel decretoPanel(Ferramenta ferramenta, int index){
         ArrayList<Integer> temp = ( ArrayList<Integer>) currentResult.clone();
         int tempIndex = index;
         String decreto = ferramenta.Decreto(index,currentClient);
@@ -2827,16 +2843,19 @@ class GUI{
         return panel;
     }
 
-    public JPanel protocoloPanel(SubFerramenta subFerramenta, ArrayList<Integer> indexArray){
+    public JPanel decretoPanel(SubFerramenta subFerramenta, ArrayList<Integer> indexArray){
         JLabel labelDecreto = new JLabel();
-        labelDecreto.setFont(configFonte);
         String decreto;
         JButton confirmButton = new JButton("Confirmar");
         ArrayList<Integer> temp = ( ArrayList<Integer>) currentResult.clone();
         
+        labelDecreto.setFont(configFonte);
+
         if(subFerramenta.multi){
             indexArray.add(multiResultsArray.get(0));
         }
+
+        String pageTitle = getCurrentToolPathName(subFerramenta.mainFerramenta,indexArray.subList(0, indexArray.size()-1));
         
         for (Integer integer : indexArray) {
             temp.add(integer);
@@ -2860,7 +2879,7 @@ class GUI{
 
         JPanel panel = new JPanel(new BorderLayout());
 
-        JLabel labelTitle = new JLabel(subFerramenta.mainFerramenta.name, JLabel.CENTER);
+        JLabel labelTitle = new JLabel(pageTitle, JLabel.CENTER);
         panel.add(labelTitle,BorderLayout.NORTH);
 
         JPanel centerJPanel = new JPanel(new BorderLayout());
