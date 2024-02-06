@@ -18,6 +18,7 @@ public class CampoMorfogenético extends Ferramenta{
         this.resultados.add("Campo Morfogenético");
 
         intermedFerramenta = new SubFerramenta(this,"Campo Mórfico");
+        intermedFerramenta.ownDecreto="Eu ativo a Matriz do Campo Mórfico para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Removendo, destruindo e transmutando todas as frequências de má informação da anomalia do (campo, número, ligação) e promovendo (ação) . Fixo agora no (resultado) a ação de (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
         intermedFerramenta.resultados.add("Passado");
         intermedFerramenta.resultados.add("Presente");
         intermedFerramenta.resultados.add("Futuro");
@@ -43,6 +44,7 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this,"Presente");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.resultados.add("Social");
         intermedSubFerramenta.resultados.add("Familiar");
         intermedSubFerramenta.resultados.add("Conjugal");
@@ -54,6 +56,7 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this,"Futuro");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.resultados.add("Social");
         intermedSubFerramenta.resultados.add("Familiar");
         intermedSubFerramenta.resultados.add("Conjugal");
@@ -65,20 +68,24 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Emocional");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.inactive = true;
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Mental");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.inactive = true;
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Espiritual");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.inactive = true;
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this,"Campo Morfogenético");
+        intermedFerramenta.ownDecreto="Eu ativo a Matriz do Campo Morfogenético para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Removendo, destruindo e transmutando todas as frequências de má informação da anomalia do (campo, número, ligação) e promovendo (ação) . Fixo agora no (resultado) a ação de (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
         intermedFerramenta.resultados.add("Passado");
         intermedFerramenta.resultados.add("Presente");
         intermedFerramenta.resultados.add("Futuro");
@@ -93,6 +100,7 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.ações.add("Limpar, reconstruir, equilibrar e harmonizar");
         intermedFerramenta.ações.add("Abrir a expansão de consciência");
         intermedSubFerramenta = new SubFerramenta(this,"Passado");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.resultados.add("Social");
         intermedSubFerramenta.resultados.add("Familiar");
         intermedSubFerramenta.resultados.add("Conjugal");
@@ -104,6 +112,7 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this,"Presente");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.resultados.add("Social");
         intermedSubFerramenta.resultados.add("Familiar");
         intermedSubFerramenta.resultados.add("Conjugal");
@@ -115,6 +124,7 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this,"Futuro");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.resultados.add("Social");
         intermedSubFerramenta.resultados.add("Familiar");
         intermedSubFerramenta.resultados.add("Conjugal");
@@ -126,20 +136,20 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Emocional");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.inactive = true;
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Mental");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.inactive = true;
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Espiritual");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.inactive = true;
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         this.subFerramentas.add(intermedFerramenta);
-
-        this.Decreto="Eu ativo a Matriz do Campo Mórfico/Morfogenético para que limpe a informação anomala no ambiente de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Removendo, destruindo e transmutando todas as frequências de má informação da anomalia do (campo, número, ligação) e promovendo (ação) . Fixo agora no (resultado) a ação de (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
-
     }
 }
