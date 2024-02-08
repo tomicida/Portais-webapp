@@ -19,6 +19,7 @@ public class MatrizBioenergéticaEMeridional extends Ferramenta{
         this.resultados.add("Tabela Periódica dos Elementos");
 
         intermedFerramenta = new SubFerramenta(this, "Matriz Bioenergética");
+        intermedFerramenta.multi = true;
         intermedFerramenta.resultados.add("Da rede cósmica de entrelaçamento");
         intermedFerramenta.resultados.add("Da informação holográfica");
         intermedFerramenta.resultados.add("Do direcionamento da informação");
@@ -41,7 +42,8 @@ public class MatrizBioenergéticaEMeridional extends Ferramenta{
         intermedFerramenta.ações.add("Programar a matriz química da água no corpo e no ambiente para a cura");
         intermedFerramenta.ações.add("Auto-regeneração do corpo físico");
 
-        intermedFerramenta.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz da Bioenergética Sutil pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos, chakras e corpos sutis. Ativo agora a frequência do Princípio (princípio) para (ação). Que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedFerramenta.repeatString = "Princípio (princípio) para (ação), ";
+        intermedFerramenta.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz da Bioenergética Sutil pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos, chakras e corpos sutis. Ativo agora a frequência do (next). Que pulsem na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new MeridianosDoCorpo(this);
