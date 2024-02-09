@@ -11,6 +11,8 @@ public class PortaisDimensionais extends Ferramenta{
         SubFerramenta intermedFerramenta;
 
         this.type = 2;
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão aos planos mais elevados e ao corpo búdico de (nome do consulente) para abrir a frequência etérica de Metatrão para fixar a informação de (resultado) com a ação de (next) que causam bloqueios não divinos na existência presente de (nome do consulente). Decreto aberto o campo akáshico para que possa (next) fixando o equilíbrio, na medida exata e na quantidade certa. Pulso no campo, pulso no campo, pulso no campo.";
+        this.repeatString = "(ação), ";
 
         this.resultados.add("1ª Dimensão");
         this.resultados.add("2ª Dimensão");
@@ -22,6 +24,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.resultados.add("8ª Dimensão");
 
         intermedFerramenta = new SubFerramenta(this, "1ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
@@ -32,6 +37,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "2ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
@@ -44,6 +52,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "3ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
@@ -54,6 +65,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "4ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
@@ -64,6 +78,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "5ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
@@ -74,6 +91,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "6ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         
@@ -82,6 +102,9 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "7ª Dimensão");
+        intermedFerramenta.multi = true;
+        intermedFerramenta.ownDecreto = this.Decreto;
+        intermedFerramenta.repeatString = this.repeatString;
         intermedFerramenta.resultados.add("");
         intermedFerramenta.resultados.add("");
         
@@ -90,12 +113,12 @@ public class PortaisDimensionais extends Ferramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta = new SubFerramenta(this, "8ª Dimensão");
+        intermedFerramenta.ownDecreto = this.Decreto.replace("(next)", "(ação)");
         intermedFerramenta.resultados.add("");
         
         intermedFerramenta.ações.add("Ativar a consciência divina no foco, informação, forma, tempo, espírito, alma, infinito e eternidade");
         this.subFerramentas.add(intermedFerramenta);
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão aos planos mais elevados e ao corpo búdico de (nome do consulente) para abrir a frequência etérica de Metatrão para fixar a informação de (resultado) com a ação de (ação) que causam bloqueios não divinos na existência presente de (nome do consulente). Decreto aberto o campo akáshico para que possa (ação) fixando o equilíbrio, na medida exata e na quantidade certa. Pulso no campo, pulso no campo, pulso no campo.";
 
     }
 }
