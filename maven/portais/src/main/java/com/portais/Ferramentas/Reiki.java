@@ -41,11 +41,9 @@ public class Reiki extends SubFerramenta{
         intermedFerramenta.ações.add("Potenciar a ação do propósito no campo");
         intermedFerramenta.ações.add("Acionar a proteção e a transmutação de energias");
         intermedFerramenta.ações.add("Equilibrar todas as energias do passado, presente e futuro");
-        //TODO - Update Reiki?
         intermedFerramenta.ações.add("Restaurar o equilíbrio e sinergia entre chakras");
         intermedFerramenta.ações.add("Equilibrar a energia do propósito divino do local");
         intermedFerramenta.ações.add("Acionar a confiança nas múltiplas possibilidades");
-        intermedFerramenta.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) e invocando os mestres ancestrais de Reiki, peço permissão ao Eu Superior de (nome do consulente) para ativar as frequências de equilíbrio e harmonia com o (simbolo reiki) para (ação) imprimindo essas informações no seu campo morfogenético para que se sinta confortado e empoderado, na medida certa e quantidade exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
         intermedFerramenta.repeatString = "simbolo (simbolo reiki) para (ação), ";
         intermedFerramenta.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) e invocando os mestres ancestrais de Reiki, peço permissão ao Eu Superior de (nome do consulente) para ativar as frequências de equilíbrio e harmonia com o (next) imprimindo essas informações no seu campo morfogenético para que se sinta confortado e empoderado, na medida certa e quantidade exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
         this.subFerramentas.add(intermedFerramenta);

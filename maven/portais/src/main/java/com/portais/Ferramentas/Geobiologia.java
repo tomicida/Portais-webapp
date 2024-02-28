@@ -132,7 +132,6 @@ public class Geobiologia extends SubFerramenta{
         intermedFerramenta.ações.add("Remover todo o vínculo de informação nocivo e transmutar com a frequência da cor violeta e a frequência da cor verde para limpeza e eterização espacial");
         intermedFerramenta.ações.add("Remover todas as informações de frequências nocivas ao ambiente e ativar a Geometria Exodin de proteção");
         intermedFerramenta.ações.add("Transmutar a informação espaço-temporal com a frequência da cor violeta");
-        //TODO Confirmar Vampirizadores Energéticos
         intermedFerramenta.ações.add("Remover todas as informações de frequências nocivas ao ambiente e ativar as Geometrias Exodin de proteção e Labirinto de Amiens para sustentação da proteção");
         intermedFerramenta.ações.add("Ativar a frequência do equilíbrio Yin/Yang para promover a cura do espaço. Ativar a frequência da geometria programador físico com a sintonia do equilíbrio da energia");
         intermedFerramenta.ações.add("Transmutar a informação espaço-temporal com a frequência da cor violeta");
@@ -225,7 +224,6 @@ public class Geobiologia extends SubFerramenta{
         intermedFerramenta.resultados.add("Hipotensão");
         intermedFerramenta.resultados.add("Hipertensão");
         intermedFerramenta.resultados.add("Sepsis");
-        //TODO confirmar Hipoxia/Hipoxis
         intermedFerramenta.resultados.add("Hipoxia");
         intermedFerramenta.resultados.add("Anoxia");
         intermedFerramenta.resultados.add("Necrose");

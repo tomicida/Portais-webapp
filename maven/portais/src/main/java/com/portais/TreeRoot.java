@@ -74,7 +74,6 @@ public class TreeRoot {
 
         //Portal de Relacionamentos
 
-        //TODO - Change Name (Graficos Radiestesicos -> Cartões Radiónicos)?
         temp = new GráficosRadiestesicos(Portal2, 0);
         Portal2.AddFerramenta(temp);
 
@@ -127,7 +126,6 @@ public class TreeRoot {
         temp.target = Portal1;
         Portal3.AddFerramenta(temp);
 
-        //TODO Change Name? (Vidas Passadas -> CURA PALINGENICA)
         temp = new VidasPassadas(Portal3,3);
         Portal3.AddFerramenta(temp);
 
