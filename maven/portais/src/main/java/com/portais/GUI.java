@@ -10,7 +10,8 @@ import java.awt.event.ActionEvent;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
+import com.portais.Ferramentas.MesaArcturiana;
+import com.portais.Ferramentas.MesaArcturianaParte2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,19 +26,27 @@ import java.util.stream.Collectors;
 
 class GUI{
     public TreeRoot root;
+    //reusable components
     JFrame frame;
     JPanel centerPanel;
     JPanel bottomPanel;
     JPanel sidePanel;
+
+    //temporary information
+    Leitura leitura;
     Cliente currentClient;
     ArrayList<Integer> currentResult;
     public ArrayList<Integer> indexArray;
     public ArrayList<Integer> multiResultsArray;
-    Leitura leitura;
+    public ArrayList<Integer[]> bidimensionalResults;
     int page = 0;
     int maxPage = 0;
     int offset = 0;
+    long codigoMatrizTempo = 0;
+    long codigoMatrizEspaço = 0;
+    long codigoMatrizSincronica = 0;
 
+    //config
     String configNomeTerapeuta = "NomeDoTerapeuta";
     int configFonteTamanho = 12;
     Font configFonte;
@@ -2501,7 +2510,7 @@ class GUI{
             resultadosPanel.add(confirmButton);
         }
         
-        JLabel labelTitle = new JLabel(ferramenta.name, JLabel.CENTER);
+        JLabel labelTitle = new JLabel(ferramenta.portal.name + " > "+ferramenta.name, JLabel.CENTER);
         containerJPanel.add(labelTitle,BorderLayout.PAGE_START);
 
         containerJPanel.add(resultadosPanel, BorderLayout.CENTER);
@@ -2542,41 +2551,42 @@ class GUI{
         JPanel resultadosPanel = new JPanel(new GridLayout(pagesize,1));
         JButton confirmButton = new JButton("Confirmar Resultados");
 
-        for (int i = page*rownum;i < (page+1)*rownum && i<subFerramenta.resultados.size();i++) {
-            JPanel smaller = new JPanel();
-            JButton button = new JButton(i+subFerramenta.offset+" - "+subFerramenta.resultados.get(i));
-            smaller.add(button);
-            ArrayList<Integer> newIndexArray = (ArrayList<Integer>) indexArray.clone();
-            newIndexArray.add(i);
-            int newi = i;
+        if(subFerramenta.type == 0){ //regular
+            for (int i = page*rownum;i < (page+1)*rownum && i<subFerramenta.resultados.size();i++) {
+                JPanel smaller = new JPanel();
+                JButton button = new JButton(i+subFerramenta.offset+" - "+subFerramenta.resultados.get(i));
+                smaller.add(button);
+                ArrayList<Integer> newIndexArray = (ArrayList<Integer>) indexArray.clone();
+                newIndexArray.add(i);
+                int newi = i;
 
-            if(subFerramenta.subFerramentas.isEmpty() || subFerramenta.subFerramentas.get(i).inactive){
-                if(!subFerramenta.multi)
-                    button.addActionListener(e -> replacePanel(decretoPanel(subFerramenta, newIndexArray)));
-                else
+                if(subFerramenta.subFerramentas.isEmpty() || subFerramenta.subFerramentas.get(i).inactive){
+                    if(!subFerramenta.multi)
+                        button.addActionListener(e -> replacePanel(decretoPanel(subFerramenta, newIndexArray)));
+                    else
+                        button.addActionListener(new ActionListener(){
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                multiResultsArray.add(newi);
+                                confirmButton.setEnabled(true);
+                                sidePanel();
+                            }
+                        });
+                }
+                else{
                     button.addActionListener(new ActionListener(){
                         @Override
-                        public void actionPerformed(ActionEvent e) {
-                            multiResultsArray.add(newi);
-                            confirmButton.setEnabled(true);
-                            sidePanel();
+                        public void actionPerformed(ActionEvent e) { 
+                            page = 0;
+                            replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(newi), newIndexArray));
                         }
                     });
-            }
-            else{
-                button.addActionListener(new ActionListener(){
-                    @Override
-                    public void actionPerformed(ActionEvent e) { 
-                        page = 0;
-                        replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(newi), newIndexArray));
-                    }
-                });
-            }
+                }
 
-            resultadosPanel.add(smaller);
+                resultadosPanel.add(smaller);
+            }
         }
-
-        if(subFerramenta.type == 1){
+        else if(subFerramenta.type == 1){ //linhas hartmann/curry
             JTextField textField = new JTextField(32);
             resultadosPanel.add(textField);
             confirmButton.addActionListener(new ActionListener(){
@@ -2594,6 +2604,162 @@ class GUI{
             });
             resultadosPanel.add(confirmButton);
         }
+        else if(subFerramenta.type == 2){//Mesa Arcturiana Part 1
+            resultadosPanel = new JPanel(new BorderLayout());
+            JPanel tablePanel = new JPanel(new GridLayout(9,4));
+            resultadosPanel.add(tablePanel, BorderLayout.NORTH);
+
+            ArrayList<JCheckBox> checkBoxs = new ArrayList<>();
+            ArrayList<JComboBox<String>> selosCombos = new ArrayList<>();
+            ArrayList<JComboBox<String>> tonsCombos = new ArrayList<>();
+            for(int i=0; i<subFerramenta.resultados.size();i++){
+                JCheckBox box = new JCheckBox();
+                checkBoxs.add(box);
+                tablePanel.add(box);
+                tablePanel.add(new JLabel((i+subFerramenta.offset)+" "+subFerramenta.resultados.get(i)));
+                JComboBox<String> selosComboBox = getSelos(subFerramenta);
+                selosCombos.add(selosComboBox);
+                tablePanel.add(selosComboBox);
+                JComboBox<String> tonsComboBox = getTons(subFerramenta);
+                tonsCombos.add(tonsComboBox);
+                tablePanel.add(tonsComboBox);
+            }
+
+            JPanel codesPanel = new JPanel(new GridLayout(3,2));
+
+            codesPanel.add(new JLabel("<html>Código Matriz do Tempo <b style=\"color:red\">(apontar da direita para a esquerda)</b></html>"));
+            JTextField fieldTempo = new JTextField(30);
+            codesPanel.add(fieldTempo);
+            codesPanel.add(new JLabel("<html>Código Matriz do Espaço <b style=\"color:red\">(apontar da direita para a esquerda)</b></html>"));
+            JTextField fieldEspaço= new JTextField(30);
+            codesPanel.add(fieldEspaço);
+            codesPanel.add(new JLabel("<html>Código da Matriz Sincrónica <b style=\"color:red\">(apontar da direita para a esquerda)</b></html>"));
+            JTextField fieldSincronica= new JTextField(30);
+            codesPanel.add(fieldSincronica);
+
+            resultadosPanel.add(codesPanel, BorderLayout.CENTER);
+
+            confirmButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    bidimensionalResults = new ArrayList<Integer[]>();
+                    ArrayList<Integer> tempIndexArray = (ArrayList<Integer>) indexArray.clone();
+
+                    for (int i=0;i<checkBoxs.size();i++){
+                        if (checkBoxs.get(i).isSelected()) {
+                            System.out.println(subFerramenta.resultados.get(i) + " "//
+                            +subFerramenta.selos.get(selosCombos.get(i).getSelectedIndex())+" "//
+                            +subFerramenta.tons.get(tonsCombos.get(i).getSelectedIndex()));
+        
+                            bidimensionalResults.add(new Integer[]{i,selosCombos.get(i).getSelectedIndex(),tonsCombos.get(i).getSelectedIndex()});
+                        }
+                    }
+
+                    indexArray.add(bidimensionalResults.get(0)[0]);
+
+                    codigoMatrizTempo = Long.parseLong(fieldTempo.getText());
+                    codigoMatrizEspaço = Long.parseLong(fieldEspaço.getText());
+                    codigoMatrizSincronica =  Long.parseLong(fieldSincronica.getText());
+
+                    System.out.println("Tempo: "+ codigoMatrizTempo);
+                    System.out.println("Espaço: "+ codigoMatrizEspaço);
+                    System.out.println("Sincronica: "+ codigoMatrizSincronica);
+
+                    if(subFerramenta.getClass()==MesaArcturiana.class){
+                        MesaArcturiana tempClass = (MesaArcturiana) subFerramenta;
+                        tempClass.setMatrizTempo(codigoMatrizTempo);
+                        tempClass.setMatrizEspaço(codigoMatrizEspaço);
+                        tempClass.setMatrizSincronica(codigoMatrizSincronica);
+                        decretoWindow("Mesa Arcturiana", tempClass.ArcturianaDecreto(indexArray,currentClient,bidimensionalResults,indexArray.size()-1));
+                        replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(0), tempIndexArray));
+                    }
+                } 
+            });
+
+            resultadosPanel.add(confirmButton, BorderLayout.SOUTH);
+            
+        }else if(subFerramenta.type == 3){//Mesa Arcturiana Part 2
+            resultadosPanel = new JPanel(new BorderLayout());
+
+            JPanel fieldsTablePanel = new JPanel(new GridLayout(3,2));
+            resultadosPanel.add(fieldsTablePanel, BorderLayout.NORTH);
+            fieldsTablePanel.add(new JLabel("Kin (DNA)"));
+            JTextField kinField = new JTextField();
+            fieldsTablePanel.add(kinField);
+            fieldsTablePanel.add(new JLabel("Selo (RNA)"));
+            JComboBox<String> selosComboBox = getSelos(subFerramenta);
+            fieldsTablePanel.add(selosComboBox);
+            fieldsTablePanel.add(new JLabel("Tom (RNA)"));
+            JComboBox<String> tonsComboBox = getTons(subFerramenta);
+            fieldsTablePanel.add(tonsComboBox);
+
+            JPanel basesTablePanel = new JPanel(new GridLayout(5,4));
+            resultadosPanel.add(basesTablePanel, BorderLayout.CENTER);
+
+            basesTablePanel.add(new JLabel("Base (DNA)"));
+            basesTablePanel.add(new JLabel("Código"));
+            basesTablePanel.add(new JLabel("Base (RNA)"));
+            basesTablePanel.add(new JLabel("Código"));
+
+            basesTablePanel.add(new JLabel("Citosina"));
+            JTextField CitosinaDNA = new JTextField(20);
+            basesTablePanel.add(CitosinaDNA);
+            basesTablePanel.add(new JLabel("Citosina"));
+            JTextField CitosinaRNA = new JTextField(20);
+            basesTablePanel.add(CitosinaRNA);
+
+            basesTablePanel.add(new JLabel("Guanina"));
+            JTextField GuaninaDNA = new JTextField(20);
+            basesTablePanel.add(GuaninaDNA);
+            basesTablePanel.add(new JLabel("Guanina"));
+            JTextField GuaninaRNA = new JTextField(20);
+            basesTablePanel.add(GuaninaRNA);
+
+            basesTablePanel.add(new JLabel("Adenina"));
+            JTextField AdeninaDNA = new JTextField(20);
+            basesTablePanel.add(AdeninaDNA);
+            basesTablePanel.add(new JLabel("Adenina"));
+            JTextField AdeninaRNA = new JTextField(20);
+            basesTablePanel.add(AdeninaRNA);
+
+            basesTablePanel.add(new JLabel("Timina"));
+            JTextField Timina = new JTextField(20);
+            basesTablePanel.add(Timina);
+            basesTablePanel.add(new JLabel("Uracila"));
+            JTextField Uracila = new JTextField(20);
+            basesTablePanel.add(Uracila);
+
+            confirmButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    if(subFerramenta.getClass()==MesaArcturianaParte2.class){
+                        MesaArcturianaParte2 tempClass = (MesaArcturianaParte2) subFerramenta;
+                        tempClass.setAdeninaRNA(AdeninaRNA.getText());
+                        tempClass.setAdeninaDNA(AdeninaDNA.getText());
+                        tempClass.setCitosinaDNA(CitosinaDNA.getText());
+                        tempClass.setCitosinaRNA(CitosinaRNA.getText());
+                        tempClass.setGuaninaDNA(GuaninaDNA.getText());
+                        tempClass.setGuaninaRNA(GuaninaRNA.getText());
+                        tempClass.setTimina(Timina.getText());
+                        tempClass.setUracila(Uracila.getText());
+
+                        tempClass.setKin(kinField.getText());
+                        tempClass.setTomIndex(tonsComboBox.getSelectedIndex());
+                        tempClass.setSeloIndex(selosComboBox.getSelectedIndex());
+
+                        tempClass.setMatrizTempo(codigoMatrizTempo);
+                        tempClass.setMatrizEspaço(codigoMatrizEspaço);
+                        tempClass.setMatrizSincronica(codigoMatrizSincronica);
+                        
+                        //decretoWindow("Mesa Arcturiana", tempClass.Decreto(indexArray, currentClient));
+                        indexArray.add(0);
+                        replacePanel(decretoPanel(tempClass, indexArray));
+                    }
+                }
+            });
+            resultadosPanel.add(confirmButton, BorderLayout.SOUTH);
+        }
 
         if(subFerramenta.multi){
             if(multiResultsArray.isEmpty())
@@ -2607,8 +2773,24 @@ class GUI{
         return containerJPanel;
     }
 
+    private JComboBox<String> getSelos(SubFerramenta subFerramenta) {
+        String[] options = new String[subFerramenta.selos.size()];
+        for(int i =0; i < subFerramenta.selos.size(); i++){
+            options[i] = (i + subFerramenta.offset) + " " + subFerramenta.selos.get(i);
+        }
+        return new JComboBox<String>(options);
+    }
+
+    private JComboBox<String> getTons(SubFerramenta subFerramenta) {
+        String[] options = new String[subFerramenta.tons.size()];
+        for(int i = 0; i < subFerramenta.tons.size(); i++){
+            options[i] = (i + subFerramenta.offset) + " " + subFerramenta.tons.get(i);
+        }
+        return new JComboBox<String>(options);
+    }
+
     public String getCurrentToolPathName(Ferramenta ferramenta, List<Integer> indexArray){
-        String pathString= ferramenta.name;
+        String pathString= ferramenta.portal.name + " > " + ferramenta.name;
         SubFerramenta tempSubFerramenta = ferramenta.subFerramentas.get(indexArray.get(0));
         pathString += " > " + tempSubFerramenta.prevResult;
 
@@ -2662,7 +2844,7 @@ class GUI{
 
         JPanel panel = new JPanel(new BorderLayout());
 
-        JLabel labelTitle = new JLabel(ferramenta.name, JLabel.CENTER);
+        JLabel labelTitle = new JLabel(ferramenta.portal.name + " > " +ferramenta.name, JLabel.CENTER);
         panel.add(labelTitle,BorderLayout.NORTH);
         
         JPanel centerJPanel = new JPanel(new BorderLayout());
@@ -2855,6 +3037,8 @@ class GUI{
             indexArray.add(multiResultsArray.get(0));
         }
 
+        System.out.println(indexArray);
+
         String pageTitle = getCurrentToolPathName(subFerramenta.mainFerramenta,indexArray.subList(0, indexArray.size()-1));
         
         for (Integer integer : indexArray) {
@@ -2989,9 +3173,107 @@ class GUI{
                         leitura.historico.add(temp2);
                         leitura.Save();
                         result++;
-                    }while(result<multiResultsArray.size());
+                    }while(result < multiResultsArray.size());
                     multiResultsArray = new ArrayList<Integer>();
                     sidePanel();
+                }else if(subFerramenta.getClass() == MesaArcturianaParte2.class){
+                    ArrayList<Integer> temp2;
+                    MesaArcturianaParte2 tempClass = (MesaArcturianaParte2) subFerramenta;
+                    
+                    //0 - Bidimensional Results
+                    for(int i = 0;i<bidimensionalResults.size();i++){
+                        temp2 = ( ArrayList<Integer>) temp.clone();
+                        for(int j=0; j<bidimensionalResults.get(i).length;j++)
+                            temp2.add(bidimensionalResults.get(i)[j]);
+                        leitura.historico.add(temp2);
+                        leitura.Save();
+                    }
+                    bidimensionalResults = new ArrayList<Integer[]>();
+
+                    //1- Codigo do Tempo
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,1);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(codigoMatrizTempo+"");
+                    leitura.historico.add(temp2);
+                    //2- Codigo do Espaço
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,2);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(codigoMatrizEspaço+"");
+                    leitura.historico.add(temp2);
+                    //3- Codigo Sincronica
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,3);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(codigoMatrizSincronica+"");
+                    leitura.historico.add(temp2);
+                    //4- kin
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,4);
+                    temp2.add(Integer.parseInt(tempClass.getKin()));
+                    leitura.historico.add(temp2);
+                    //5- selo
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,5);
+                    temp2.add(tempClass.getSeloIndex());
+                    leitura.historico.add(temp2);
+                    //6- tom
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,6);
+                    temp2.add(tempClass.getTomIndex());
+                    leitura.historico.add(temp2);
+                    //7- DNA C
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,7);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getCitosinaDNA());
+                    leitura.historico.add(temp2);
+                    //8- DNA G
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,8);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getGuaninaDNA());
+                    leitura.historico.add(temp2);
+                    //9- DNA A
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,9);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getAdeninaDNA());
+                    leitura.historico.add(temp2);
+                    //10- DNA T
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,10);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getTimina());
+                    leitura.historico.add(temp2);
+                    //11- RNA C
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,11);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getCitosinaRNA());
+                    leitura.historico.add(temp2);
+                    //12- RNA G
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,12);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getGuaninaRNA());
+                    leitura.historico.add(temp2);
+                    //13- RNA A
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,13);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getAdeninaRNA());
+                    leitura.historico.add(temp2);
+                    //14- RNA U
+                    temp2 = ( ArrayList<Integer>) temp.clone();
+                    temp2.set(temp.size()-1,14);
+                    temp2.add(leitura.strings.size());
+                    leitura.strings.add(tempClass.getUracila());
+                    leitura.historico.add(temp2);
+                    leitura.Save();
+
+
                 }
                 else{
                     leitura.historico.add(temp);

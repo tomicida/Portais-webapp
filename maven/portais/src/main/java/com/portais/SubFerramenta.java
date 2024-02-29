@@ -14,6 +14,9 @@ public class SubFerramenta implements Cloneable{
     public ArrayList<String> resultados2;
     public ArrayList<String> ações;
     public ArrayList<String> funções;
+    public ArrayList<String> selos;
+    public ArrayList<String> tons;
+    public ArrayList<String> forças;
     public boolean inactive;
     public boolean multi;
     public String ownDecreto;
@@ -33,6 +36,10 @@ public class SubFerramenta implements Cloneable{
         subFerramentas = new ArrayList<SubFerramenta>();
         ações = new ArrayList<String>();
         funções = new ArrayList<String>();
+        selos = new ArrayList<String>();
+        tons = new ArrayList<String>();
+        forças = new ArrayList<String>();
+        
 
         this.mainFerramenta = ferramenta;
         this.prevResult = prevResult;
@@ -80,7 +87,6 @@ public class SubFerramenta implements Cloneable{
 
         if(resultados.size()>index.get(1)){
             decreto = decreto.replace("(index)", "<b style=\"color:blue;\">" + (index.get(1)+offset)+ "</b>");
-            decreto = decreto.replace("(campo, número, ligação)", "<b style=\"color:blue;\">" + mainFerramenta.resultados.get(index.get(0))+"; "+(index.get(1)+offset)+" "+ resultados.get(index.get(1))+"</b>");
             decreto = decreto.replace("(nome do floral)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(nome da cepa)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(indicação)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
@@ -94,6 +100,10 @@ public class SubFerramenta implements Cloneable{
             decreto = decreto.replace("(nome de deus)", "<b style=\"color:blue;\">" + resultados.get(index.get(1))+ "</b>");
             if(!ações.isEmpty()){
                 decreto = decreto.replace("(nº e designação)", "<b style=\"color:blue;\">" + (index.get(1) + offset) + " " + resultados.get(index.get(1))+" "+  ações.get(index.get(1)) + "</b>");
+            }
+            if(mainFerramenta.resultados.size()>index.get(0)){
+                decreto = decreto.replace("(campo, número, ligação)", "<b style=\"color:blue;\">" + mainFerramenta.resultados.get(index.get(0))+"; "+(index.get(1)+offset)+" "+ resultados.get(index.get(1))+"</b>");
+
             }
         }
         decreto = decreto.replace("(designação)", "<b style=\"color:blue;\">" + mainFerramenta.subFerramentas.get(index.get(0)).resultados.get(index.get(1))+ "</b>");

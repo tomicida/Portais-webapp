@@ -144,6 +144,7 @@ public class GeneratePDF {
             Portal portal;
             Portal lastPortal = new Portal("",9);
             Ferramenta ferramenta;
+            SubFerramenta subFerramenta;
             Ferramenta lastTool = new Ferramenta("", lastPortal, 19);
             Paragraph tempParagraph;
 
@@ -178,7 +179,63 @@ public class GeneratePDF {
                 }else if (ferramenta.type == 2){
                     if(lista.size() >=3){
                         tempParagraph.add(new Chunk(ferramenta.resultados.get(lista.get(2)),fontn));
-                        if (lista.size() >=4 ){
+                        if(lista.get(0)==3 && lista.get(1)==6 && lista.get(2)==1){
+                            subFerramenta= ferramenta.subFerramentas.get(1);
+                            tempParagraph.add(new Chunk(" ",fontn));
+                            switch (lista.get(3)) {
+                                case 0:
+                                tempParagraph.add(new Chunk(subFerramenta.resultados.get(lista.get(4))+//
+                                                            " "+ subFerramenta.selos.get(lista.get(5))+//
+                                                            "/"+ subFerramenta.forças.get(lista.get(5))+//
+                                                            "; "+subFerramenta.tons.get(lista.get(6))+//
+                                                            "/"+subFerramenta.funções.get(lista.get(6)),fontn));
+                                    break;
+                                case 1:
+                                tempParagraph.add(new Chunk("Código da Matriz do Tempo: "+ leitura.strings.get(lista.get(4)),fontn));
+                                    break;
+                                case 2:
+                                tempParagraph.add(new Chunk("Código da Matriz do Espaço: "+ leitura.strings.get(lista.get(4)),fontn));
+                                    break;
+                                case 3:
+                                tempParagraph.add(new Chunk("Código da Matriz Sincrónica: "+ leitura.strings.get(lista.get(4)),fontn));
+                                    break;
+                                case 4:
+                                tempParagraph.add(new Chunk("Kin: "+lista.get(4),fontn));
+                                    break;
+                                case 5:
+                                tempParagraph.add(new Chunk("Selo: "+subFerramenta.selos.get(lista.get(4))+"/"+//
+                                                                     subFerramenta.forças.get(lista.get(4)),fontn));
+                                    break;
+                                case 6:
+                                tempParagraph.add(new Chunk("Tom "+subFerramenta.tons.get(lista.get(4))+"/"+//
+                                                                   subFerramenta.funções.get(lista.get(4)),fontn));
+                                    break;
+                                case 7:
+                                tempParagraph.add(new Chunk("Citosina (DNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 8:
+                                tempParagraph.add(new Chunk("Guanina (DNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 9:
+                                tempParagraph.add(new Chunk("Adenina (DNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 10:
+                                tempParagraph.add(new Chunk("Timina (DNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 11:
+                                tempParagraph.add(new Chunk("Citosina (RNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 12:
+                                tempParagraph.add(new Chunk("Guanina (RNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 13:
+                                tempParagraph.add(new Chunk("Adenina (RNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;
+                                case 14:
+                                tempParagraph.add(new Chunk("Uracila (RNA): "+ leitura.strings.get(lista.get(4))+" Hz",fontn));
+                                    break;    
+                            }
+                        }else if (lista.size() >=4 ){
                             tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).resultados.get(lista.get(3)),fontn));
                             if (lista.size() >= 5 && !(lista.get(0)==2 && lista.get(1)==7)){
                                 if(ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).type != 1)
