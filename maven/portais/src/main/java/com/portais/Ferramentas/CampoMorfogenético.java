@@ -33,6 +33,7 @@ public class CampoMorfogenético extends Ferramenta{
         intermedFerramenta.ações.add("Limpar, reconstruir, equilibrar e harmonizar");
         intermedFerramenta.ações.add("Abrir a expansão de consciência");
         intermedSubFerramenta = new SubFerramenta(this,"Passado");
+        intermedSubFerramenta.ownDecreto = intermedFerramenta.ownDecreto;
         intermedSubFerramenta.resultados.add("Social");
         intermedSubFerramenta.resultados.add("Familiar");
         intermedSubFerramenta.resultados.add("Conjugal");
