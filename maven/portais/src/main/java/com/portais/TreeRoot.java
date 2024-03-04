@@ -55,7 +55,7 @@ public class TreeRoot {
         temp.target = Portal4;
         Portal1.AddFerramenta(temp);
 
-        temp = new CampoMorfogenético(Portal1, 6);
+        temp = new CampoMorfogenetico(Portal1, 6);
         Portal1.AddFerramenta(temp);
 
         temp = new FengShui(Portal1, 7);
@@ -97,7 +97,7 @@ public class TreeRoot {
         temp.target = Portal4;
         Portal2.AddFerramenta(temp);
 
-        temp = new CampoMorfogenético(Portal2, 6);
+        temp = new CampoMorfogenetico(Portal2, 6);
         Portal2.AddFerramenta(temp);
 
         temp = new CuraEgipcia(Portal2,7);

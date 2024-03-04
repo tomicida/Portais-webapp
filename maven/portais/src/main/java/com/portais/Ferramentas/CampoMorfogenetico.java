@@ -4,8 +4,8 @@ import com.portais.Portal;
 import com.portais.SubFerramenta;
 import com.portais.Ferramenta;
 
-public class CampoMorfogenético extends Ferramenta{
-    public CampoMorfogenético (Portal portal, int id){
+public class CampoMorfogenetico extends Ferramenta{
+    public CampoMorfogenetico (Portal portal, int id){
         super("Campo Morfogenético", portal, id);
         
         SubFerramenta intermedFerramenta;
