@@ -21,7 +21,7 @@ public class Naturopatia extends Ferramenta{
         intermedFerramenta.resultados.add("Mimulus");
         intermedFerramenta.resultados.add("Aspen");
         intermedFerramenta.resultados.add("Rock Rose");
-        intermedFerramenta.resultados.add("Cherry Pum");
+        intermedFerramenta.resultados.add("Cherry Plum");
         intermedFerramenta.resultados.add("Red Chestnut");
         intermedFerramenta.resultados.add("Honeysuckle");
         intermedFerramenta.resultados.add("Clematis");
