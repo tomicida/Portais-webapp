@@ -286,6 +286,11 @@ public class GeneratePDF {
                 doc.add(paragraph);
             }
             
+            paragraph = new Paragraph("Esta terapia não serve de substituto à Medicina Convencional",new Font(Font.FontFamily.HELVETICA, 16, Font.NORMAL));
+            paragraph.setAlignment(Element.ALIGN_CENTER);
+            paragraph.setSpacingBefore(24f);
+            doc.add(paragraph);
+
             doc.close();
             writer.close();
         }
