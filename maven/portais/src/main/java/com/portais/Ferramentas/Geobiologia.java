@@ -94,7 +94,7 @@ public class Geobiologia extends SubFerramenta{
         intermedFerramenta.ações.add("Ajustar a georeferência terrestre com os vórtices e portais etéricos para eliminação de forças telúricas nocivas");
         intermedFerramenta.ações.add("Ajustar a georeferência terrestre com os vórtices e portais etéricos para eliminação de forças telúricas nocivas");
         
-        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de (tipo geo) com a informação de (geopatias) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental sito em (morada) de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de (tipo geo) com a informação de (geopatias) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
 
         this.subFerramentas.add(intermedFerramenta);
 
@@ -189,7 +189,7 @@ public class Geobiologia extends SubFerramenta{
 
         intermedSubFerramenta.ações.add("Remover todas as informações de frequências nocivas ao ambiente e ativar as Geometrias Exodin de proteção e Dispersor para afastar as energias nocivas");
         intermedSubFerramenta.ações.add("Remover todas as informações de frequências nocivas ao ambiente e ativar as Geometrias Exodin de proteção e Dispersor para afastar as energias nocivas");
-        intermedSubFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (geopatia) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedSubFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental sito em (morada) de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (geopatia) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
         intermedSubFerramenta = new SubFerramenta(mainFerramenta,"Ataques Psíquicos");
         intermedSubFerramenta.inactive=true;
@@ -214,7 +214,7 @@ public class Geobiologia extends SubFerramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
 
-        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (geopatia) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental sito em (morada) de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (geopatia) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
         
         this.subFerramentas.add(intermedFerramenta);
 
@@ -265,7 +265,7 @@ public class Geobiologia extends SubFerramenta{
         intermedFerramenta.ações.add("Ativar as frequências das Geometrias Phtah, Exodin e Labirinto de Amiens para limpeza, reestruturação, equilíbrio e proteção do espaço-tempo e de Programador Físico e Multioscilador para imprimir o estado de equilíbrio de saúde nos envolvidos com a anomalia do campo mórfico.");
         
         intermedFerramenta.repeatString = "(geopatia), ";
-        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (next) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental sito em (morada) de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (next) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
         
         this.subFerramentas.add(intermedFerramenta);
 
