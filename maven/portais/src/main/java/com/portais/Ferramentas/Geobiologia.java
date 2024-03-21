@@ -219,6 +219,7 @@ public class Geobiologia extends SubFerramenta{
         this.subFerramentas.add(intermedFerramenta);
 
         intermedFerramenta=new SubFerramenta(mainFerramenta, "Geopatia Anatómica");
+        intermedFerramenta.multi = true;
         intermedFerramenta.resultados.add("Tumor");
         intermedFerramenta.resultados.add("Neoplasia");
         intermedFerramenta.resultados.add("Hipotensão");
@@ -263,7 +264,8 @@ public class Geobiologia extends SubFerramenta{
         intermedFerramenta.ações.add("Ativar as frequências das Geometrias Phtah, Exodin e Labirinto de Amiens para limpeza, reestruturação, equilíbrio e proteção do espaço-tempo e de Programador Físico e Multioscilador para imprimir o estado de equilíbrio de saúde nos envolvidos com a anomalia do campo mórfico.");
         intermedFerramenta.ações.add("Ativar as frequências das Geometrias Phtah, Exodin e Labirinto de Amiens para limpeza, reestruturação, equilíbrio e proteção do espaço-tempo e de Programador Físico e Multioscilador para imprimir o estado de equilíbrio de saúde nos envolvidos com a anomalia do campo mórfico.");
         
-        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (geopatia) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedFerramenta.repeatString = "(geopatia), ";
+        intermedFerramenta.ownDecreto = "Ativando o acesso ao Atma de (nome do terapeuta) e a todos os corpos sutis participantes no processo de regeneração ambiental de (nome do consulente), pedindo permissão para ação corretiva no espaço aqui tratado. Retificando a anomalia mórfica de com a informação de (next) e abrindo campo de cura para (ação). Pulsa no campo, pulsa no campo, pulsa no campo.";
         
         this.subFerramentas.add(intermedFerramenta);
 
