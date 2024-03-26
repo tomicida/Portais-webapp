@@ -12,9 +12,8 @@ public class ConstelaçãoFamiliar extends Ferramenta{
 
         this.type = 2;
 
-        this.repeatString = "Ativo o elemento (resultado) identificado como causando (causa) no plano das relações de (nome do consulente). ";
-        this.repeatString2 = "(Ação), ";
-        this.Decreto = "Abro no portal dos relacionamentos a frequência de cura da Constelação Familiar para que os bloqueios de relação de (nome do consulente) possam ser desativados, limpos e harmonizados. (next) (next2) pulsando no campo a limpeza e harmonização para que se fixe na medida certa e na quantidade exata, dentro do que é divino. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.repeatString = "Ativo o elemento (resultado) identificado como causando (causa) no plano das relações de (nome do consulente) para (Ação) ";
+        this.Decreto = "Abro no portal dos relacionamentos a frequência de cura da Constelação Familiar para que os bloqueios de relação de (nome do consulente) possam ser desativados, limpos e harmonizados. (next) pulsando no campo a limpeza e harmonização para que se fixe na medida certa e na quantidade exata, dentro do que é divino. Pulsa no campo, pulsa no campo, pulsa no campo.";
 
         this.resultados.add("Mãe");
         this.resultados.add("Pai");
