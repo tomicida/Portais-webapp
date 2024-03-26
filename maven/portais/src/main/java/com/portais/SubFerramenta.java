@@ -87,6 +87,7 @@ public class SubFerramenta implements Cloneable{
 
         if(resultados.size()>index.get(1)){
             decreto = decreto.replace("(index)", "<b style=\"color:blue;\">" + (index.get(1)+offset)+ "</b>");
+            decreto = decreto.replace("(meridiano)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(nome do floral)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(nome da cepa)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");
             decreto = decreto.replace("(indicação)", "<b style=\"color:blue;\">" + resultados.get(index.get(1)) + "</b>");

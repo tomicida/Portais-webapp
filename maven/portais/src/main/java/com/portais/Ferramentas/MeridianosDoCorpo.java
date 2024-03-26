@@ -64,7 +64,7 @@ public class MeridianosDoCorpo extends SubFerramenta{
         this.ações.add("Regula a digestão e a função estomacal");
         this.ações.add("Regula a função do intestino grosso");
 
-        this.repeatString = "(ação), ";
-        this.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz da Bioenergética Sutil pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos bioenergéticos. Ativo agora a frequência do Meridianos do Corpo para (next) reajustando e equilibrando o seu fluxo normal. Que pulse(m) na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
+        this.repeatString = "(meridiano) para (ação), ";
+        this.ownDecreto = "Na divina presença do Eu Sou de (nome do terapeuta) abro a frequência do método de Cura Quântica Multidimensional e a Matriz da Bioenergética Sutil pedindo ao Eu Superior de (nome do consulente) permissão para atuar nos seus campos bioenergéticos. Ativo agora a frequência do (next) reajustando e equilibrando o seu fluxo normal. Que pulse(m) na harmonia e alinhamento de consciência de (nome do consulente) na quantidade certa e na medida exata. Pulsa no campo, pulsa no campo, pulsa no campo.";
     }
 }
