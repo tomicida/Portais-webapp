@@ -177,6 +177,7 @@ public class GeneratePDF {
                     if(!ferramenta.ações.isEmpty())
                         tempParagraph.add(new Chunk("; "+ferramenta.ações.get(lista.get(2)),fontn));     
                 }else if (ferramenta.type == 2){
+                    System.out.println(lista.size());
                     if(lista.size() >=3){
                         tempParagraph.add(new Chunk(ferramenta.resultados.get(lista.get(2)),fontn));
                         if(lista.get(0)==3 && lista.get(1)==6 && lista.get(2)==1){
@@ -240,7 +241,9 @@ public class GeneratePDF {
                             if (lista.size() >= 5 && !(lista.get(0)==2 && lista.get(1)==7)){
                                 if(ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).type != 1)
                                     tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados.get(lista.get(4)),fontn));
-                                if(lista.size() >= 6){
+                                    if(!ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados2.isEmpty())
+                                        tempParagraph.add(new Chunk(" "+ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados2.get(lista.get(4)),fontn));
+                                    if(lista.size() >= 6){
                                     tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).resultados.get(lista.get(5)),fontn));
                                     if(!ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).ações.isEmpty())
                                         tempParagraph.add(new Chunk("; "+ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).ações.get(lista.get(5)),fontn));
