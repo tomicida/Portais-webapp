@@ -15,10 +15,12 @@ public class Ferramenta {
     public int id;
     public int optionPerPage;
     public int offset;
+    public int bonusResults;
     public boolean multi;
     public Portal portal;
     public Portal target;
     public String repeatString2;
+    
 
     public Ferramenta(String name, Portal portal,int id){
         Decreto = "ERRO DECRETO";
@@ -27,6 +29,7 @@ public class Ferramenta {
         type = 0;
         offset = 1;
         optionPerPage = 15;
+        bonusResults = 0;
         multi = false;
         
         resultados = new ArrayList<String>();

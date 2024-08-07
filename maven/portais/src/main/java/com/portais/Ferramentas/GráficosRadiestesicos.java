@@ -6,6 +6,8 @@ import com.portais.Portal;
 public class GráficosRadiestesicos extends Ferramenta{
     public GráficosRadiestesicos (Portal portal, int id){
         super("Gráficos Radiestesicos", portal, id);
+        this.multi = true;
+        this.bonusResults = 3;
 
         this.resultados.add("Decágono");
         this.resultados.add("Desembaraçador");
@@ -108,7 +110,8 @@ public class GráficosRadiestesicos extends Ferramenta{
         this.funções.add("Utilizado pelo método CQM® para representar os campos morfogenéticos e as infinitas possibilidades de futuro, posiciona, através de coordenadas dadas pelo biometro a melhor tomada de decisão perante um evento significativo da vida do sujeito");
         this.funções.add("Utilizado pelo método CQM® para acionar um vórtice imediato para acionar o propósito no campo do sujeito com as frequências triplices: amor, empoderamento e sabedoria. Atua no campo colocado em antena pelo tempo indicado pelo biometro.");
 
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta), ativo os gráficos radiônicos (resultado) no plano relacional aqui relatado por (nome do consulente) e programo a clareza, a harmonia e o equilíbrio dentro do que é divino. Que os gráficos pulsem no campo na medida certa e na quantidade exata durante um período de (medir no relógio de mensuração). A começar neste momentum. Pulsa no campo e clarifica, pulsa no campo e harmoniza, pulsa no campo e equilibra, AGORA.";
+        this.repeatString = "(resultado), ";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta), ativo os gráficos radiônicos (next) no plano relacional aqui relatado por (nome do consulente) e programo a clareza, a harmonia e o equilíbrio dentro do que é divino. Que os gráficos pulsem no campo na medida certa e na quantidade exata durante um período de (medir no relógio de mensuração). A começar neste momentum. Pulsa no campo e clarifica, pulsa no campo e harmoniza, pulsa no campo e equilibra, AGORA.";
 
     }
 }

@@ -2876,7 +2876,38 @@ class GUI{
 
         JPanel topPanel;
         if(ferramenta.portal.id == 1){
-            if(ferramenta.id == 0 || ferramenta.id == 1){
+            if(ferramenta.id == 0){
+                confirmButton.setEnabled(false);
+                int resultLength = temp.size();
+                temp.add(0);
+                temp.add(0);
+                temp.add(0);
+                topPanel = new JPanel();
+                JLabel instructLabel = new JLabel("Medir no Biometro");
+                topPanel.add(instructLabel,BorderLayout.NORTH);
+                JPanel capsule = new JPanel(new GridLayout(4,1));
+                JTextField numberField = new JTextField(4);
+                capsule.add(numberField);
+                JTextField numberField2 = new JTextField(4);
+                capsule.add(numberField2);
+                JTextField numberField3 = new JTextField(4);
+                capsule.add(numberField3);
+                topPanel.add(capsule, BorderLayout.CENTER);
+                JButton topButton = new JButton("Confirmar Medições");
+                topButton.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        temp.set(resultLength+0, Integer.parseInt(numberField.getText()));
+                        temp.set(resultLength+1, Integer.parseInt(numberField2.getText()));
+                        temp.set(resultLength+2, Integer.parseInt(numberField3.getText()));
+                        String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" semanas "+numberField2.getText()+" dias, "+numberField3.getText()+" horas </b>";
+                        labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(multiResultsArray, currentClient).replace("<b style=\"color:red;\">(medir no relógio de mensuração) </b>", newD) + "</div></html>");
+                        confirmButton.setEnabled(true);
+                    }
+                });
+                topPanel.add(topButton,BorderLayout.SOUTH);
+                centerJPanel.add(topPanel,BorderLayout.NORTH);
+            }else if(ferramenta.id == 1){
                 confirmButton.setEnabled(false);
                 temp.add(0);
                 temp.add(0);
@@ -2999,6 +3030,9 @@ class GUI{
                     do{
                         ArrayList<Integer> temp2 = ( ArrayList<Integer>) currentResult.clone();
                         temp2.add(multiResultsArray.get(result));
+                        for(int i=0;i<ferramenta.bonusResults;i++){
+                            temp2.add(temp.get(currentResult.size()+1+i));
+                        }
                         leitura.historico.add(temp2);
                         leitura.Save();
                         result++;

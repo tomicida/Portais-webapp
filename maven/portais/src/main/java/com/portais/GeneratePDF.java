@@ -175,7 +175,10 @@ public class GeneratePDF {
                 if(ferramenta.type == 0 || ferramenta.type == 3){
                     tempParagraph.add(new Chunk(ferramenta.resultados.get(lista.get(2)),fontn));
                     if(!ferramenta.ações.isEmpty())
-                        tempParagraph.add(new Chunk("; "+ferramenta.ações.get(lista.get(2)),fontn));     
+                        tempParagraph.add(new Chunk("; "+ferramenta.ações.get(lista.get(2)),fontn));
+                    if(portal.id==1 && ferramenta.id==0){
+                        tempParagraph.add(new Chunk("; "+lista.get(3)+" semanas "+lista.get(4)+" dias "+lista.get(5)+" horas ",fontn));
+                    }   
                 }else if (ferramenta.type == 2){
                     System.out.println(lista.size());
                     if(lista.size() >=3){
@@ -272,7 +275,7 @@ public class GeneratePDF {
                 }
 
                 if(portal.id == 1){
-                    if(ferramenta.id == 0 || ferramenta.id == 1){
+                    if(ferramenta.id == 1){
                         tempParagraph.add(new Chunk(", " + lista.get(3)+" "+tempo[lista.get(4)],fontn));
                     }
                 }
