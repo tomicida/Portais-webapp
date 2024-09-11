@@ -1,5 +1,6 @@
 package com.portais;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
@@ -2642,9 +2643,18 @@ class GUI{
             confirmButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    try{
                     bidimensionalResults = new ArrayList<Integer[]>();
                     ArrayList<Integer> tempIndexArray = (ArrayList<Integer>) indexArray.clone();
+                    
+                    codigoMatrizTempo = Long.parseLong(fieldTempo.getText());
+                    codigoMatrizEspaço = Long.parseLong(fieldEspaço.getText());
+                    codigoMatrizSincronica =  Long.parseLong(fieldSincronica.getText());
 
+                    System.out.println("Tempo: "+ codigoMatrizTempo);
+                    System.out.println("Espaço: "+ codigoMatrizEspaço);
+                    System.out.println("Sincronica: "+ codigoMatrizSincronica);
+                    
                     for (int i=0;i<checkBoxs.size();i++){
                         if (checkBoxs.get(i).isSelected()) {
                             System.out.println(subFerramenta.resultados.get(i) + " "//
@@ -2657,13 +2667,7 @@ class GUI{
 
                     indexArray.add(bidimensionalResults.get(0)[0]);
 
-                    codigoMatrizTempo = Long.parseLong(fieldTempo.getText());
-                    codigoMatrizEspaço = Long.parseLong(fieldEspaço.getText());
-                    codigoMatrizSincronica =  Long.parseLong(fieldSincronica.getText());
-
-                    System.out.println("Tempo: "+ codigoMatrizTempo);
-                    System.out.println("Espaço: "+ codigoMatrizEspaço);
-                    System.out.println("Sincronica: "+ codigoMatrizSincronica);
+                    
 
                     if(subFerramenta.getClass()==MesaArcturiana.class){
                         MesaArcturiana tempClass = (MesaArcturiana) subFerramenta;
@@ -2672,6 +2676,10 @@ class GUI{
                         tempClass.setMatrizSincronica(codigoMatrizSincronica);
                         decretoWindow("Mesa Arcturiana", tempClass.ArcturianaDecreto(indexArray,currentClient,bidimensionalResults,indexArray.size()-1));
                         replacePanel(subFerramentaPanel(subFerramenta.subFerramentas.get(0), tempIndexArray));
+                    }
+                    }catch(NumberFormatException numberError){
+                        System.out.println("caught exception");
+                        decretoWindow("Erro", "O número que inseriu não é um número válido, por favor garanta que apenas está a inserir algarismos e não inclui outros caracteres especiais ou espaços brancos.");
                     }
                 } 
             });
@@ -2968,7 +2976,9 @@ class GUI{
                     setPanel.add(label);
                     topPanel.add(setPanel);
                 }
-                centerJPanel.add(topPanel,BorderLayout.NORTH);
+                JScrollPane scrollPane = new JScrollPane(topPanel);
+                scrollPane.setPreferredSize(new Dimension(1000,300));
+                centerJPanel.add(scrollPane,BorderLayout.NORTH);
             }
         }else if (ferramenta.portal.id == 3){
             if (ferramenta.id==0){
@@ -3137,7 +3147,9 @@ class GUI{
                     setPanel.add(label);
                     topPanel.add(setPanel);
                 }
-                centerJPanel.add(topPanel,BorderLayout.NORTH);
+                JScrollPane scrollPane = new JScrollPane(topPanel);
+                scrollPane.setPreferredSize(new Dimension(1000,300));
+                centerJPanel.add(scrollPane,BorderLayout.NORTH);
             } else if(subFerramenta.mainFerramenta.id == 0 && subFerramenta.prevResult=="Tabela de Vitaminas e Minerais"){
                 topPanel = new JPanel();
                 topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
@@ -3155,7 +3167,9 @@ class GUI{
                     setPanel.add(label);
                     topPanel.add(setPanel);
                 }
-                centerJPanel.add(topPanel,BorderLayout.NORTH);
+                JScrollPane scrollPane = new JScrollPane(topPanel);
+                scrollPane.setPreferredSize(new Dimension(1000,300));
+                centerJPanel.add(scrollPane,BorderLayout.NORTH);
             } else if (subFerramenta.mainFerramenta.id == 7){
                 confirmButton.setEnabled(false);
                 temp.add(0);
