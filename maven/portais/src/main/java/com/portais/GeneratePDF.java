@@ -177,7 +177,7 @@ public class GeneratePDF {
                     if(!ferramenta.ações.isEmpty())
                         tempParagraph.add(new Chunk("; "+ferramenta.ações.get(lista.get(2)),fontn));
                     if(portal.id==1 && ferramenta.id==0){
-                        tempParagraph.add(new Chunk("; "+lista.get(3)+" semanas "+lista.get(4)+" dias "+lista.get(5)+" horas ",fontn));
+                        tempParagraph.add(new Chunk("; "+lista.get(3)+" meses "+lista.get(4)+" semanas "+lista.get(5)+" dias "+lista.get(6)+" horas ",fontn));
                     }   
                 }else if (ferramenta.type == 2){
                     System.out.println(lista.size());

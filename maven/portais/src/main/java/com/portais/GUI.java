@@ -2882,6 +2882,7 @@ class GUI{
                 temp.add(0);
                 temp.add(0);
                 temp.add(0);
+                temp.add(0);
                 topPanel = new JPanel();
                 JLabel instructLabel = new JLabel("Medir no Biometro");
                 topPanel.add(instructLabel,BorderLayout.NORTH);
@@ -2892,6 +2893,8 @@ class GUI{
                 capsule.add(numberField2);
                 JTextField numberField3 = new JTextField(4);
                 capsule.add(numberField3);
+                JTextField numberField4 = new JTextField(4);
+                capsule.add(numberField4);
                 topPanel.add(capsule, BorderLayout.CENTER);
                 JButton topButton = new JButton("Confirmar Medições");
                 topButton.addActionListener(new ActionListener(){
@@ -2900,7 +2903,8 @@ class GUI{
                         temp.set(resultLength+0, Integer.parseInt(numberField.getText()));
                         temp.set(resultLength+1, Integer.parseInt(numberField2.getText()));
                         temp.set(resultLength+2, Integer.parseInt(numberField3.getText()));
-                        String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" semanas "+numberField2.getText()+" dias, "+numberField3.getText()+" horas </b>";
+                        temp.set(resultLength+3, Integer.parseInt(numberField4.getText()));
+                        String newD = "<b style=\"color:blue;\">"+ numberField.getText()+" meses, "+ numberField2.getText()+" semanas, "+numberField3.getText()+" dias, "+numberField4.getText()+" horas </b>";
                         labelDecreto.setText("<html><div WIDTH=1600>" + ferramenta.Decreto(multiResultsArray, currentClient).replace("<b style=\"color:red;\">(medir no relógio de mensuração) </b>", newD) + "</div></html>");
                         confirmButton.setEnabled(true);
                     }

@@ -7,7 +7,7 @@ public class GráficosRadiestesicos extends Ferramenta{
     public GráficosRadiestesicos (Portal portal, int id){
         super("Gráficos Radiestesicos", portal, id);
         this.multi = true;
-        this.bonusResults = 3;
+        this.bonusResults = 4;
 
         this.resultados.add("Decágono");
         this.resultados.add("Desembaraçador");
