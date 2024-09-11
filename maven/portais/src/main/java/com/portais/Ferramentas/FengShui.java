@@ -25,7 +25,7 @@ public class FengShui extends Ferramenta{
 
         intermedSubFerramenta = new SubFerramenta(this, "Casa");
 
-        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) (efeito: (efeito)) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         
         intermedSubFerramenta.resultados.add("Yin");
         intermedSubFerramenta.resultados.add("Yang");
@@ -43,8 +43,8 @@ public class FengShui extends Ferramenta{
         intermedSubFerramenta.resultados.add("Li");
         intermedSubFerramenta.resultados.add("Dui");
 
-        intermedSubFerramenta.resultados2.add("");
-        intermedSubFerramenta.resultados2.add("");
+        intermedSubFerramenta.resultados2.add("(efeito2)");
+        intermedSubFerramenta.resultados2.add("(efeito2)");
         intermedSubFerramenta.resultados2.add("Gerador");
         intermedSubFerramenta.resultados2.add("Expansor");
         intermedSubFerramenta.resultados2.add("Estabilizador");
@@ -134,7 +134,7 @@ public class FengShui extends Ferramenta{
         
         intermedSubFerramenta = (SubFerramenta) intermedSubFerramenta.clone();
         intermedSubFerramenta.prevResult = "Empresa";
-        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
+        intermedSubFerramenta.ownDecreto = "Eu ativo a Matriz do Feng Shui para que limpe a informação anomala no ambiente (casa ou empresa) de (nome do consulente) e todos os seus registros no campo morfogenético e mórfico. Ativando, limpando e fortalecendo, limpando e fortalecendo, limpando e fortalecendo. Ativo a frequência de (desig) (efeito: (efeito)) para (ação), reconstruindo e harmonizando o campo anómalo, assim como a consciência de mudança de (nome do consulente). Pulsa no campo, pulsa no campo, pulsa no campo.";
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         this.subFerramentas.add(intermedFerramenta);

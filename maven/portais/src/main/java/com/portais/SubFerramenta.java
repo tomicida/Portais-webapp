@@ -74,7 +74,10 @@ public class SubFerramenta implements Cloneable{
             decreto = decreto.replace("(geopatia)","<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
             decreto = decreto.replace("(tipo geo)","<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
             decreto = decreto.replace("(desig)", "<b style=\"color:blue;\">" + resultados.get(index.get(2)) + "</b>");
-            if(!resultados2.isEmpty())decreto = decreto.replace("(geopatias)","<b style=\"color:blue;\">" + resultados2.get(index.get(2)) + "</b>");
+            if(!resultados2.isEmpty()){
+                decreto = decreto.replace("(geopatias)","<b style=\"color:blue;\">" + resultados2.get(index.get(2)) + "</b>");
+                decreto = decreto.replace("(efeito)", "<b style=\"color:blue;\">" + resultados2.get(index.get(2)) + "</b>");
+            }
         }
 
         if(index.size()==4){
@@ -83,6 +86,10 @@ public class SubFerramenta implements Cloneable{
             decreto = decreto.replace("(nome do ou dos elementos)", "<b style=\"color:blue;\">" + resultados.get(index.get(3)) + "</b>");
             decreto = decreto.replace("(desig)", "<b style=\"color:blue;\">" + prevResult + "</b>");
             decreto = decreto.replace("(geopatia)","<b style=\"color:blue;\">Inimigos Ocultos " + resultados.get(index.get(3)) + "</b>");
+            if (!mainFerramenta.subFerramentas.get(index.get(0)).subFerramentas.get(index.get(1)).resultados2.isEmpty()){
+                decreto = decreto.replace("(efeito)", "<b style=\"color:blue;\">" + mainFerramenta.subFerramentas.get(index.get(0)).subFerramentas.get(index.get(1)).resultados2.get(index.get(2)) + "</b>");
+                decreto = decreto.replace("(efeito2)", "<b style=\"color:blue;\">" + resultados.get(index.get(3)) + "</b>");
+            }
         }
 
         if(resultados.size()>index.get(1)){
