@@ -8,6 +8,9 @@ public class ChakrasECorposSutis extends Ferramenta{
     public ChakrasECorposSutis(Portal portal,int id){
         super("Chakras e Corpos Sutis", portal, id);
 
+        this.repeatString = "(ação), ";
+        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, abrindo o (resultado) (designação) para (next) e crie impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu sou a ativar agora o equilíbrio de (resultado) (designação) e promovo o alinhamento de todos os chakras e todos os corpos sutis. Pulsa, pulsa, pulsa no campo.";
+
         SubFerramenta intermedFerramenta;
         SubFerramenta intermedSubFerramenta;
 
@@ -26,6 +29,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.resultados.add("Coronário");
 
         intermedSubFerramenta = new SubFerramenta(this, "Básico");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -38,6 +44,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Umbilical");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -50,6 +59,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Solar");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -62,6 +74,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Cardíaco");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -74,6 +89,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Laríngeo");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -86,6 +104,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Frontal");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -98,6 +119,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Coronário");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -122,6 +146,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.resultados.add("Átmico");
 
         intermedSubFerramenta = new SubFerramenta(this, "Físico");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -132,6 +159,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Etérico");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -142,6 +172,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Emocional");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -153,6 +186,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         
 
         intermedSubFerramenta = new SubFerramenta(this, "Mental Inferior");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -163,6 +199,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Mental Superior");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -173,6 +212,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Búdico");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -183,6 +225,9 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         intermedSubFerramenta = new SubFerramenta(this, "Átmico");
+        intermedSubFerramenta.multi = true;
+        intermedSubFerramenta.ownDecreto = this.Decreto;
+        intermedSubFerramenta.repeatString = this.repeatString;
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
         intermedSubFerramenta.resultados.add("");
@@ -193,8 +238,6 @@ public class ChakrasECorposSutis extends Ferramenta{
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
         this.subFerramentas.add(intermedFerramenta);
-
-        this.Decreto = "Na divina presença do Eu Sou de (nome do terapeuta) peço permissão ao Eu Superior de (nome do consulente) para aceder ao seu campo morfogenético, abrindo o (resultado) (designação) para (ação) e crie impacto na estrutura do DNA, reestruturando e renovando o funcionamento do corpo físico na medida certa e na quantidade exata, dentro do que é divino. Eu sou a ativar agora o equilíbrio de (resultado) (designação) e promovo o alinhamento de todos os chakras e todos os corpos sutis. Pulsa, pulsa, pulsa no campo.";
-
+        
     }
 }
