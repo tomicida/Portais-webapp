@@ -1,7 +1,5 @@
 package com.portais.Ferramentas;
 
-import java.util.ArrayList;
-
 import com.portais.Ferramenta;
 import com.portais.Portal;
 import com.portais.SubFerramenta;
