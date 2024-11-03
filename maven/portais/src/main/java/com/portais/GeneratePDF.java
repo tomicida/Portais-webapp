@@ -46,11 +46,13 @@ public class GeneratePDF {
             table.addCell("Nome do Espaço");
             table.addCell(leitura.cliente.nomeEspaço);
 
+            /* 
             table.addCell("Hora de Inicio da Leitura");
             table.addCell(leitura.startTime.toString());
 
             table.addCell("Hora de Conclusão da Leitura");
             table.addCell(leitura.finishTime.toString());
+            */
 
             table.setSpacingAfter(12f);
 
