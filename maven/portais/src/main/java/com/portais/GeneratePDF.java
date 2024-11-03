@@ -246,7 +246,8 @@ public class GeneratePDF {
                             if (lista.size() >= 5 && !(lista.get(0)==2 && lista.get(1)==7)){
                                 if(ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).type != 1)
                                     tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados.get(lista.get(4)),fontn));
-                                    if(!ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados2.isEmpty())
+                                    if(!ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados2.isEmpty() 
+                                    && ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados2.get(lista.get(4)) != "(efeito2)")
                                         tempParagraph.add(new Chunk(" "+ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).resultados2.get(lista.get(4)),fontn));
                                     if(lista.size() >= 6){
                                     tempParagraph.add(new Chunk(" " + ferramenta.subFerramentas.get(lista.get(2)).subFerramentas.get(lista.get(3)).subFerramentas.get(lista.get(4)).resultados.get(lista.get(5)),fontn));
