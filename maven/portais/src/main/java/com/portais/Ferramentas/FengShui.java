@@ -181,17 +181,43 @@ public class FengShui extends Ferramenta{
 
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
-        intermedSubFerramenta = (SubFerramenta) intermedSubFerramenta.clone();
-        intermedSubFerramenta.prevResult = "Empresa";
 
-        intermedSubFerramenta.resultados= new ArrayList<String>();
-        intermedSubFerramenta.resultados.add(0,"Recepção");
-        intermedSubFerramenta.resultados.add(1,"ShowRoom");
-        intermedSubFerramenta.resultados.add(2,"Contabilidade");
-        intermedSubFerramenta.resultados.add(3,"Área Comum");
-        intermedSubFerramenta.resultados.add(4,"Banheiros");
-        intermedSubFerramenta.resultados.add(5,"Sala Reunião");
-        intermedSubFerramenta.resultados.add(6,"Produção");
+
+
+        intermedSubFerramenta = new SubFerramenta(this, "Empresa");
+        intermedSubFerramenta.resultados.add("Recepção");
+        intermedSubFerramenta.resultados.add("ShowRoom");
+        intermedSubFerramenta.resultados.add("Contabilidade");
+        intermedSubFerramenta.resultados.add("Área Comum");
+        intermedSubFerramenta.resultados.add("Banheiros");
+        intermedSubFerramenta.resultados.add("Sala Reunião");
+        intermedSubFerramenta.resultados.add("Produção");
+
+        intermedSubSubFerramenta = new SubFerramenta(this, "Recepção");
+        intermedSubSubFerramenta.resultados.add("Madeira");
+        intermedSubSubFerramenta.resultados.add("Fogo");
+        intermedSubSubFerramenta.resultados.add("Terra");
+        intermedSubSubFerramenta.resultados.add("Metal");
+        intermedSubSubFerramenta.resultados.add("Água");
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
+        intermedSubSubFerramenta = (SubFerramenta) intermedSubSubFerramenta.clone();
+        intermedSubSubFerramenta.prevResult = "ShowRoom";
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
+        intermedSubSubFerramenta = (SubFerramenta) intermedSubSubFerramenta.clone();
+        intermedSubSubFerramenta.prevResult = "Contabilidade";
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
+        intermedSubSubFerramenta = (SubFerramenta) intermedSubSubFerramenta.clone();
+        intermedSubSubFerramenta.prevResult = "Área Comum";
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
+        intermedSubSubFerramenta = (SubFerramenta) intermedSubSubFerramenta.clone();
+        intermedSubSubFerramenta.prevResult = "Banheiros";
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
+        intermedSubSubFerramenta = (SubFerramenta) intermedSubSubFerramenta.clone();
+        intermedSubSubFerramenta.prevResult = "Sala Reunião";
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
+        intermedSubSubFerramenta = (SubFerramenta) intermedSubSubFerramenta.clone();
+        intermedSubSubFerramenta.prevResult = "Produção";
+        intermedSubFerramenta.subFerramentas.add(intermedSubSubFerramenta);
 
         intermedFerramenta.subFerramentas.add(intermedSubFerramenta);
 
